@@ -94,17 +94,9 @@
 		1ADFB8BB28611B9F005A5E74 /* auth */ = {
 			isa = PBXGroup;
 			children = (
-				1ADFB8BC28611BA6005A5E74 /* New Group */,
 				1ADFB8B528610FEF005A5E74 /* Login */,
 			);
 			path = auth;
-			sourceTree = "<group>";
-		};
-		1ADFB8BC28611BA6005A5E74 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
