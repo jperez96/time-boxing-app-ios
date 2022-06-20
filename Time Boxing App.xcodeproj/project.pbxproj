@@ -65,9 +65,9 @@
 		1ADFB8B328610FAE005A5E74 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				1ADFB8BB28611B9F005A5E74 /* auth */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7DB285F96AB00CAF671 /* Main.storyboard */,
-				1ADFB8B528610FEF005A5E74 /* Login */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -89,6 +89,22 @@
 				1A3EF7E3285F96AC00CAF671 /* Info.plist */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		1ADFB8BB28611B9F005A5E74 /* auth */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB8BC28611BA6005A5E74 /* New Group */,
+				1ADFB8B528610FEF005A5E74 /* Login */,
+			);
+			path = auth;
+			sourceTree = "<group>";
+		};
+		1ADFB8BC28611BA6005A5E74 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,7 +333,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Time Boxing App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Application/LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -345,7 +361,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Time Boxing App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = Application/LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
