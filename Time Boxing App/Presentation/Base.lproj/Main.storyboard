@@ -70,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="1010.144927536232" y="116.51785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="ad4-7x-i8V">
             <objects>
-                <viewController id="ooy-Lv-d0g" sceneMemberID="viewController">
+                <viewController id="ooy-Lv-d0g" customClass="RegisterViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rb6-ZX-uWi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                                 <rect key="frame" x="50" y="202.5" width="314" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
+                                <connections>
+                                    <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="keB-kY-sXt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="75e-QD-GV0"/>
@@ -112,6 +115,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kDC-2b-IIW"/>
+                    <connections>
+                        <outlet property="userTextField" destination="20w-XU-e6P" id="bas-xg-VRZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygP-5p-kmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
