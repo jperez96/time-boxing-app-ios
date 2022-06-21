@@ -100,6 +100,7 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
                                 <connections>
                                     <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="keB-kY-sXt"/>
+                                    <segue destination="IG3-qF-4mS" kind="show" id="J8G-cl-TyK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,9 +124,20 @@
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="116.51785714285714"/>
         </scene>
+        <!--HomeStoryboard-->
+        <scene sceneID="SkA-My-XWh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="IG3-qF-4mS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V7i-1D-wbu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kn7-4H-rGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="125"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="hjV-8y-Fl0">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gm-TR-FbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9JJ-dY-Eks" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdG-9L-jDH">
@@ -137,7 +149,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dyX-GK-L6F"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gm-TR-FbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="116.51785714285714"/>
         </scene>
