@@ -13,6 +13,7 @@
 		1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */; };
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
 		1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8B628611011005A5E74 /* LoginViewController.swift */; };
+		1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8E328616476005A5E74 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1A3EF7E1285F96AC00CAF671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ADFB8B628611011005A5E74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1ADFB8E328616476005A5E74 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +67,8 @@
 		1ADFB8B328610FAE005A5E74 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1ADFB8BB28611B9F005A5E74 /* auth */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
+				1ADFB8BB28611B9F005A5E74 /* auth */,
 				1A3EF7DB285F96AB00CAF671 /* Main.storyboard */,
 			);
 			path = Presentation;
@@ -94,9 +96,18 @@
 		1ADFB8BB28611B9F005A5E74 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				1ADFB8E22861644F005A5E74 /* Register */,
 				1ADFB8B528610FEF005A5E74 /* Login */,
 			);
 			path = auth;
+			sourceTree = "<group>";
+		};
+		1ADFB8E22861644F005A5E74 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB8E328616476005A5E74 /* RegisterViewController.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */,
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
+				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
