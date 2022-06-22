@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DD0F55C8465025B2199C5D5 /* Pods_Time_Boxing_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */; };
 		1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */; };
 		1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */; };
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
@@ -14,9 +15,15 @@
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
 		1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8B628611011005A5E74 /* LoginViewController.swift */; };
 		1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8E328616476005A5E74 /* RegisterViewController.swift */; };
+		1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB90C28616EF1005A5E74 /* CalendaryTabViewController.swift */; };
+		1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB90E28616EFE005A5E74 /* RoutineTabViewController.swift */; };
+		1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */; };
+		1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */; };
+		1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		074E95F24A4EE5929C7F95A7 /* Pods-Time Boxing App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.release.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.release.xcconfig"; sourceTree = "<group>"; };
 		1A3EF7D2285F96AB00CAF671 /* Time Boxing App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Boxing App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,13 @@
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1ADFB8B628611011005A5E74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1ADFB8E328616476005A5E74 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1ADFB90C28616EF1005A5E74 /* CalendaryTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryTabViewController.swift; sourceTree = "<group>"; };
+		1ADFB90E28616EFE005A5E74 /* RoutineTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTabViewController.swift; sourceTree = "<group>"; };
+		1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
+		1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
+		1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFormViewController.swift; sourceTree = "<group>"; };
+		4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.debug.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD0F55C8465025B2199C5D5 /* Pods_Time_Boxing_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +59,8 @@
 			children = (
 				1A3EF7D4285F96AB00CAF671 /* Time Boxing App */,
 				1A3EF7D3285F96AB00CAF671 /* Products */,
+				376C7A6F43347B5864437745 /* Pods */,
+				AD3D12D9D85581FDECE9D754 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,9 +84,8 @@
 		1ADFB8B328610FAE005A5E74 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
+				1ADFB90528616DDA005A5E74 /* home */,
 				1ADFB8BB28611B9F005A5E74 /* auth */,
-				1A3EF7DB285F96AB00CAF671 /* Main.storyboard */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -85,6 +101,7 @@
 		1ADFB8BA28611225005A5E74 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */,
 				1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */,
 				1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */,
@@ -96,6 +113,7 @@
 		1ADFB8BB28611B9F005A5E74 /* auth */ = {
 			isa = PBXGroup;
 			children = (
+				1A3EF7DB285F96AB00CAF671 /* Main.storyboard */,
 				1ADFB8E22861644F005A5E74 /* Register */,
 				1ADFB8B528610FEF005A5E74 /* Login */,
 			);
@@ -110,6 +128,68 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		1ADFB90528616DDA005A5E74 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB91C2862AA9A005A5E74 /* task */,
+				1ADFB90B28616ED6005A5E74 /* settingsTab */,
+				1ADFB90A28616EC9005A5E74 /* routineTab */,
+				1ADFB90928616EC2005A5E74 /* calendaryTab */,
+				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		1ADFB90928616EC2005A5E74 /* calendaryTab */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB90C28616EF1005A5E74 /* CalendaryTabViewController.swift */,
+			);
+			path = calendaryTab;
+			sourceTree = "<group>";
+		};
+		1ADFB90A28616EC9005A5E74 /* routineTab */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB90E28616EFE005A5E74 /* RoutineTabViewController.swift */,
+			);
+			path = routineTab;
+			sourceTree = "<group>";
+		};
+		1ADFB90B28616ED6005A5E74 /* settingsTab */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */,
+			);
+			path = settingsTab;
+			sourceTree = "<group>";
+		};
+		1ADFB91C2862AA9A005A5E74 /* task */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */,
+			);
+			path = task;
+			sourceTree = "<group>";
+		};
+		376C7A6F43347B5864437745 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */,
+				074E95F24A4EE5929C7F95A7 /* Pods-Time Boxing App.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD3D12D9D85581FDECE9D754 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -117,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A3EF7E6285F96AC00CAF671 /* Build configuration list for PBXNativeTarget "Time Boxing App" */;
 			buildPhases = (
+				851BAF2B50847E442CD05BAD /* [CP] Check Pods Manifest.lock */,
 				1A3EF7CE285F96AB00CAF671 /* Sources */,
 				1A3EF7CF285F96AB00CAF671 /* Frameworks */,
 				1A3EF7D0285F96AB00CAF671 /* Resources */,
@@ -170,11 +251,37 @@
 			files = (
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
+				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		851BAF2B50847E442CD05BAD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Time Boxing App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A3EF7CE285F96AB00CAF671 /* Sources */ = {
@@ -182,7 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */,
+				1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */,
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
+				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
+				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
+				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
 				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,
 			);
@@ -328,6 +439,7 @@
 		};
 		1A3EF7E7285F96AC00CAF671 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -356,6 +468,7 @@
 		};
 		1A3EF7E8285F96AC00CAF671 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 074E95F24A4EE5929C7F95A7 /* Pods-Time Boxing App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
