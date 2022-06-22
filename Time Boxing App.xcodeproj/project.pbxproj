@@ -13,6 +13,12 @@
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
 		1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */; };
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
+		1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */; };
+		1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */; };
+		1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3BB2862D83600A54872 /* Constants.swift */; };
+		1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C02862E28100A54872 /* CheckBoxView.swift */; };
+		1A8FF3C32862E2A100A54872 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */; };
+		1A8FF3C72863871200A54872 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C62863871200A54872 /* Task.swift */; };
 		1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8B628611011005A5E74 /* LoginViewController.swift */; };
 		1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8E328616476005A5E74 /* RegisterViewController.swift */; };
 		1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB90C28616EF1005A5E74 /* CalendaryTabViewController.swift */; };
@@ -31,6 +37,12 @@
 		1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3EF7E1285F96AC00CAF671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
+		1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellTableViewCell.xib; sourceTree = "<group>"; };
+		1A8FF3BB2862D83600A54872 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A8FF3C02862E28100A54872 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
+		1A8FF3C62863871200A54872 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		1ADFB8B628611011005A5E74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1ADFB8E328616476005A5E74 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1ADFB90C28616EF1005A5E74 /* CalendaryTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryTabViewController.swift; sourceTree = "<group>"; };
@@ -75,10 +87,63 @@
 		1A3EF7D4285F96AB00CAF671 /* Time Boxing App */ = {
 			isa = PBXGroup;
 			children = (
+				1A8FF3C42863852200A54872 /* Domain */,
+				1A8FF3BA2862D82B00A54872 /* Common */,
 				1ADFB8BA28611225005A5E74 /* Application */,
 				1ADFB8B328610FAE005A5E74 /* Presentation */,
 			);
 			path = "Time Boxing App";
+			sourceTree = "<group>";
+		};
+		1A8FF3B82862D23700A54872 /* cellTask */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */,
+				1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */,
+			);
+			path = cellTask;
+			sourceTree = "<group>";
+		};
+		1A8FF3BA2862D82B00A54872 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3BE2862E23A00A54872 /* UIComponents */,
+				1A8FF3BB2862D83600A54872 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A8FF3BE2862E23A00A54872 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3BF2862E25A00A54872 /* Checkbox */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		1A8FF3BF2862E25A00A54872 /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3C02862E28100A54872 /* CheckBoxView.swift */,
+				1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		1A8FF3C42863852200A54872 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3C5286386FC00A54872 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		1A8FF3C5286386FC00A54872 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A8FF3C62863871200A54872 /* Task.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		1ADFB8B328610FAE005A5E74 /* Presentation */ = {
@@ -167,6 +232,7 @@
 		1ADFB91C2862AA9A005A5E74 /* task */ = {
 			isa = PBXGroup;
 			children = (
+				1A8FF3B82862D23700A54872 /* cellTask */,
 				1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */,
 			);
 			path = task;
@@ -178,7 +244,6 @@
 				53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */,
 				074E95F24A4EE5929C7F95A7 /* Pods-Time Boxing App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -201,7 +266,6 @@
 				1A3EF7CE285F96AB00CAF671 /* Sources */,
 				1A3EF7CF285F96AB00CAF671 /* Frameworks */,
 				1A3EF7D0285F96AB00CAF671 /* Resources */,
-				22B8389A5630B8E31435B6A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,32 +315,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
+				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
+				1A8FF3C32862E2A100A54872 /* CheckBoxView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		22B8389A5630B8E31435B6A5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		851BAF2B50847E442CD05BAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,9 +359,13 @@
 				1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */,
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
+				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
+				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
+				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
+				1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */,
 				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

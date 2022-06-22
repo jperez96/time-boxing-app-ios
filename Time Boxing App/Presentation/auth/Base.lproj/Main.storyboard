@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9JJ-dY-Eks">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dbr-jB-jhS">
-                                <rect key="frame" x="50" y="138" width="314" height="389"/>
+                                <rect key="frame" x="50" y="94" width="314" height="433"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-C1-RjK">
                                 <rect key="frame" x="50" y="627" width="314" height="143"/>
@@ -37,7 +37,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Iniciar Sesión como Anónimo"/>
                                         <connections>
-                                            <segue destination="ooy-Lv-d0g" kind="show" id="9BI-ZU-0kC"/>
+                                            <segue destination="ooy-Lv-d0g" kind="showDetail" id="cil-TA-xgX"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,11 +75,11 @@
             <objects>
                 <viewController id="ooy-Lv-d0g" customClass="RegisterViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rb6-ZX-uWi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKF-CZ-VUQ">
-                                <rect key="frame" x="25" y="113" width="364" height="64.5"/>
+                                <rect key="frame" x="25" y="25" width="364" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-lb-ihs">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -95,12 +95,11 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l">
-                                <rect key="frame" x="50" y="202.5" width="314" height="31"/>
+                                <rect key="frame" x="50" y="114.5" width="314" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
                                 <connections>
                                     <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="keB-kY-sXt"/>
-                                    <segue destination="IG3-qF-4mS" kind="show" id="J8G-cl-TyK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -123,34 +122,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygP-5p-kmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1828.985507246377" y="116.51785714285714"/>
-        </scene>
-        <!--HomeStoryboard-->
-        <scene sceneID="SkA-My-XWh">
-            <objects>
-                <viewControllerPlaceholder storyboardName="HomeStoryboard" id="IG3-qF-4mS" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="V7i-1D-wbu"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kn7-4H-rGL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2681" y="125"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="hjV-8y-Fl0">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5Gm-TR-FbA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9JJ-dY-Eks" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hdG-9L-jDH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dyX-GK-L6F"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="100.00000000000001" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
