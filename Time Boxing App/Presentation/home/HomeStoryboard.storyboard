@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,19 +32,64 @@
                     <view key="view" contentMode="scaleToFill" id="meH-Ca-Wl8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czX-px-KJg">
+                                <rect key="frame" x="25" y="69" width="364" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21/05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Rt-fgD">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-6I-gce">
+                                        <rect key="frame" x="324" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="UEP-5z-Tuo"/>
+                                            <constraint firstAttribute="width" constant="40" id="nSk-1Z-Iz2"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="3so-kT-Tn4" kind="popoverPresentation" popoverAnchorView="x6i-6I-gce" id="lQ7-ir-b0C">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
+                                <rect key="frame" x="0.0" y="134" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="orQ-zg-lF8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lv0-FT-EfM" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="3tR-lB-BPN"/>
+                            <constraint firstItem="czX-px-KJg" firstAttribute="top" secondItem="orQ-zg-lF8" secondAttribute="top" constant="25" id="58o-nb-g1Q"/>
+                            <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" constant="25" id="G45-NC-BNn"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="lv0-FT-EfM" secondAttribute="bottom" id="IfQ-sA-PBN"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="czX-px-KJg" secondAttribute="trailing" constant="25" id="VQ4-yR-icW"/>
+                            <constraint firstItem="czX-px-KJg" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="25" id="eaE-5M-syG"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" id="sBL-EA-b56"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendario" id="l1P-jS-Rly"/>
+                    <connections>
+                        <outlet property="taskTableView" destination="lv0-FT-EfM" id="bo7-qM-4mV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjb-bU-KJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894" y="-763"/>
+            <point key="canvasLocation" x="-894.20289855072474" y="-763.39285714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vZj-ao-gma">
             <objects>
-                <tabBarController id="nzc-oA-rgy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" modalPresentationStyle="fullScreen" id="nzc-oA-rgy" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iO5-u2-Eo8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -80,16 +126,16 @@
             <objects>
                 <viewController id="3so-kT-Tn4" customClass="TaskFormViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1uA-j3-00Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp">
-                                <rect key="frame" x="25" y="69" width="81.5" height="31"/>
+                                <rect key="frame" x="25" y="25" width="81.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cancelar"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-sO-c6T">
-                                <rect key="frame" x="25" y="144" width="364" height="197.5"/>
+                                <rect key="frame" x="25" y="100" width="364" height="197.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-8x-9Ch">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -115,7 +161,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR">
-                                <rect key="frame" x="306.5" y="69" width="82.5" height="31"/>
+                                <rect key="frame" x="306.5" y="25" width="82.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
                             </button>
@@ -135,10 +181,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yc3-df-jSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="-651"/>
+            <point key="canvasLocation" x="10" y="-808"/>
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
