@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DD0F55C8465025B2199C5D5 /* Pods_Time_Boxing_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */; };
+		0E3D3401A121DD68AB78395D /* Pods_Time_Boxing_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */; };
 		1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */; };
 		1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */; };
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
@@ -38,7 +38,7 @@
 		1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
 		1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFormViewController.swift; sourceTree = "<group>"; };
-		4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.debug.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -47,7 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DD0F55C8465025B2199C5D5 /* Pods_Time_Boxing_App.framework in Frameworks */,
+				0E3D3401A121DD68AB78395D /* Pods_Time_Boxing_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +185,7 @@
 		AD3D12D9D85581FDECE9D754 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4BB7290FC09F4FAFD196F361 /* Pods_Time_Boxing_App.framework */,
+				25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,6 +201,7 @@
 				1A3EF7CE285F96AB00CAF671 /* Sources */,
 				1A3EF7CF285F96AB00CAF671 /* Frameworks */,
 				1A3EF7D0285F96AB00CAF671 /* Resources */,
+				22B8389A5630B8E31435B6A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -259,6 +260,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		22B8389A5630B8E31435B6A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		851BAF2B50847E442CD05BAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
