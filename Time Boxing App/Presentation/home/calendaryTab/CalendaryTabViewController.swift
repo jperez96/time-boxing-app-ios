@@ -31,6 +31,14 @@ class CalendaryTabViewController: UIViewController {
         taskTableView.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
     }
     
+    @IBAction func openFormTaskButton(_ sender: UIButton) {
+        let viewController = TaskFormViewController()
+        viewController.delegate = self
+        self.present(viewController, animated: true, completion: nil)
+        //viewController.modalPresentationStyle = .automatic
+        //self.present(viewController, animated: true)
+    }
+    
     private func initCalendaryView(){
         let calendar = HorizontalCalendar()
         view.addSubview(calendar)
@@ -61,4 +69,10 @@ extension CalendaryTabViewController : UITableViewDataSource {
         return cell
     }
     
+}
+
+extension CalendaryTabViewController : TaskFormDelegate {
+    func didRegister(task: Task) {
+        tasks.append(task)
+    }
 }

@@ -17,7 +17,6 @@
 		1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */; };
 		1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3BB2862D83600A54872 /* Constants.swift */; };
 		1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C02862E28100A54872 /* CheckBoxView.swift */; };
-		1A8FF3C32862E2A100A54872 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */; };
 		1A8FF3C72863871200A54872 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3C62863871200A54872 /* Task.swift */; };
 		1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8B628611011005A5E74 /* LoginViewController.swift */; };
 		1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB8E328616476005A5E74 /* RegisterViewController.swift */; };
@@ -41,7 +40,6 @@
 		1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellTableViewCell.xib; sourceTree = "<group>"; };
 		1A8FF3BB2862D83600A54872 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1A8FF3C02862E28100A54872 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
-		1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 		1A8FF3C62863871200A54872 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		1ADFB8B628611011005A5E74 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1ADFB8E328616476005A5E74 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				1A8FF3C02862E28100A54872 /* CheckBoxView.swift */,
-				1A8FF3C22862E2A100A54872 /* CheckBoxView.xib */,
 			);
 			path = Checkbox;
 			sourceTree = "<group>";
@@ -320,7 +317,6 @@
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
-				1A8FF3C32862E2A100A54872 /* CheckBoxView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
