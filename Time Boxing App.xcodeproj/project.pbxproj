@@ -196,11 +196,11 @@
 		1ADFB90528616DDA005A5E74 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
 				1ADFB91C2862AA9A005A5E74 /* task */,
 				1ADFB90B28616ED6005A5E74 /* settingsTab */,
 				1ADFB90A28616EC9005A5E74 /* routineTab */,
 				1ADFB90928616EC2005A5E74 /* calendaryTab */,
-				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -266,6 +266,7 @@
 				1A3EF7CE285F96AB00CAF671 /* Sources */,
 				1A3EF7CF285F96AB00CAF671 /* Frameworks */,
 				1A3EF7D0285F96AB00CAF671 /* Resources */,
+				452854F6B9F90BF88608AB6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -326,6 +327,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		452854F6B9F90BF88608AB6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		851BAF2B50847E442CD05BAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

@@ -60,25 +60,37 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-Oq-Fky">
+                                <rect key="frame" x="0.0" y="109" width="414" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="bdQ-ef-p7a"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
-                                <rect key="frame" x="0.0" y="134" width="414" height="679"/>
+                                <rect key="frame" x="16" y="229" width="382" height="584"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="orQ-zg-lF8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="lv0-FT-EfM" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="3tR-lB-BPN"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="czX-px-KJg" secondAttribute="trailing" constant="25" id="2Kl-9c-4gY"/>
+                            <constraint firstItem="lv0-FT-EfM" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="16" id="3tR-lB-BPN"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="top" secondItem="orQ-zg-lF8" secondAttribute="top" constant="25" id="58o-nb-g1Q"/>
-                            <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" constant="25" id="G45-NC-BNn"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="dEZ-Oq-Fky" secondAttribute="trailing" id="DTM-H6-QMP"/>
+                            <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" id="HZK-Nd-fR0"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="lv0-FT-EfM" secondAttribute="bottom" id="IfQ-sA-PBN"/>
-                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="czX-px-KJg" secondAttribute="trailing" constant="25" id="VQ4-yR-icW"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="25" id="eaE-5M-syG"/>
-                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" id="sBL-EA-b56"/>
+                            <constraint firstItem="dEZ-Oq-Fky" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" id="gLZ-ot-u6w"/>
+                            <constraint firstItem="dEZ-Oq-Fky" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="rhH-9G-BCz"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" constant="16" id="sBL-EA-b56"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendario" id="l1P-jS-Rly"/>
                     <connections>
+                        <outlet property="calendaryView" destination="dEZ-Oq-Fky" id="Yba-kf-cOK"/>
+                        <outlet property="headerStackView" destination="czX-px-KJg" id="KL8-4A-fBq"/>
                         <outlet property="taskTableView" destination="lv0-FT-EfM" id="bo7-qM-4mV"/>
                     </connections>
                 </viewController>

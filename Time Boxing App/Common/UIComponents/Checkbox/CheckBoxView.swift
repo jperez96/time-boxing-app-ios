@@ -14,7 +14,6 @@ class CheckBoxView: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
     
     required init?(coder: NSCoder) {
@@ -26,9 +25,7 @@ class CheckBoxView: UIButton {
         self.backgroundColor = .clear
         self.tintColor = .clear
         self.setTitle("", for: .normal)
-
         self.setImage(uncheckedIcon?.withRenderingMode(.alwaysOriginal) , for: .normal)
-        self.setImage(checkedIcon?.withRenderingMode(.alwaysOriginal) , for: .highlighted)
         self.setImage(checkedIcon?.withRenderingMode(.alwaysOriginal) , for: .selected)
     }
     

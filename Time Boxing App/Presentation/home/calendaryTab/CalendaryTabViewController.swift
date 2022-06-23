@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import HorizontalCalendar
 
 class CalendaryTabViewController: UIViewController {
    
     @IBOutlet weak var taskTableView: UITableView!
+    @IBOutlet weak var headerStackView: UIStackView!
+    @IBOutlet weak var calendaryView: UIView!
     
     var tasks = [
         Task(name: "Estudiar",finished: true,  initDate: Date(), finishDate: Date()),
@@ -19,9 +22,29 @@ class CalendaryTabViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        initCalendaryView()
+        initTableView()
+    }
+    
+    private func initTableView(){
         taskTableView.dataSource = self
         taskTableView.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
+    }
+    
+    private func initCalendaryView(){
+        let calendar = HorizontalCalendar()
+        view.addSubview(calendar)
+        calendar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            calendar.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 0),
+            calendar.leftAnchor.constraint(equalTo: view.leftAnchor),
+            calendar.rightAnchor.constraint(equalTo: view.rightAnchor),
+            calendar.bottomAnchor.constraint(equalTo: taskTableView.topAnchor)
+        ])
+        calendar.backgroundColor = .systemBackground
+        calendar.onSelectionChanged = { date in
+            print(date)
+        }
     }
     
 }
