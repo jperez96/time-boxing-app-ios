@@ -1,16 +1,20 @@
 PODS:
   - HorizontalCalendar (0.0.1)
+  - RxSwift (6.5.0)
 
 DEPENDENCIES:
   - HorizontalCalendar
+  - RxSwift
 
 SPEC REPOS:
   trunk:
     - HorizontalCalendar
+    - RxSwift
 
 SPEC CHECKSUMS:
   HorizontalCalendar: 264ae0d6b162890d637db90db3a618fc14587a69
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 3987fe2082deb7533fc504dbf5683b49e8774ac4
+PODFILE CHECKSUM: 53499b7fabf480af0de3085a3e1dcf969a6c9212
 
 COCOAPODS: 1.11.3

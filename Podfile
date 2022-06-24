@@ -5,6 +5,7 @@ target 'Time Boxing App' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'HorizontalCalendar'
+  pod 'RxSwift'
   # Pods for Time Boxing App
 
 end
