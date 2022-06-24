@@ -25,6 +25,8 @@
 		1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */; };
 		1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */; };
 		1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */; };
+		1AE92848286560BA0076057A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE92847286560BA0076057A /* Extensions.swift */; };
+		1AE9284D2865730A0076057A /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9284C2865730A0076057A /* UIExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		1ADFB91028616F08005A5E74 /* SettingsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabViewController.swift; sourceTree = "<group>"; };
 		1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFormViewController.swift; sourceTree = "<group>"; };
+		1AE92847286560BA0076057A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		1AE9284C2865730A0076057A /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.debug.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,8 @@
 			children = (
 				1A8FF3BE2862E23A00A54872 /* UIComponents */,
 				1A8FF3BB2862D83600A54872 /* Constants.swift */,
+				1AE92847286560BA0076057A /* Extensions.swift */,
+				1AE9284C2865730A0076057A /* UIExtension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -372,11 +378,13 @@
 				1ADFB8B728611011005A5E74 /* LoginViewController.swift in Sources */,
 				1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */,
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
+				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
+				1AE92848286560BA0076057A /* Extensions.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
 				1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */,

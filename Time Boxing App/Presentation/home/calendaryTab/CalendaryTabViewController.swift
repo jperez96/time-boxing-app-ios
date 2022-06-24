@@ -9,7 +9,7 @@ import UIKit
 import HorizontalCalendar
 
 class CalendaryTabViewController: UIViewController {
-   
+    
     @IBOutlet weak var taskTableView: UITableView!
     @IBOutlet weak var headerStackView: UIStackView!
     @IBOutlet weak var calendaryView: UIView!
@@ -19,7 +19,7 @@ class CalendaryTabViewController: UIViewController {
         Task(name: "Repasar", initDate: Date(), finishDate: Date()),
         Task(name: "Acabar el proyecto", finished: false, initDate: Date(), finishDate: Date())
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initCalendaryView()
@@ -32,11 +32,11 @@ class CalendaryTabViewController: UIViewController {
     }
     
     @IBAction func openFormTaskButton(_ sender: UIButton) {
-        let viewController = TaskFormViewController()
-        viewController.delegate = self
-        self.present(viewController, animated: true, completion: nil)
-        //viewController.modalPresentationStyle = .automatic
-        //self.present(viewController, animated: true)
+        if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
+            vc.delegate = self
+            vc.modalPresentationStyle = .formSheet
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     private func initCalendaryView(){
@@ -74,5 +74,6 @@ extension CalendaryTabViewController : UITableViewDataSource {
 extension CalendaryTabViewController : TaskFormDelegate {
     func didRegister(task: Task) {
         tasks.append(task)
+        taskTableView.reloadData()
     }
 }

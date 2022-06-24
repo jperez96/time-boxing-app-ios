@@ -94,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gjb-bU-KJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-894.20289855072474" y="-763.39285714285711"/>
+            <point key="canvasLocation" x="-943" y="-988"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="vZj-ao-gma">
@@ -134,13 +134,13 @@
         <!--Task Form View Controller-->
         <scene sceneID="1ht-JG-YL8">
             <objects>
-                <viewController id="3so-kT-Tn4" customClass="TaskFormViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1uA-j3-00Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                <viewController storyboardIdentifier="TaskFormVC" id="3so-kT-Tn4" customClass="TaskFormViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="1uA-j3-00Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp">
-                                <rect key="frame" x="25" y="25" width="81.5" height="31"/>
+                                <rect key="frame" x="25" y="69" width="81.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Cancelar"/>
                                 <connections>
@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-sO-c6T">
-                                <rect key="frame" x="25" y="100" width="364" height="161.5"/>
+                                <rect key="frame" x="25" y="144" width="364" height="161.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-8x-9Ch">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -160,39 +160,58 @@
                                         <rect key="frame" x="0.0" y="35.5" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="titleEditingChangedTextField:" destination="3so-kT-Tn4" eventType="editingChanged" id="eeI-zA-EGb"/>
+                                        </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-9J-qnA">
                                         <rect key="frame" x="0.0" y="84.5" width="364" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Fecha Inicio"/>
-                                        <connections>
-                                            <action selector="startDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="6Nn-Rv-3nS"/>
-                                        </connections>
-                                    </button>
-                                    <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FV7-7f-QGF">
-                                        <rect key="frame" x="0.0" y="123" width="364" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="RWM-Od-6YD"/>
-                                        </constraints>
-                                    </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Fecha Inicio"/>
+                                                <connections>
+                                                    <action selector="startDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="6Nn-Rv-3nS"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="FV7-7f-QGF">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="RWM-Od-6YD"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="initValueChangeDatePicker:" destination="3so-kT-Tn4" eventType="valueChanged" id="rBJ-Gg-gCl"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-mB-XZr">
                                         <rect key="frame" x="0.0" y="130.5" width="364" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Fecha Fin"/>
-                                        <connections>
-                                            <action selector="endDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="vI2-Sz-UeA"/>
-                                        </connections>
-                                    </button>
-                                    <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-I8-jRQ">
-                                        <rect key="frame" x="0.0" y="161.5" width="364" height="100"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="ITR-d5-adZ"/>
-                                        </constraints>
-                                    </datePicker>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Fecha Fin"/>
+                                                <connections>
+                                                    <action selector="endDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="vI2-Sz-UeA"/>
+                                                </connections>
+                                            </button>
+                                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-I8-jRQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="110"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="110" id="ITR-d5-adZ"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="endValueChangedDatePicker:" destination="3so-kT-Tn4" eventType="valueChanged" id="B8J-CW-JA2"/>
+                                                </connections>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR">
-                                <rect key="frame" x="306.5" y="25" width="82.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR">
+                                <rect key="frame" x="306.5" y="69" width="82.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
                                 <connections>
@@ -213,17 +232,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RQu-g8-yHy"/>
-                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="endDateButtonOutlet" destination="dRc-r3-oDP" id="9CN-Wh-7QJ"/>
-                        <outlet property="endDatePicker" destination="Jh1-I8-jRQ" id="6Dr-7S-mnM"/>
+                        <outlet property="endDatePicker" destination="Jh1-I8-jRQ" id="h1Q-zO-h2A"/>
                         <outlet property="initDateButtonOutle" destination="SFv-CB-G1t" id="ljT-LB-sdP"/>
-                        <outlet property="startDatePicker" destination="FV7-7f-QGF" id="rTD-mS-EP1"/>
+                        <outlet property="registerButton" destination="TM6-mz-VgR" id="xl6-en-EbK"/>
+                        <outlet property="startDatePicker" destination="FV7-7f-QGF" id="PJ9-FB-N2v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yc3-df-jSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-1001"/>
+            <point key="canvasLocation" x="-99" y="-988"/>
         </scene>
     </scenes>
     <resources>

@@ -18,12 +18,22 @@ class TaskFormViewController: UIViewController {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var initDateButtonOutle: UIButton!
     @IBOutlet weak var endDateButtonOutlet: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
     
     var task = Task(name: "", initDate: Date(), finishDate: Date())
     var delegate : TaskFormDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
+    }
+    
+    private func setupViews() {
+        initDateButtonOutle.contentHorizontalAlignment = .left
+        endDateButtonOutlet.contentHorizontalAlignment = .left
+        let defaultDate = Date()
+        initDateButtonOutle.setDateString(defaultDate, "Fecha Inicio")
+        endDateButtonOutlet.setDateString(defaultDate, "Fecha Fin", .format3)
     }
  
     @IBAction func dismissButton(_ sender: Any) {
@@ -37,27 +47,38 @@ class TaskFormViewController: UIViewController {
     
     @IBAction func startDateButton(_ sender: UIButton) {
         startDatePicker.isHidden = !startDatePicker.isHidden
-        if(startDatePicker.isHidden) {
-            saveInitDate()
-        }
     }
     
     @IBAction func endDateButton(_ sender: UIButton) {
         endDatePicker.isHidden = !endDatePicker.isHidden
-        if(endDatePicker.isHidden) {
-            saveEndDate()
+    }
+    
+    @IBAction func titleEditingChangedTextField(_ sender: UITextField) {
+        guard let title = sender.text else {
+            return
         }
+        registerButton.isEnabled = !title.isEmpty
+        task.name = title
     }
     
-    private func saveEndDate(){
-        task.finishDate = endDatePicker.date
-        endDateButtonOutlet.setTitle("\(task.finishDate.description(with: .current))", for: .normal)
+    @IBAction func initValueChangeDatePicker(_ sender: UIDatePicker) {
+        saveInitDate(sender.date)
+    }
+
+    @IBAction func endValueChangedDatePicker(_ sender: UIDatePicker) {
+        saveEndDate(sender.date)
     }
     
-    private func saveInitDate() {
-        task.initDate = startDatePicker.date
-        task.finishDate = startDatePicker.date
-        endDatePicker.minimumDate = startDatePicker.date
-        initDateButtonOutle.setTitle("\(task.initDate.description(with: .current))", for: .normal)
+    private func saveEndDate(_ date: Date){
+        task.finishDate = date
+        endDateButtonOutlet.setDateString(date, "Fecha Fin", .format3)
     }
+    
+    private func saveInitDate(_ date: Date) {
+        task.initDate = date
+        task.finishDate = date
+        endDatePicker.minimumDate = date
+        initDateButtonOutle.setDateString(date, "Fecha Inicio")
+    }
+    
 }
