@@ -16,8 +16,8 @@ class LoginUseCase: LoginUseCaseProtocol {
     
     private let authRepository : AuthRepository
     
-    init(_ repository: AuthRepository){
-        self.authRepository = repository
+    init() {
+        self.authRepository = AuthRepository()
     }
     
     func execute(_ user: User) -> Single<Bool> {

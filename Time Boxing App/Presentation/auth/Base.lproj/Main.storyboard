@@ -91,15 +91,18 @@
                                         <rect key="frame" x="0.0" y="30.5" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onChangeUsernameTextField:" destination="ooy-Lv-d0g" eventType="editingChanged" id="5h0-QK-Aok"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l">
                                 <rect key="frame" x="50" y="114.5" width="314" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
                                 <connections>
-                                    <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="keB-kY-sXt"/>
+                                    <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="oe2-hL-U0v"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -116,6 +119,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kDC-2b-IIW"/>
                     <connections>
+                        <outlet property="registerButton" destination="ahh-E4-38l" id="zGC-y4-Uxq"/>
                         <outlet property="userTextField" destination="20w-XU-e6P" id="bas-xg-VRZ"/>
                     </connections>
                 </viewController>

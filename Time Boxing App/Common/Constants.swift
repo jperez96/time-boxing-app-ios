@@ -13,10 +13,12 @@ enum CellViewName : String {
 
 enum ViewControllerName: String {
     case TabView = "TabViewController"
+    case LoginView = "LoginViewController"
 }
 
 enum StoryboardName : String {
     case Home = "HomeStoryboard"
+    case Login = "Main"
 }
 
 enum AssetsName : String {
@@ -30,6 +32,8 @@ enum DateFormat : String {
     case format3 = "HH:mm"
 }
 
-enum LoginType {
-    case AppleId, Google, Other
+enum LoginType : Int {
+    case AppleId = 1
+    case Google = 2
+    case Other = 3
 }

@@ -28,7 +28,7 @@
         <!--Calendario-->
         <scene sceneID="82h-Sl-3Ic">
             <objects>
-                <viewController id="kD3-ag-ugZ" customClass="CalendaryTabViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendaryTabViewController" id="kD3-ag-ugZ" customClass="CalendaryTabViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="meH-Ca-Wl8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
