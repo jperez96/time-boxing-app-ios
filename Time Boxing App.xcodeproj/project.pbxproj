@@ -14,7 +14,6 @@
 		1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */; };
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
 		1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */; };
-		1A72F17C2866BB2B00A5CB34 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F17B2866BB2B00A5CB34 /* RegisterUseCase.swift */; };
 		1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */; };
 		1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */; };
 		1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3BB2862D83600A54872 /* Constants.swift */; };
@@ -46,7 +45,6 @@
 		1A3EF7E1285F96AC00CAF671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
-		1A72F17B2866BB2B00A5CB34 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
 		1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
 		1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellTableViewCell.xib; sourceTree = "<group>"; };
 		1A8FF3BB2862D83600A54872 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -297,7 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE928572865787B0076057A /* LoginUseCase.swift */,
-				1A72F17B2866BB2B00A5CB34 /* RegisterUseCase.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -461,7 +458,6 @@
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
-				1A72F17C2866BB2B00A5CB34 /* RegisterUseCase.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,

@@ -10,5 +10,4 @@ import RxSwift
 
 protocol IAuthRepository {
     func login(_ user : User) -> Single<Bool>
-    func register(_ user : User) -> Single<Bool>
 }

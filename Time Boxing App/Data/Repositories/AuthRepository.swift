@@ -12,20 +12,7 @@ class AuthRepository : IAuthRepository {
     
     private lazy var defaultUtilData = UserDefaultUtils()
     
-    
     func login(_ user: User) -> Single<Bool> {
-        return Single.create { single in
-            let userCreated = self.defaultUtilData.registerUser(user)
-            if ( userCreated != nil ) {
-                single(.success(true))
-            } else {
-                single(.success(false))
-            }
-            return Disposables.create {}
-        }
-    }
-    
-    func register(_ user: User) -> Single<Bool> {
         return Single.create { single in
             let userCreated = self.defaultUtilData.registerUser(user)
             if ( userCreated != nil ) {
