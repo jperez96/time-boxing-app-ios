@@ -29,3 +29,7 @@ enum DateFormat : String {
     case format2 = "dd-MM-yyyy"
     case format3 = "HH:mm"
 }
+
+enum LoginType {
+    case AppleId, Google, Other
+}
