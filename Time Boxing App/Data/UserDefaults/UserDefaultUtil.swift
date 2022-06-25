@@ -22,7 +22,7 @@ class UserDefaultUtils {
     }
     
     func removeUserLogged() -> Bool {
-        self.userDefault.set(nil, forKey: Key.userLogged.rawValue)
+        self.userDefault.removeObject(forKey: Key.userLogged.rawValue)
         return self.getUserLogged() == nil
     }
     

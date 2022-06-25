@@ -11,7 +11,7 @@ class TaskCellTableViewCell: UITableViewCell {
         
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var checkBoxView: CheckBoxView!
-    private var task : Task? = nil
+    private var task : Task?
     
     @IBAction func checboxAction(_ sender: CheckBoxView) {
         guard task != nil else {
