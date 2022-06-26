@@ -15,6 +15,8 @@
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
 		1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */; };
 		1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A12867EFA500A5CB34 /* DataModel.xcdatamodeld */; };
+		1A72F1A52867F3AF00A5CB34 /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A42867F3AF00A5CB34 /* CoreDataUtil.swift */; };
+		1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */; };
 		1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */; };
 		1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */; };
 		1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FF3BB2862D83600A54872 /* Constants.swift */; };
@@ -47,6 +49,8 @@
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		1A72F1A22867EFA500A5CB34 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		1A72F1A42867F3AF00A5CB34 /* CoreDataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUtil.swift; sourceTree = "<group>"; };
+		1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityUtil.swift; sourceTree = "<group>"; };
 		1A8FF3B42862D22D00A54872 /* TaskCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellTableViewCell.swift; sourceTree = "<group>"; };
 		1A8FF3B52862D22D00A54872 /* TaskCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCellTableViewCell.xib; sourceTree = "<group>"; };
 		1A8FF3BB2862D83600A54872 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */,
+				1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 		1A72F17D2867ED5200A5CB34 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				1A72F1A42867F3AF00A5CB34 /* CoreDataUtil.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
+				1A72F1A52867F3AF00A5CB34 /* CoreDataUtil.swift in Sources */,
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
@@ -476,6 +483,7 @@
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
 				1AE92848286560BA0076057A /* Extensions.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
+				1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
 				1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */,
 				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,

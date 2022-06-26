@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Task {
+struct Task : Codable{
+    
     let id : UUID
     var name : String
     var finished : Bool
@@ -30,4 +31,16 @@ struct Task {
         self.finishDate = finishDate
     }
     
+}
+
+extension Task : CoreDataEntityRequiere {
+    func getDataModel() -> [String : Any] {
+        return [
+            "id": self.id,
+            "name": self.name,
+            "finished": self.finished,
+            "initDate": self.initDate,
+            "finishDate": self.finishDate,
+        ] as [String : Any]
+    }
 }

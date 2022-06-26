@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum CoreDataEntity : String {
+    case TaskEntity = "TaskEntity"
+}
+
 enum CellViewName : String {
     case task = "TaskCellView"
 }
