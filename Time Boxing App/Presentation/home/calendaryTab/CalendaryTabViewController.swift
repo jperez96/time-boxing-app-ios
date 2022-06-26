@@ -17,7 +17,7 @@ class CalendaryTabViewController: UIViewController {
     var tasks = [
         Task(name: "Estudiar",finished: true,  initDate: Date(), finishDate: Date()),
         Task(name: "Repasar", initDate: Date(), finishDate: Date()),
-        Task(name: "Acabar el proyecto", finished: false, initDate: Date(), finishDate: Date())
+        Task(name: "Acabar el proyecto", initDate: Date(), finishDate: Date())
     ]
     
     override func viewDidLoad() {
