@@ -6,7 +6,11 @@
 //
 
 import Foundation
+import CoreData
 
 protocol CoreDataEntityRequiere {
     func getDataModel() -> [String: Any]
+    func getIdentifierPredicate() -> NSPredicate
+    static func getEntityName() -> String
+    static func cast<T>(_ entity : NSManagedObject) -> T?
 }

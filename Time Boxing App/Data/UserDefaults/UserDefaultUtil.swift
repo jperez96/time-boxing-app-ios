@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserDefaultUtils {
+class UserDefaultManager {
     
     private enum Key : String {
         case userLogged = "userLogged"

@@ -15,7 +15,7 @@ class SettingsTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        guard let user = UserDefaultUtils().getUserLogged() else {
+        guard let user = UserDefaultManager().getUserLogged() else {
             return
         }
         userNameLabel.text = user.name
@@ -28,7 +28,7 @@ class SettingsTabViewController: UIViewController {
     
     @IBAction func onDidTouchSignOutButton(_ sender: UIButton) {
         
-        if(UserDefaultUtils().removeUserLogged()){
+        if(UserDefaultManager().removeUserLogged()){
             let loginStoryBoard = UIStoryboard(name: StoryboardName.Login.rawValue , bundle: .main)
             let initialViewController = loginStoryBoard.instantiateViewController(withIdentifier: ViewControllerName.LoginView.rawValue)
             initialViewController.modalPresentationStyle = .currentContext

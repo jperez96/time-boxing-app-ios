@@ -14,11 +14,9 @@ class CalendaryTabViewController: UIViewController {
     @IBOutlet weak var headerStackView: UIStackView!
     @IBOutlet weak var calendaryView: UIView!
     
-    var tasks = [
-        Task(name: "Estudiar",finished: true,  initDate: Date(), finishDate: Date()),
-        Task(name: "Repasar", initDate: Date(), finishDate: Date()),
-        Task(name: "Acabar el proyecto", initDate: Date(), finishDate: Date())
-    ]
+    private var getTaskFromDate = GetTaskFromDateUseCase()
+    private var tasks : [Task] = []
+    private var calendar = HorizontalCalendar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +38,6 @@ class CalendaryTabViewController: UIViewController {
     }
     
     private func initCalendaryView(){
-        let calendar = HorizontalCalendar()
         view.addSubview(calendar)
         calendar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -51,11 +48,21 @@ class CalendaryTabViewController: UIViewController {
         ])
         calendar.backgroundColor = .systemBackground
         calendar.onSelectionChanged = { date in
-            print(date)
+            self.getTaskFromDate(date)
+        }
+    }
+    
+    private func getTaskFromDate(_ date: Date){
+        let _ = self.getTaskFromDate.execute(date).subscribe { response in
+            self.tasks = response.responseData
+            self.taskTableView.reloadData()
+        } onFailure: { error in
+            print(error)
         }
     }
     
 }
+
 
 extension CalendaryTabViewController : UITableViewDataSource {
     
@@ -73,7 +80,6 @@ extension CalendaryTabViewController : UITableViewDataSource {
 
 extension CalendaryTabViewController : TaskFormDelegate {
     func didRegister(task: Task) {
-        tasks.append(task)
-        taskTableView.reloadData()
+        getTaskFromDate(self.calendar.selectedDate)
     }
 }

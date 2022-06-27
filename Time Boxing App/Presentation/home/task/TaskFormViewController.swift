@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol TaskFormDelegate {
     func didRegister(task: Task)
@@ -41,8 +42,13 @@ class TaskFormViewController: UIViewController {
     }
     
     @IBAction func registerTaskButton(_ sender: UIButton) {
-        dismiss(animated: true)
-        delegate?.didRegister(task: task)
+        let useCase = CreateTaskUseCase()
+        let _ = useCase.execute(task).subscribe { response in
+            self.dismiss(animated: true)
+            self.delegate?.didRegister(task: self.task)
+        } onFailure: { error in
+            print(error)
+        }
     }
     
     @IBAction func startDateButton(_ sender: UIButton) {
