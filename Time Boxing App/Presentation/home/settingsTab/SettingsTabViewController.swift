@@ -27,8 +27,11 @@ class SettingsTabViewController: UIViewController {
     }
     
     @IBAction func onDidTouchSignOutButton(_ sender: UIButton) {
-        
+        guard let coreData = CoreDataManager() else {
+            return
+        }
         if(UserDefaultManager().removeUserLogged()){
+            coreData.nuke()
             let loginStoryBoard = UIStoryboard(name: StoryboardName.Login.rawValue , bundle: .main)
             let initialViewController = loginStoryBoard.instantiateViewController(withIdentifier: ViewControllerName.LoginView.rawValue)
             initialViewController.modalPresentationStyle = .currentContext

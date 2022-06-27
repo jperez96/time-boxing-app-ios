@@ -23,9 +23,6 @@
                             <constraint firstAttribute="height" constant="20" id="KsD-lE-Pb2"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <connections>
-                            <action selector="checboxAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RDB-6y-wWN"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-k3-7oQ">
                         <rect key="frame" x="40" y="10" width="270" height="40"/>

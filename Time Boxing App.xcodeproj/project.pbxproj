@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E3D3401A121DD68AB78395D /* Pods_Time_Boxing_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */; };
 		1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */; };
+		1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */; };
+		1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */; };
 		1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */; };
 		1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */; };
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		074E95F24A4EE5929C7F95A7 /* Pods-Time Boxing App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.release.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.release.xcconfig"; sourceTree = "<group>"; };
 		1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaskFromDateUseCase.swift; sourceTree = "<group>"; };
+		1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCase.swift; sourceTree = "<group>"; };
+		1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTaskUseCase.swift; sourceTree = "<group>"; };
 		1A3EF7D2285F96AB00CAF671 /* Time Boxing App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Boxing App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A062165286A17A6000B58D6 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				1A72F1AB286814B600A5CB34 /* CreateTaskUseCase.swift */,
+				1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */,
+				1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */,
+				1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
 		1A3EF7C9285F96AB00CAF671 = {
 			isa = PBXGroup;
 			children = (
@@ -315,9 +330,8 @@
 		1AE92855286578590076057A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				1A062165286A17A6000B58D6 /* Task */,
 				1AE928562865786B0076057A /* Auth */,
-				1A72F1AB286814B600A5CB34 /* CreateTaskUseCase.swift */,
-				1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -485,9 +499,11 @@
 				1ADFB90D28616EF1005A5E74 /* CalendaryTabViewController.swift in Sources */,
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
 				1A72F1B22868160300A5CB34 /* BaseResponse.swift in Sources */,
+				1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */,
 				1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */,
 				1AE928542865777A0076057A /* AuthRepository.swift in Sources */,
 				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
+				1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
 				1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */,

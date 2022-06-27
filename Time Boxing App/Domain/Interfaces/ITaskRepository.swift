@@ -11,4 +11,5 @@ import RxSwift
 protocol ITaskRepository {
     func createTask(_ task : Task) -> Single<BaseResponse<Task>>
     func removeTask(_ task : Task) -> Single<BaseResponse<Bool>>
+    func updateTask(_ task : Task) -> Single<BaseResponse<Bool>>
 }

@@ -42,10 +42,31 @@ class CoreDataManager {
         return inserted
     }
     
+    func updateEntity<T: CoreDataEntityRequiere>(entityData : T) -> Bool {
+        guard let dataToUpdate = self.findEntitiesByPredicate(entity: T.self, predicate: entityData.getIdentifierPredicate() ) else {
+            return false
+        }
+        if (dataToUpdate.isEmpty) {
+            return false
+        }
+        
+        dataToUpdate.forEach { obj in
+            obj.setValuesForKeys(entityData.getDataModel())
+        }
+        
+        let updated = saveData()
+        return updated
+    }
+    
     func removeEntity<T: CoreDataEntityRequiere>(entity: T) -> Bool {
         guard let results = findEntitiesByPredicate(entity: T.self, predicate: entity.getIdentifierPredicate()) else {
             return false
         }
+        
+        if (results.isEmpty){
+            return false
+        }
+        
         for result in results {
             context.delete(result)
         }
@@ -91,6 +112,28 @@ class CoreDataManager {
         let newData =  NSManagedObject(entity: entity, insertInto: context)
         newData.setValuesForKeys(entityData.getDataModel())
         return true
+    }
+    
+    func nuke() {
+        let storeContainer = appDelegate.persistentContainer.persistentStoreCoordinator
+        for store in storeContainer.persistentStores {
+            do {
+                try storeContainer.destroyPersistentStore(
+                    at: store.url!,
+                    ofType: store.type,
+                    options: nil
+                )
+            } catch let error {
+                print(error)
+            }
+        }
+        appDelegate.persistentContainer = NSPersistentCloudKitContainer(
+            name: "DataModel"
+        )
+        appDelegate.persistentContainer.loadPersistentStores {
+            (store, error) in
+            print(error ?? store)
+        }
     }
     
     private func saveData() -> Bool {
