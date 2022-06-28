@@ -31,6 +31,9 @@
                                         <rect key="frame" x="0.0" y="56" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesión con Google"/>
+                                        <connections>
+                                            <action selector="loginGoogleButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPI-mh-56R"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4c-fv-q0q">
                                         <rect key="frame" x="0.0" y="112" width="314" height="31"/>

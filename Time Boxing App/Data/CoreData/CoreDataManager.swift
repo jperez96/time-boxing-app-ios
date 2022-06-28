@@ -132,7 +132,7 @@ class CoreDataManager {
         )
         appDelegate.persistentContainer.loadPersistentStores {
             (store, error) in
-            print(error ?? store)
+            print(error ?? "")
         }
     }
     

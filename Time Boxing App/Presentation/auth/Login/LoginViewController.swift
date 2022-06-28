@@ -14,4 +14,10 @@ class LoginViewController: UIViewController {
         
     }
 
+    @IBAction func loginGoogleButton() {
+        guard let service = GoogleAuthService() else {
+            return
+        }
+        service.signGoogle(vc: self)
+    }
 }

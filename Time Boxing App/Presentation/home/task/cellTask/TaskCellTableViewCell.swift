@@ -35,7 +35,11 @@ class TaskCellTableViewCell: UITableViewCell {
             return
         }
         let _ = updateTaskUseCase.execute(self.task!).subscribe { response in
-            if(!response.responseData){
+            guard let result = response.responseData else {
+                print(response.responseMessage)
+                return
+            }
+            if(!result){
                 print(response.responseMessage)
             }
         } onFailure: { error in

@@ -15,14 +15,14 @@ class TaskRepository : ITaskRepository {
     func createTask(_ task: Task) -> Single<BaseResponse<Task>> {
         return Single.create { single in
             guard let coreData = self.coreData else {
-                single(.success(.error(data: task, msg: "CoreData no inicializado.")))
+                single(.success(.error(msg: "CoreData no inicializado.")))
                 return Disposables.create {}
             }
             let created = coreData.insertEntity(entityData: task)
             if (created) {
                 single(.success(.success(data: task)))
             } else {
-                single(.success(.error(data: task, msg: "No se registro en Core Data.")))
+                single(.success(.error(msg: "No se registro en Core Data.")))
             }
             return Disposables.create {}
         }
@@ -31,14 +31,14 @@ class TaskRepository : ITaskRepository {
     func removeTask(_ task: Task) -> Single<BaseResponse<Bool>> {
         return Single.create { single in
             guard let coreData = self.coreData else {
-                single(.success(.error(data: false, msg: "CoreData no inicializado.")))
+                single(.success(.error(msg: "CoreData no inicializado.")))
                 return Disposables.create {}
             }
             let removed = coreData.removeEntity(entity: task)
             if (removed) {
                 single(.success(.success(data: true)))
             } else {
-                single(.success(.error(data: false, msg: "No se elimino de Core Data.")))
+                single(.success(.error( msg: "No se elimino de Core Data.")))
             }
             return Disposables.create {}
         }
@@ -47,7 +47,7 @@ class TaskRepository : ITaskRepository {
     func getTaskByDate(_ date: Date) -> Single<BaseResponse<[Task]>> {
         return Single.create { single in
             guard let coreData = self.coreData else {
-                single(.success(.error(data: [], msg: "CoreData no inicializado.")))
+                single(.success(.error(msg: "CoreData no inicializado.")))
                 return Disposables.create {}
             }
             
@@ -68,7 +68,7 @@ class TaskRepository : ITaskRepository {
                 }
                 single(.success(.success(data: taskList)))
             } else {
-                single(.success(.error(data: [], msg: "Hay objetos nulos en la lista, verifique el modelo que se ha implementado")))
+                single(.success(.error( msg: "Hay objetos nulos en la lista, verifique el modelo que se ha implementado")))
             }
             
             return Disposables.create {}
@@ -78,14 +78,14 @@ class TaskRepository : ITaskRepository {
     func updateTask(_ task: Task) -> Single<BaseResponse<Bool>> {
         return Single.create { single in
             guard let coreData = self.coreData else {
-                single(.success(.error(data: false, msg: "CoreData no inicializado.")))
+                single(.success(.error( msg: "CoreData no inicializado.")))
                 return Disposables.create {}
             }
             let updated = coreData.updateEntity(entityData: task)
             if (updated) {
                 single(.success(.success(data: updated)))
             } else {
-                single(.success(.error(data: updated, msg: "No se actualizo en Core Data.")))
+                single(.success(.error( msg: "No se actualizo en Core Data.")))
             }
             return Disposables.create {}
         }

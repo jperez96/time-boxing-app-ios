@@ -56,7 +56,11 @@ class CalendaryTabViewController: UIViewController {
     
     private func getTaskFromDate(_ date: Date){
         let _ = self.getTaskFromDate.execute(date).subscribe { response in
-            self.tasks = response.responseData
+            guard let result = response.responseData else {
+                print(response.responseMessage)
+                return
+            }
+            self.tasks = result
             self.taskTableView.reloadData()
         } onFailure: { error in
             print(error)
@@ -65,7 +69,11 @@ class CalendaryTabViewController: UIViewController {
     
     private func removeTask(_ task : Task) {
         let _ = removeTaskUseCase.execute(task).subscribe { response in
-            if !response.responseData  {
+            guard let result = response.responseData else {
+                print(response.responseMessage)
+                return
+            }
+            if !result  {
                 print("Fallo al borrar la tarea")
             }
             self.getTaskFromDate(self.calendar.selectedDate)

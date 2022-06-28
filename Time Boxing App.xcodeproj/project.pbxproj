@@ -11,6 +11,8 @@
 		1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */; };
 		1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */; };
 		1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */; };
+		1A113146286B6AED00C9385F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A113145286B6AED00C9385F /* GoogleService-Info.plist */; };
+		1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */; };
 		1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */; };
 		1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */; };
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
@@ -50,6 +52,8 @@
 		1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaskFromDateUseCase.swift; sourceTree = "<group>"; };
 		1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCase.swift; sourceTree = "<group>"; };
 		1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTaskUseCase.swift; sourceTree = "<group>"; };
+		1A113145286B6AED00C9385F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
 		1A3EF7D2285F96AB00CAF671 /* Time Boxing App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Boxing App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +115,14 @@
 			path = Task;
 			sourceTree = "<group>";
 		};
+		1A24BDCB286BA317003D846C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		1A3EF7C9285F96AB00CAF671 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +144,7 @@
 		1A3EF7D4285F96AB00CAF671 /* Time Boxing App */ = {
 			isa = PBXGroup;
 			children = (
+				1A113145286B6AED00C9385F /* GoogleService-Info.plist */,
 				1AE9284E286576870076057A /* Data */,
 				1A8FF3C42863852200A54872 /* Domain */,
 				1A8FF3BA2862D82B00A54872 /* Common */,
@@ -170,6 +183,7 @@
 		1A8FF3BA2862D82B00A54872 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A24BDCB286BA317003D846C /* Services */,
 				1A72F1772866B19D00A5CB34 /* Utilities */,
 				1A8FF3BE2862E23A00A54872 /* UIComponents */,
 				1A8FF3BB2862D83600A54872 /* Constants.swift */,
@@ -443,6 +457,7 @@
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
+				1A113146286B6AED00C9385F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +529,7 @@
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
+				1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */,
 				1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */,
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
 				1AE92848286560BA0076057A /* Extensions.swift in Sources */,
