@@ -15,6 +15,7 @@ class CalendaryTabViewController: UIViewController {
     @IBOutlet weak var calendaryView: UIView!
     
     private var getTaskFromDate = GetTaskFromDateUseCase()
+    private var removeTaskUseCase = RemoveTaskUseCase()
     private var tasks : [Task] = []
     private var calendar = HorizontalCalendar()
     
@@ -26,6 +27,7 @@ class CalendaryTabViewController: UIViewController {
     
     private func initTableView(){
         taskTableView.dataSource = self
+        taskTableView.delegate = self
         taskTableView.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
     }
     
@@ -61,6 +63,17 @@ class CalendaryTabViewController: UIViewController {
         }
     }
     
+    private func removeTask(_ task : Task) {
+        let _ = removeTaskUseCase.execute(task).subscribe { response in
+            if !response.responseData  {
+                print("Fallo al borrar la tarea")
+            }
+            self.getTaskFromDate(self.calendar.selectedDate)
+        } onFailure: { error in
+          print(error)
+        }
+    }
+    
 }
 
 
@@ -76,6 +89,21 @@ extension CalendaryTabViewController : UITableViewDataSource {
         return cell
     }
     
+}
+
+extension CalendaryTabViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+            let taskToRemove = self.tasks[indexPath.row]
+            self.removeTask(taskToRemove)
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .systemRed
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
 }
 
 extension CalendaryTabViewController : TaskFormDelegate {
