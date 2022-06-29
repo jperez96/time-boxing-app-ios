@@ -10,15 +10,21 @@ import FirebaseCore
 import GoogleSignIn
 import FirebaseAuth
 
-protocol GoogleAuthDelegate {
-    func onSignGoogleResponse(_ response: BaseResponse<User>)
+protocol GoogleSignInDelegate {
+    func onSignInGoogleResponse(_ response: BaseResponse<User>)
+}
+
+protocol GoogleSignOutDelegate {
+    func onSignOutResponse(_ response: BaseResponse<Bool>)
 }
 
 class GoogleAuthService {
     
     private var clientID : String
     private var config : GIDConfiguration
-    var delegate : GoogleAuthDelegate?
+    var signInDelegate : GoogleSignInDelegate?
+    var signOutDelegate : GoogleSignOutDelegate?
+
     
     init?(){
         guard let id = FirebaseApp.app()?.options.clientID else {
@@ -28,21 +34,17 @@ class GoogleAuthService {
         self.config = GIDConfiguration(clientID: clientID)
     }
     
-    private func getCredentials(vc : UIViewController){
-        
-    }
-    
-    func signGoogle(vc : UIViewController){
-        GIDSignIn.sharedInstance.signIn(with: config, presenting: vc) { [unowned self] user, error in
-            if let error = error {
-                self.delegate?.onSignGoogleResponse(.error(msg: error.localizedDescription))
+    func signIn(vc : UIViewController){
+        GIDSignIn.sharedInstance.signIn(with: config, presenting: vc) { user, error in
+            if let _ = error {
+                self.signInDelegate?.onSignInGoogleResponse(.error(msg: error?.localizedDescription ?? "Error no especifido."))
                 return
             }
             guard
                 let authentication = user?.authentication,
                 let idToken = authentication.idToken
             else {
-                self.delegate?.onSignGoogleResponse(.error(msg: "No se obtuvo el authentication."))
+                self.signInDelegate?.onSignInGoogleResponse(.error(msg: "No se obtuvo el authentication."))
                 return
             }
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,
@@ -53,21 +55,31 @@ class GoogleAuthService {
     
     private func firebaseSignIn(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { authResult, error in
-            if let error = error {
-                self.delegate?.onSignGoogleResponse(.error(msg: error.localizedDescription))
+            if let _ = error {
+                self.signInDelegate?.onSignInGoogleResponse(.error(msg: error?.localizedDescription ?? "Error no especificado."))
                 // Falta la verificacion de telefono MULTI-FACTOR
                 return
             }
             
             guard let result = authResult else {
-                self.delegate?.onSignGoogleResponse(.error(msg: "Error al iniciar sesion con Google."))
+                self.signInDelegate?.onSignInGoogleResponse(.error(msg: "Error al iniciar sesion con Google."))
                 return
             }
             let defaultErrorMessage = "Sin identificar."
             let userName = result.user.displayName ?? defaultErrorMessage
             let userEmail = result.user.email ?? defaultErrorMessage
             let user = User(name: userName, email: userEmail, loginType: LoginType.Google.rawValue)
-            self.delegate?.onSignGoogleResponse(.success(data: user))
+            self.signInDelegate?.onSignInGoogleResponse(.success(data: user))
+        }
+    }
+    
+    func signOut() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            signOutDelegate?.onSignOutResponse(.success(data: true))
+        } catch let signOutError as NSError {
+            signOutDelegate?.onSignOutResponse(.error(msg: signOutError.localizedDescription))
         }
     }
     

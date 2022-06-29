@@ -183,7 +183,6 @@
 		1A8FF3BA2862D82B00A54872 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1A24BDCB286BA317003D846C /* Services */,
 				1A72F1772866B19D00A5CB34 /* Utilities */,
 				1A8FF3BE2862E23A00A54872 /* UIComponents */,
 				1A8FF3BB2862D83600A54872 /* Constants.swift */,
@@ -325,6 +324,7 @@
 		1AE9284E286576870076057A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A24BDCB286BA317003D846C /* Services */,
 				1A72F17D2867ED5200A5CB34 /* CoreData */,
 				1AE9285D28657EBA0076057A /* UserDefaults */,
 				1AE92850286576ED0076057A /* Repositories */,

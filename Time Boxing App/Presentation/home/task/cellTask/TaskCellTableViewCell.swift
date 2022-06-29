@@ -45,7 +45,6 @@ class TaskCellTableViewCell: UITableViewCell {
         } onFailure: { error in
             print(error)
         }
-
     }
     
 }
