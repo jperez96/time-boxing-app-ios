@@ -18,5 +18,13 @@ extension Date {
     func getWeekDay() -> Int {
         return Calendar.current.component(.weekday, from: self)
     }
-
+    
+    func getHour() -> Int {
+        return Calendar.current.component(.hour, from: self)
+    }
+    
+    func toDateString(_ format : DateFormat) -> String{
+        return self.string(format: format)
+    }
+    
 }

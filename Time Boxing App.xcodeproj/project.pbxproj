@@ -56,6 +56,7 @@
 		F741FFA72873C3FB001D5F55 /* UpdateRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA62873C3FB001D5F55 /* UpdateRoutineUseCase.swift */; };
 		F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */; };
 		F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */; };
+		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		F741FFA62873C3FB001D5F55 /* UpdateRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoutineUseCase.swift; sourceTree = "<group>"; };
 		F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoutineUseCase.swift; sourceTree = "<group>"; };
 		F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRoutineUseCase.swift; sourceTree = "<group>"; };
+		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */,
+				F7ABCFA12874ECB700D0182D /* NotificationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 		1ADFB8BA28611225005A5E74 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				1A24BDCB286BA317003D846C /* Services */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */,
 				1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */,
@@ -346,7 +350,6 @@
 		1AE9284E286576870076057A /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1A24BDCB286BA317003D846C /* Services */,
 				1A72F17D2867ED5200A5CB34 /* CoreData */,
 				1AE9285D28657EBA0076057A /* UserDefaults */,
 				1AE92850286576ED0076057A /* Repositories */,
@@ -613,6 +616,7 @@
 				F741FF9B28738E79001D5F55 /* Routine.swift in Sources */,
 				F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
+				F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
