@@ -97,6 +97,18 @@ class CoreDataManager {
         }
     }
     
+    func findEntitiesCasted<T: CoreDataEntityRequiere>(entity: T.Type) -> [T?] {
+        let request = NSFetchRequest<NSManagedObject>(entityName: entity.getEntityName())
+        request.returnsObjectsAsFaults = true
+        do {
+            let data = try context.fetch(request)
+            return castNSManagedObjectToObject(data)
+        } catch let error{
+            print(error)
+            return []
+        }
+    }
+
     private func castNSManagedObjectToObject<T: CoreDataEntityRequiere>(_ listNs : [NSManagedObject]) -> [T?] {
         var list : [T?] = []
         for obj in listNs {
