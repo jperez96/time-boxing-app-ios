@@ -67,6 +67,15 @@ class CalendaryTabViewController: UIViewController {
         }
     }
     
+    private func registerTask(_ task: Task){
+        let useCase = CreateTaskUseCase()
+        _ = useCase.execute(task).subscribe { response in
+            self.getTaskFromDate(self.calendar.selectedDate)
+        } onFailure: { error in
+            print(error)
+        }
+    }
+    
     private func removeTask(_ task : Task) {
         let _ = removeTaskUseCase.execute(task).subscribe { response in
             guard let result = response.responseData else {
@@ -116,6 +125,6 @@ extension CalendaryTabViewController : UITableViewDelegate {
 
 extension CalendaryTabViewController : TaskFormDelegate {
     func didRegister(task: Task) {
-        getTaskFromDate(self.calendar.selectedDate)
+        registerTask(task)
     }
 }

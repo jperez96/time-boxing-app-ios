@@ -308,8 +308,8 @@
 			children = (
 				F741FF852870A1DE001D5F55 /* routine */,
 				F741FF8228709E8A001D5F55 /* tabs */,
-				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
 				1ADFB91C2862AA9A005A5E74 /* task */,
+				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
 			);
 			path = home;
 			sourceTree = "<group>";

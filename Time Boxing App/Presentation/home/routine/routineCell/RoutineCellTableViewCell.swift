@@ -20,4 +20,8 @@ class RoutineCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setData(_ routine: Routine) {
+        self.textLabel?.text = routine.name
+    }
+    
 }

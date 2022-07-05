@@ -48,10 +48,14 @@ class TaskFormViewController: UIViewController {
     private func setUpFormTaskRoutineView(){
         startDatePicker.datePickerMode = .time
         guard let date = Task.getTaskDateByWeekDay(date: Date(), weekDay: weekDay) else {
-            startDatePicker.setDate(Date.now, animated: true)
             return
         }
+        self.task.initDate = date
+        self.task.finishDate = date
         startDatePicker.setDate(date, animated: true)
+        startDatePicker.minimumDate = date
+        endDatePicker.setDate(date, animated: true)
+        endDatePicker.minimumDate = date
     }
  
     @IBAction func dismissButton(_ sender: Any) {
@@ -59,22 +63,8 @@ class TaskFormViewController: UIViewController {
     }
     
     @IBAction func registerTaskButton(_ sender: UIButton) {
-        if(weekDay == 0) {
-            registerTask()
-            return
-        }
         self.delegate?.didRegister(task: self.task)
         dismiss(animated: true)
-    }
-    
-    private func registerTask(){
-        let useCase = CreateTaskUseCase()
-        let _ = useCase.execute(task).subscribe { response in
-            self.dismiss(animated: true)
-            self.delegate?.didRegister(task: self.task)
-        } onFailure: { error in
-            print(error)
-        }
     }
     
     @IBAction func startDateButton(_ sender: UIButton) {

@@ -24,4 +24,8 @@ extension UITableView {
     func registerTaskCell(){
         self.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
     }
+    
+    func registerRoutineCell(){
+        self.register(UINib(nibName: "RoutineCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.routine.rawValue)
+    }
 }

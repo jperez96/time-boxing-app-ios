@@ -3,7 +3,7 @@
     <entity name="RoutineEntity" representedClassName="RoutineEntity" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="tasks" optional="YES" attributeType="Transformable" valueTransformerName=""/>
+        <attribute name="tasks" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Task]"/>
     </entity>
     <entity name="TaskEntity" representedClassName="TaskEntity" syncable="YES" codeGenerationType="class">
         <attribute name="finishDate" attributeType="Date" usesScalarValueType="NO"/>
@@ -13,7 +13,7 @@
         <attribute name="name" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TaskEntity" positionX="-63" positionY="-54" width="128" height="104"/>
         <element name="RoutineEntity" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="TaskEntity" positionX="-63" positionY="-54" width="128" height="104"/>
     </elements>
 </model>

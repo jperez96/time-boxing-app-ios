@@ -14,6 +14,7 @@ enum CoreDataEntity : String {
 
 enum CellViewName : String {
     case task = "TaskCellView"
+    case routine = "RoutineCellView"
 }
 
 enum ViewControllerName: String {

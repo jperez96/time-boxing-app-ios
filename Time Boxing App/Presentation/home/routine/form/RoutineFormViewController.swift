@@ -7,39 +7,36 @@
 
 import UIKit
 
+protocol RoutineFormDelegate {
+    func registerRoutine(_ routine: Routine)
+}
+
 class RoutineFormViewController: UIViewController {
 
     @IBOutlet weak var daysStackView: UIStackView!
-    @IBOutlet weak var addRoutineButton: UIButton!
-    private var tasksWeek: [Task] = []
-    private var routine : Routine?
+    @IBOutlet weak var addRoutineOutlet: UIButton!
+    @IBOutlet weak var routineTableView: UITableView!
+    private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [])
+    private var tasks: [Task] = []
     private var weekDay = 1
     private var isToUpdate: Bool = false
-    private let taskListViewController = TaskListViewController()
+    var delegate: RoutineFormDelegate? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTaskListView()
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setUpTableView()
     }
     
-    private func setUpTaskListView(){
-        guard let taskListView = self.taskListViewController.view else {
-            return
-        }
-        view.addSubview(taskListView)
-        taskListView.translatesAutoresizingMaskIntoConstraints = false
-        addChild(self.taskListViewController)
-        NSLayoutConstraint.activate([
-            taskListView.topAnchor.constraint(equalTo: daysStackView.bottomAnchor, constant: 15),
-            taskListView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            taskListView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            taskListView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+    private func setUpTableView(){
+        self.routineTableView.dataSource = self
+        self.routineTableView.reloadData()
+        self.routineTableView.registerTaskCell()
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     
     private func setTaskOnView(_ tasks: [Task]){
-        taskListViewController.setNewTasks(tasks)
+        self.tasks = tasks
+        routineTableView.reloadData()
     }
 
     func setupForm(routine: Routine?){
@@ -51,64 +48,86 @@ class RoutineFormViewController: UIViewController {
     }
 
     @IBAction func onEditNameTextField(_ sender: UITextField) {
-        addRoutineButton.isEnabled = validateName(sender.text)
+        guard let name = sender.text else {
+            return
+        }
+        self.addRoutineOutlet.isHidden = !validateName(name)
+        self.routine.name = name
     }
 
     @IBAction func onTouchAddRoutineButton(_ sender: UIButton) {
+        delegate?.registerRoutine(self.routine)
+        dismiss(animated: true)
+    }
+    
+    @IBAction func addTaskButton(_ sender: UIButton) {
         if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
             vc.delegate = self
             vc.setFormTaskRoutine(self.weekDay)
+            print(self.weekDay)
             vc.modalPresentationStyle = .overCurrentContext
-            self.present(vc, animated: true)
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
     //Days
     @IBAction func mondayButton(_ sender: UIButton) {
         weekDay = 1
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func tuesdayButton(_ sender: UIButton) {
         weekDay = 2
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func wednesdayButton(_ sender: UIButton) {
         weekDay = 3
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func thursdayButton(_ sender: UIButton) {
         weekDay = 4
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func fridayButton(_ sender: UIButton) {
         weekDay = 5
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func saturdayButton(_ sender: UIButton) {
         weekDay = 6
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     @IBAction func sundayButton(_ sender: UIButton) {
         weekDay = 7
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     
     @IBAction func onTouchHideButton(_ sender: Any) {
         dismiss(animated: true)
     }
     
-    private func validateName(_ text : String?) -> Bool{
-        guard let name = text else {
-            return false
-        }
-        return name.count > 3
+    private func validateName(_ text : String) -> Bool{
+        return text.count > 2
     }
+    
+}
+
+extension RoutineFormViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellViewName.task.rawValue, for: indexPath) as! TaskCellTableViewCell
+        cell.setData(obj: self.tasks[indexPath.row])
+        cell.hideCompletedButton(true)
+        return cell
+    }
+    
     
 }
 
 extension RoutineFormViewController: TaskFormDelegate {
     func didRegister(task: Task) {
-        self.tasksWeek.append(task)
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: tasksWeek, weekDay: weekDay))
+        self.routine.tasks.append(task)
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
 }
