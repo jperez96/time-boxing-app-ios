@@ -28,13 +28,13 @@ class CalendaryTabViewController: UIViewController {
     private func initTableView(){
         taskTableView.dataSource = self
         taskTableView.delegate = self
-        taskTableView.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
+        taskTableView.registerTaskCell()
     }
     
     @IBAction func openFormTaskButton(_ sender: UIButton) {
         if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
             vc.delegate = self
-            vc.modalPresentationStyle = .formSheet
+            vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true, completion: nil)
         }
     }

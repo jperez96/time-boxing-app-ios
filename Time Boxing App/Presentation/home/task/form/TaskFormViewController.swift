@@ -20,6 +20,7 @@ class TaskFormViewController: UIViewController {
     @IBOutlet weak var initDateButtonOutle: UIButton!
     @IBOutlet weak var endDateButtonOutlet: UIButton!
     @IBOutlet weak var registerButton: UIButton!
+    private var weekDay = 0
     
     var task = Task(name: "", initDate: Date(), finishDate: Date())
     var delegate : TaskFormDelegate?
@@ -27,14 +28,30 @@ class TaskFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        if(weekDay != 0){
+            setUpFormTaskRoutineView()
+        }
     }
     
     private func setupViews() {
         initDateButtonOutle.contentHorizontalAlignment = .left
         endDateButtonOutlet.contentHorizontalAlignment = .left
         let defaultDate = Date()
-        initDateButtonOutle.setDateString(defaultDate, "Fecha Inicio")
+        initDateButtonOutle.setDateString(defaultDate, "Fecha Inicio", weekDay == 0 ? .format1 : .format3)
         endDateButtonOutlet.setDateString(defaultDate, "Fecha Fin", .format3)
+    }
+    
+    func setFormTaskRoutine(_ weekDay : Int){
+        self.weekDay = weekDay
+    }
+    
+    private func setUpFormTaskRoutineView(){
+        startDatePicker.datePickerMode = .time
+        guard let date = Task.getTaskDateByWeekDay(date: Date(), weekDay: weekDay) else {
+            startDatePicker.setDate(Date.now, animated: true)
+            return
+        }
+        startDatePicker.setDate(date, animated: true)
     }
  
     @IBAction func dismissButton(_ sender: Any) {
@@ -42,6 +59,15 @@ class TaskFormViewController: UIViewController {
     }
     
     @IBAction func registerTaskButton(_ sender: UIButton) {
+        if(weekDay == 0) {
+            registerTask()
+            return
+        }
+        self.delegate?.didRegister(task: self.task)
+        dismiss(animated: true)
+    }
+    
+    private func registerTask(){
         let useCase = CreateTaskUseCase()
         let _ = useCase.execute(task).subscribe { response in
             self.dismiss(animated: true)
@@ -84,7 +110,7 @@ class TaskFormViewController: UIViewController {
         task.initDate = date
         task.finishDate = date
         endDatePicker.minimumDate = date
-        initDateButtonOutle.setDateString(date, "Fecha Inicio")
+        initDateButtonOutle.setDateString(date, "Fecha Inicio", weekDay == 0 ? .format1 : .format3)
     }
     
 }

@@ -30,11 +30,15 @@ class TaskCellTableViewCell: UITableViewCell {
         super.setSelected(false, animated: true)
     }
     
+    func hideCompletedButton(_ hide : Bool){
+        self.checkBoxView.isHidden = hide
+    }
+    
     private func updateTask(){
         if(self.task == nil){
             return
         }
-        let _ = updateTaskUseCase.execute(self.task!).subscribe { response in
+        _ = updateTaskUseCase.execute(self.task!).subscribe { response in
             guard let result = response.responseData else {
                 print(response.responseMessage)
                 return

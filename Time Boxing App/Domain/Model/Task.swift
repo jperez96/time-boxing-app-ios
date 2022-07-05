@@ -40,6 +40,11 @@ struct Task : Codable {
         self.finishDate = finishDate
     }
     
+    static func getTaskDateByWeekDay(date: Date, weekDay : Int) -> Date? {
+        let nexttDay = DateComponents(weekday: weekDay)
+        return Calendar.current.nextDate(after: date, matching: nexttDay, matchingPolicy: .strict)
+    }
+    
 }
 
 extension Task : CoreDataEntityRequiere {

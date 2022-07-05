@@ -14,4 +14,9 @@ extension Date {
         formatter.dateFormat = format.rawValue
         return formatter.string(from: self)
     }
+    
+    func getWeekDay() -> Int {
+        return Calendar.current.component(.weekday, from: self)
+    }
+
 }

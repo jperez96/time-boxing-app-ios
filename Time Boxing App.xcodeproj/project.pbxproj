@@ -11,7 +11,6 @@
 		1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */; };
 		1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */; };
 		1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */; };
-		1A113146286B6AED00C9385F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A113145286B6AED00C9385F /* GoogleService-Info.plist */; };
 		1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */; };
 		1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */; };
 		1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */; };
@@ -45,6 +44,14 @@
 		1AE9285C286579160076057A /* IAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9285B286579160076057A /* IAuthRepository.swift */; };
 		1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9285E28657ECB0076057A /* UserDefaultUtil.swift */; };
 		1AE928652865836C0076057A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE928642865836C0076057A /* User.swift */; };
+		F741FF8028709C22001D5F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */; };
+		F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF8A2870A2ED001D5F55 /* RoutineFormViewController.swift */; };
+		F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */; };
+		F741FF912870A5C5001D5F55 /* RoutineCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */; };
+		F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF902870A5C5001D5F55 /* RoutineCellTableViewCell.xib */; };
+		F741FF962870E44A001D5F55 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF942870E44A001D5F55 /* TaskListViewController.swift */; };
+		F741FF972870E44A001D5F55 /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF952870E44A001D5F55 /* TaskListViewController.xib */; };
+		F741FF9B28738E79001D5F55 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF9A28738E79001D5F55 /* Routine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +59,6 @@
 		1A062161286972F6000B58D6 /* GetTaskFromDateUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaskFromDateUseCase.swift; sourceTree = "<group>"; };
 		1A062166286A182D000B58D6 /* UpdateTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTaskUseCase.swift; sourceTree = "<group>"; };
 		1A062168286A3895000B58D6 /* RemoveTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveTaskUseCase.swift; sourceTree = "<group>"; };
-		1A113145286B6AED00C9385F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
 		1A3EF7D2285F96AB00CAF671 /* Time Boxing App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Boxing App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +96,14 @@
 		1AE928642865836C0076057A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.debug.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.debug.xcconfig"; sourceTree = "<group>"; };
+		F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F741FF8A2870A2ED001D5F55 /* RoutineFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineFormViewController.swift; sourceTree = "<group>"; };
+		F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineFormViewController.xib; sourceTree = "<group>"; };
+		F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellTableViewCell.swift; sourceTree = "<group>"; };
+		F741FF902870A5C5001D5F55 /* RoutineCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineCellTableViewCell.xib; sourceTree = "<group>"; };
+		F741FF942870E44A001D5F55 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		F741FF952870E44A001D5F55 /* TaskListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
+		F741FF9A28738E79001D5F55 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +158,7 @@
 		1A3EF7D4285F96AB00CAF671 /* Time Boxing App */ = {
 			isa = PBXGroup;
 			children = (
-				1A113145286B6AED00C9385F /* GoogleService-Info.plist */,
+				F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */,
 				1AE9284E286576870076057A /* Data */,
 				1A8FF3C42863852200A54872 /* Domain */,
 				1A8FF3BA2862D82B00A54872 /* Common */,
@@ -224,6 +238,7 @@
 			children = (
 				1A8FF3C62863871200A54872 /* Task.swift */,
 				1AE928642865836C0076057A /* User.swift */,
+				F741FF9A28738E79001D5F55 /* Routine.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,11 +294,10 @@
 		1ADFB90528616DDA005A5E74 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				F741FF852870A1DE001D5F55 /* routine */,
+				F741FF8228709E8A001D5F55 /* tabs */,
 				1ADFB9122861701B005A5E74 /* HomeStoryboard.storyboard */,
 				1ADFB91C2862AA9A005A5E74 /* task */,
-				1ADFB90B28616ED6005A5E74 /* settingsTab */,
-				1ADFB90A28616EC9005A5E74 /* routineTab */,
-				1ADFB90928616EC2005A5E74 /* calendaryTab */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -315,8 +329,9 @@
 		1ADFB91C2862AA9A005A5E74 /* task */ = {
 			isa = PBXGroup;
 			children = (
+				F741FF992870ED42001D5F55 /* form */,
+				F741FF932870E42A001D5F55 /* taskList */,
 				1A8FF3B82862D23700A54872 /* cellTask */,
-				1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */,
 			);
 			path = task;
 			sourceTree = "<group>";
@@ -392,6 +407,60 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F741FF8228709E8A001D5F55 /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB90B28616ED6005A5E74 /* settingsTab */,
+				1ADFB90A28616EC9005A5E74 /* routineTab */,
+				1ADFB90928616EC2005A5E74 /* calendaryTab */,
+			);
+			path = tabs;
+			sourceTree = "<group>";
+		};
+		F741FF852870A1DE001D5F55 /* routine */ = {
+			isa = PBXGroup;
+			children = (
+				F741FF982870ED30001D5F55 /* form */,
+				F741FF8E2870A5A1001D5F55 /* routineCell */,
+			);
+			path = routine;
+			sourceTree = "<group>";
+		};
+		F741FF8E2870A5A1001D5F55 /* routineCell */ = {
+			isa = PBXGroup;
+			children = (
+				F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */,
+				F741FF902870A5C5001D5F55 /* RoutineCellTableViewCell.xib */,
+			);
+			path = routineCell;
+			sourceTree = "<group>";
+		};
+		F741FF932870E42A001D5F55 /* taskList */ = {
+			isa = PBXGroup;
+			children = (
+				F741FF942870E44A001D5F55 /* TaskListViewController.swift */,
+				F741FF952870E44A001D5F55 /* TaskListViewController.xib */,
+			);
+			path = taskList;
+			sourceTree = "<group>";
+		};
+		F741FF982870ED30001D5F55 /* form */ = {
+			isa = PBXGroup;
+			children = (
+				F741FF8A2870A2ED001D5F55 /* RoutineFormViewController.swift */,
+				F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */,
+			);
+			path = form;
+			sourceTree = "<group>";
+		};
+		F741FF992870ED42001D5F55 /* form */ = {
+			isa = PBXGroup;
+			children = (
+				1ADFB91E2862AAB2005A5E74 /* TaskFormViewController.swift */,
+			);
+			path = form;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -455,9 +524,12 @@
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
+				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
+				F741FF972870E44A001D5F55 /* TaskListViewController.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
-				1A113146286B6AED00C9385F /* GoogleService-Info.plist in Resources */,
+				F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */,
+				F741FF8028709C22001D5F55 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,10 +597,13 @@
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
 				1A72F1AC286814B600A5CB34 /* CreateTaskUseCase.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
+				F741FF9B28738E79001D5F55 /* Routine.swift in Sources */,
+				F741FF962870E44A001D5F55 /* TaskListViewController.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
+				F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */,
 				1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */,
 				1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */,
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
@@ -537,6 +612,7 @@
 				1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */,
 				1A72F1AE286814F400A5CB34 /* TaskRepository.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
+				F741FF912870A5C5001D5F55 /* RoutineCellTableViewCell.swift in Sources */,
 				1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */,
 				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,
 				1AE928582865787B0076057A /* LoginUseCase.swift in Sources */,

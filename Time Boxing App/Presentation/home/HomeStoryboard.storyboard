@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzc-oA-rgy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nzc-oA-rgy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,14 +12,57 @@
         <!--Rutinas-->
         <scene sceneID="haV-9w-VQ3">
             <objects>
-                <viewController id="mSM-KR-8RT" sceneMemberID="viewController">
+                <viewController id="mSM-KR-8RT" customClass="RoutineTabViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l3n-hZ-TRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-Xz-KhO">
+                                <rect key="frame" x="25" y="69" width="364" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-ai-5tm">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-jh-Gf4" userLabel="El">
+                                        <rect key="frame" x="324" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="JO9-5x-5Lp"/>
+                                            <constraint firstAttribute="height" constant="40" id="lkF-tb-FC7"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addRoutineAction:" destination="mSM-KR-8RT" eventType="touchUpInside" id="msH-wH-cdr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-H1-5Tq">
+                                <rect key="frame" x="0.0" y="134" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2j8-Qe-vsN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H6a-Xz-KhO" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" constant="25" id="CX0-Hf-tpY"/>
+                            <constraint firstItem="H6a-Xz-KhO" firstAttribute="top" secondItem="2j8-Qe-vsN" secondAttribute="top" constant="25" id="Qh0-n4-18a"/>
+                            <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="H6a-Xz-KhO" secondAttribute="trailing" constant="25" id="Vj7-n5-wvn"/>
+                            <constraint firstItem="KTe-H1-5Tq" firstAttribute="top" secondItem="H6a-Xz-KhO" secondAttribute="bottom" constant="25" id="f3F-OJ-SAG"/>
+                            <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="KTe-H1-5Tq" secondAttribute="trailing" id="fSv-jd-oyF"/>
+                            <constraint firstItem="KTe-H1-5Tq" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" id="g2F-7a-EUN"/>
+                            <constraint firstItem="2j8-Qe-vsN" firstAttribute="bottom" secondItem="KTe-H1-5Tq" secondAttribute="bottom" id="nBc-15-Awl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rutinas" id="Gdy-eG-DMH"/>
+                    <connections>
+                        <outlet property="routineTableView" destination="KTe-H1-5Tq" id="0Od-bT-WrC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sp4-3p-Qgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

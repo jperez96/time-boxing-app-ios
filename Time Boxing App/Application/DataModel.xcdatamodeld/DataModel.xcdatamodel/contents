@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="RoutineEntity" representedClassName="RoutineEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tasks" optional="YES" attributeType="Transformable" valueTransformerName=""/>
+    </entity>
     <entity name="TaskEntity" representedClassName="TaskEntity" syncable="YES" codeGenerationType="class">
         <attribute name="finishDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="finished" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -9,5 +14,6 @@
     </entity>
     <elements>
         <element name="TaskEntity" positionX="-63" positionY="-54" width="128" height="104"/>
+        <element name="RoutineEntity" positionX="-63" positionY="-18" width="128" height="74"/>
     </elements>
 </model>

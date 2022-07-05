@@ -18,3 +18,10 @@ extension UIButton {
         self.setTitle(content, for: .normal)
     }
 }
+
+
+extension UITableView {
+    func registerTaskCell(){
+        self.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
+    }
+}
