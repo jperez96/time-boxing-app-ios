@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-public class Task : NSObject, Codable {
+struct Task : Codable {
     
     let id : UUID
     var name : String

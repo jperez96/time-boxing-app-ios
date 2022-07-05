@@ -54,6 +54,10 @@ class CalendaryTabViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.getTaskFromDate(calendar.selectedDate)
+    }
+    
     private func getTaskFromDate(_ date: Date){
         let _ = self.getTaskFromDate.execute(date).subscribe { response in
             guard let result = response.responseData else {
@@ -62,9 +66,33 @@ class CalendaryTabViewController: UIViewController {
             }
             self.tasks = result
             self.taskTableView.reloadData()
+            self.getTaskRoutines(date)
         } onFailure: { error in
             print(error)
         }
+    }
+    
+    private func getTaskRoutines(_ date: Date){
+        let weekDay = date.getWeekDay()
+        let useCase = GetRoutineUseCase()
+        _ = useCase.execute().subscribe(onSuccess: { response in
+            guard let routines = response.responseData else {
+                return
+            }
+            self.setTasksFromRoutines(routines, weekDay: weekDay)
+        }, onFailure: { error in
+            print(error)
+        })
+    }
+    
+    private func setTasksFromRoutines(_ routines: [Routine], weekDay: Int){
+        var taskToAdd : [Task] = []
+        for routine in routines {
+            let tasksFromRoutines = Routine.getTaskByWeekDay(tasks: routine.tasks, weekDay: weekDay)
+            taskToAdd.append(contentsOf: tasksFromRoutines)
+        }
+        self.tasks.append(contentsOf: taskToAdd)
+        self.taskTableView.reloadData()
     }
     
     private func registerTask(_ task: Task){

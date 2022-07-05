@@ -7,19 +7,20 @@
 
 import UIKit
 
+protocol TaskCellTableViewCellDelegate {
+    func onEditTask(_ task : Task)
+}
+
 class TaskCellTableViewCell: UITableViewCell {
         
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var checkBoxView: CheckBoxView!
     private var task : Task?
-    
+    var delegate:TaskCellTableViewCellDelegate? = nil
     private let updateTaskUseCase = UpdateTaskUseCase()
     
     func setData(obj: Task){
         task = obj
         titleLabel.text = obj.name
-        checkBoxView.isSelected = obj.finished
-        checkBoxView.delegate = self
     }
     
     override func awakeFromNib() {
@@ -30,37 +31,15 @@ class TaskCellTableViewCell: UITableViewCell {
         super.setSelected(false, animated: true)
     }
     
-    func hideCompletedButton(_ hide : Bool){
-        self.checkBoxView.isHidden = hide
-    }
-    
-    private func updateTask(){
-        if(self.task == nil){
-            return
-        }
-        _ = updateTaskUseCase.execute(self.task!).subscribe { response in
-            guard let result = response.responseData else {
-                print(response.responseMessage)
-                return
-            }
-            if(!result){
-                print(response.responseMessage)
-            }
-        } onFailure: { error in
-            print(error)
-        }
-    }
-    
 }
 
 extension TaskCellTableViewCell : CheckBoxDelegate {
-    
     func onChangeCheck(_ isCheck: Bool) {
         if(self.task == nil){
             return
         }
         self.task!.finished = isCheck
-        updateTask()
+        self.delegate?.onEditTask(self.task!)
     }
     
 }

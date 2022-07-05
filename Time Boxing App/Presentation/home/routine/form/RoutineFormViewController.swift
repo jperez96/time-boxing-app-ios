@@ -16,7 +16,7 @@ class RoutineFormViewController: UIViewController {
     @IBOutlet weak var daysStackView: UIStackView!
     @IBOutlet weak var addRoutineOutlet: UIButton!
     @IBOutlet weak var routineTableView: UITableView!
-    private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [])
+    private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [] )
     private var tasks: [Task] = []
     private var weekDay = 1
     private var isToUpdate: Bool = false
@@ -118,7 +118,6 @@ extension RoutineFormViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellViewName.task.rawValue, for: indexPath) as! TaskCellTableViewCell
         cell.setData(obj: self.tasks[indexPath.row])
-        cell.hideCompletedButton(true)
         return cell
     }
     

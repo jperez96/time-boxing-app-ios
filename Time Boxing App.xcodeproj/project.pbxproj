@@ -49,8 +49,6 @@
 		F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */; };
 		F741FF912870A5C5001D5F55 /* RoutineCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */; };
 		F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF902870A5C5001D5F55 /* RoutineCellTableViewCell.xib */; };
-		F741FF962870E44A001D5F55 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF942870E44A001D5F55 /* TaskListViewController.swift */; };
-		F741FF972870E44A001D5F55 /* TaskListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF952870E44A001D5F55 /* TaskListViewController.xib */; };
 		F741FF9B28738E79001D5F55 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF9A28738E79001D5F55 /* Routine.swift */; };
 		F741FFA02873C0EA001D5F55 /* RoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF9F2873C0EA001D5F55 /* RoutineRepository.swift */; };
 		F741FFA22873C119001D5F55 /* IRoutineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA12873C119001D5F55 /* IRoutineRepository.swift */; };
@@ -107,8 +105,6 @@
 		F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineFormViewController.xib; sourceTree = "<group>"; };
 		F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellTableViewCell.swift; sourceTree = "<group>"; };
 		F741FF902870A5C5001D5F55 /* RoutineCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineCellTableViewCell.xib; sourceTree = "<group>"; };
-		F741FF942870E44A001D5F55 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
-		F741FF952870E44A001D5F55 /* TaskListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskListViewController.xib; sourceTree = "<group>"; };
 		F741FF9A28738E79001D5F55 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		F741FF9F2873C0EA001D5F55 /* RoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineRepository.swift; sourceTree = "<group>"; };
 		F741FFA12873C119001D5F55 /* IRoutineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRoutineRepository.swift; sourceTree = "<group>"; };
@@ -342,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				F741FF992870ED42001D5F55 /* form */,
-				F741FF932870E42A001D5F55 /* taskList */,
 				1A8FF3B82862D23700A54872 /* cellTask */,
 			);
 			path = task;
@@ -450,15 +445,6 @@
 			path = routineCell;
 			sourceTree = "<group>";
 		};
-		F741FF932870E42A001D5F55 /* taskList */ = {
-			isa = PBXGroup;
-			children = (
-				F741FF942870E44A001D5F55 /* TaskListViewController.swift */,
-				F741FF952870E44A001D5F55 /* TaskListViewController.xib */,
-			);
-			path = taskList;
-			sourceTree = "<group>";
-		};
 		F741FF982870ED30001D5F55 /* form */ = {
 			isa = PBXGroup;
 			children = (
@@ -551,7 +537,6 @@
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
-				F741FF972870E44A001D5F55 /* TaskListViewController.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
 				F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */,
@@ -627,7 +612,6 @@
 				F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */,
 				F741FF9B28738E79001D5F55 /* Routine.swift in Sources */,
 				F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */,
-				F741FF962870E44A001D5F55 /* TaskListViewController.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,

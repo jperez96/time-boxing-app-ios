@@ -13,10 +13,10 @@ struct BaseResponse<T> {
     let responseCode: BaseResponseStatus
     
     static func success<T>(data: T, msg : String = "Ok." ) -> BaseResponse<T> {
-        return BaseResponse<T>(responseData: data, responseCode: .Success)
+        return BaseResponse<T>(responseMessage: msg, responseData: data, responseCode: .Success)
     }
     static func error<T>(msg : String = "Error." ) -> BaseResponse<T> {
-        return BaseResponse<T>(responseData: nil, responseCode: .Error)
+        return BaseResponse<T>(responseMessage: msg, responseData: nil, responseCode: .Error)
     }
 }
 

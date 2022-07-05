@@ -30,10 +30,11 @@ extension Routine : CoreDataEntityRequiere {
         guard let name = entity.value(forKey: "name") as? String else {
             return nil
         }
-        guard let tasks = entity.value(forKey: "tasks") as? [Task] else {
+        guard let tasksString = entity.value(forKey: "tasks") as? String else {
             return nil
         }
-        return Routine(id: id, name: name, tasks: tasks) as? T
+        let dataTask = Data(tasksString.utf8)
+        return Routine(id: id, name: name, tasks: CodableUtil.toObject(dataTask, [Task].self) ?? [] ) as? T
     }
     
     static func getEntityName() -> String {
@@ -48,7 +49,7 @@ extension Routine : CoreDataEntityRequiere {
         return [
             "id": self.id,
             "name": self.name,
-            "tasks": self.tasks,
+            "tasks": CodableUtil.toJsonString(self.tasks) ?? "[]",
         ] as [String : Any]
     }
 }

@@ -62,6 +62,9 @@ class RoutineTabViewController: UIViewController {
     private func removeRoutine(_ routine: Routine) {
         let useCase = RemoveRoutineUseCase()
         _ = useCase.execute(routine).subscribe(onSuccess: { response in
+            guard let _ = response.responseData else {
+                return
+            }
             self.getRoutines()
         }, onFailure: { error in
             print(error)
