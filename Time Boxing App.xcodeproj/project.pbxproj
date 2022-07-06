@@ -57,6 +57,8 @@
 		F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */; };
 		F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */; };
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
+		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
+		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoutineUseCase.swift; sourceTree = "<group>"; };
 		F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRoutineUseCase.swift; sourceTree = "<group>"; };
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
+		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 			children = (
 				1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */,
 				1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */,
+				F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 		1A8FF3BA2862D82B00A54872 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A24BDCB286BA317003D846C /* Services */,
 				1A72F1772866B19D00A5CB34 /* Utilities */,
 				1A8FF3BE2862E23A00A54872 /* UIComponents */,
 				1A8FF3BB2862D83600A54872 /* Constants.swift */,
@@ -250,6 +256,7 @@
 				1A8FF3C62863871200A54872 /* Task.swift */,
 				1AE928642865836C0076057A /* User.swift */,
 				F741FF9A28738E79001D5F55 /* Routine.swift */,
+				F7ABCFA52875053900D0182D /* Configuration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,7 +281,6 @@
 		1ADFB8BA28611225005A5E74 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				1A24BDCB286BA317003D846C /* Services */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */,
 				1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */,
@@ -605,6 +611,7 @@
 				1AE928542865777A0076057A /* AuthRepository.swift in Sources */,
 				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
 				1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */,
+				F7ABCFA62875053900D0182D /* Configuration.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
 				1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */,
@@ -618,6 +625,7 @@
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
+				F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
 				F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */,

@@ -179,23 +179,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-Mg-ixs">
-                                <rect key="frame" x="50" y="229.5" width="314" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Cerrar Sesion"/>
-                                <connections>
-                                    <action selector="onDidTouchSignOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RKi-j6-eoH"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TFP-cQ-fca">
+                                <rect key="frame" x="25" y="244" width="364" height="82"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u3-Tm-snS">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12M-gU-iyb">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-7a-syX">
+                                                <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="requestNotificationPermission:" destination="Y6W-OH-hqX" eventType="valueChanged" id="LPM-1b-gIU"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-Mg-ixs">
+                                        <rect key="frame" x="0.0" y="51" width="364" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="Cerrar Sesion"/>
+                                        <connections>
+                                            <action selector="onDidTouchSignOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RKi-j6-eoH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="obP-Mg-ixs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="Bq7-fk-gEP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TFP-cQ-fca" secondAttribute="trailing" constant="25" id="8CT-Sp-OnT"/>
                             <constraint firstItem="tn2-Dy-Bc6" firstAttribute="leading" secondItem="W6K-VZ-zNS" secondAttribute="trailing" constant="15" id="EfV-xV-ING"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="obP-Mg-ixs" secondAttribute="trailing" constant="50" id="UIQ-Ra-K2M"/>
+                            <constraint firstItem="TFP-cQ-fca" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="SRb-Uc-27i"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tn2-Dy-Bc6" secondAttribute="trailing" constant="50" id="VtQ-WM-g1T"/>
-                            <constraint firstItem="obP-Mg-ixs" firstAttribute="top" secondItem="tn2-Dy-Bc6" secondAttribute="bottom" constant="100" id="YKv-4P-C1t"/>
+                            <constraint firstItem="TFP-cQ-fca" firstAttribute="top" secondItem="W6K-VZ-zNS" secondAttribute="bottom" constant="100" id="cHM-QW-JLW"/>
                             <constraint firstItem="W6K-VZ-zNS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="h0W-qF-Zgu"/>
                             <constraint firstItem="tn2-Dy-Bc6" firstAttribute="centerY" secondItem="W6K-VZ-zNS" secondAttribute="centerY" id="nTL-mV-4Rq"/>
                             <constraint firstItem="W6K-VZ-zNS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="vsS-Yq-Ems"/>
@@ -203,6 +225,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Configuracion" id="uL0-My-uUh"/>
                     <connections>
+                        <outlet property="notificationPermissionOutletSwitch" destination="Sjy-7a-syX" id="hLM-Hn-oRR"/>
                         <outlet property="userImageView" destination="W6K-VZ-zNS" id="9Qr-Le-Pwu"/>
                         <outlet property="userNameLabel" destination="tn2-Dy-Bc6" id="oPu-x9-XZI"/>
                     </connections>

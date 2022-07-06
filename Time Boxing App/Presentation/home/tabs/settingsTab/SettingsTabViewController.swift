@@ -9,14 +9,32 @@ import UIKit
 
 class SettingsTabViewController: UIViewController {
     
+    private var notificationManager = NotificationManager()
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var notificationPermissionOutletSwitch: UISwitch!
     
     private var currentUser: User?
+    private var currentConfig = Configuration()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setUpConfiguration()
+        setUpProfile()
+    }
+    
+    private func setUpConfiguration(){
+        notificationManager.delegate = self
+        guard let config = UserDefaultManager().getConfiguration() else {
+            return
+        }
+        self.currentConfig = config
+        notificationPermissionOutletSwitch.isOn = config.notification
+    }
+    
+    private func setUpProfile(){
         guard let user = UserDefaultManager().getUserLogged() else {
             return
         }
@@ -59,6 +77,26 @@ class SettingsTabViewController: UIViewController {
         }
     }
     
+    @IBAction func requestNotificationPermission(_ sender: UISwitch) {
+        changeNotificationPermission(sender.isOn)
+    }
+    
+    private func changeNotificationPermission(_ checked: Bool) {
+        self.currentConfig.notification = checked
+        if checked {
+            notificationManager.requestPermission()
+            return
+        }
+        updateConfig(self.currentConfig)
+    }
+    
+    private func updateConfig(_ config : Configuration){
+        guard let _ = UserDefaultManager().registerConfiguration(config) else {
+            return
+        }
+        setUpConfiguration()
+    }
+    
     private func removeLocalSesion(){
         guard let coreData = CoreDataManager() else {
             return
@@ -82,6 +120,21 @@ extension SettingsTabViewController : GoogleSignOutDelegate {
         case .Error:
             print(response.responseMessage)
             break
+        }
+    }
+}
+
+extension SettingsTabViewController : NotificationPermissionDelegate {
+    func requestPermission(_ permission: BaseResponse<Bool>) {
+        guard let result = permission.responseData else {
+            print(permission.responseMessage)
+            return
+        }
+        DispatchQueue.main.async {
+            if !result {
+                self.currentConfig.notification = false
+            }
+            self.updateConfig(self.currentConfig)
         }
     }
 }

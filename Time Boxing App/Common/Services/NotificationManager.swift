@@ -8,9 +8,14 @@
 import Foundation
 import UserNotifications
 
+protocol NotificationPermissionDelegate {
+    func requestPermission(_ permission : BaseResponse<Bool>)
+}
+
 class NotificationManager {
     
     private var userNotification : UNUserNotificationCenter
+    var delegate: NotificationPermissionDelegate? = nil
     
     init(){
         self.userNotification = UNUserNotificationCenter.current()
@@ -30,6 +35,16 @@ class NotificationManager {
             }
             print(task)
             print(error)
+        }
+    }
+    
+    func requestPermission(){
+        userNotification.requestAuthorization(options: [.alert, .sound, .badge]) { permission, error in
+            guard let error = error else {
+                self.delegate?.requestPermission(.success(data: permission))
+                return
+            }
+            self.delegate?.requestPermission(.error(msg: error.localizedDescription))
         }
     }
     
