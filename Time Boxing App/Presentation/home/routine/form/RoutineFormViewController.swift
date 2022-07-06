@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RoutineFormDelegate {
-    func registerRoutine(_ routine: Routine)
+    func registerRoutine(_ routine: Routine, _ isToUpdate: Bool)
 }
 
 class RoutineFormViewController: UIViewController {
@@ -18,8 +18,8 @@ class RoutineFormViewController: UIViewController {
     @IBOutlet weak var routineTableView: UITableView!
     private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [] )
     private var tasks: [Task] = []
-    private var weekDay = 1
-    private var isToUpdate: Bool = false
+    private var weekDay = 2
+    private var isToUpdate = false
     var delegate: RoutineFormDelegate? = nil
 
     override func viewDidLoad() {
@@ -29,6 +29,7 @@ class RoutineFormViewController: UIViewController {
     
     private func setUpTableView(){
         self.routineTableView.dataSource = self
+        self.routineTableView.delegate = self
         self.routineTableView.reloadData()
         self.routineTableView.registerTaskCell()
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
@@ -56,7 +57,7 @@ class RoutineFormViewController: UIViewController {
     }
 
     @IBAction func onTouchAddRoutineButton(_ sender: UIButton) {
-        delegate?.registerRoutine(self.routine)
+        delegate?.registerRoutine(self.routine, isToUpdate)
         dismiss(animated: true)
     }
     
@@ -71,31 +72,31 @@ class RoutineFormViewController: UIViewController {
     
     //Days
     @IBAction func mondayButton(_ sender: UIButton) {
-        weekDay = 1
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
-    }
-    @IBAction func tuesdayButton(_ sender: UIButton) {
         weekDay = 2
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func wednesdayButton(_ sender: UIButton) {
+    @IBAction func tuesdayButton(_ sender: UIButton) {
         weekDay = 3
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func thursdayButton(_ sender: UIButton) {
+    @IBAction func wednesdayButton(_ sender: UIButton) {
         weekDay = 4
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func fridayButton(_ sender: UIButton) {
+    @IBAction func thursdayButton(_ sender: UIButton) {
         weekDay = 5
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func saturdayButton(_ sender: UIButton) {
+    @IBAction func fridayButton(_ sender: UIButton) {
         weekDay = 6
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func sundayButton(_ sender: UIButton) {
+    @IBAction func saturdayButton(_ sender: UIButton) {
         weekDay = 7
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
+    }
+    @IBAction func sundayButton(_ sender: UIButton) {
+        weekDay = 1
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     
@@ -107,6 +108,16 @@ class RoutineFormViewController: UIViewController {
         return text.count > 2
     }
     
+    private func removeTask(_ task : Task) {
+        var index = 0
+        for i in 0...self.routine.tasks.count - 1{
+            if (self.routine.tasks[i].id == task.id) {
+                index = i
+            }
+        }
+        self.routine.tasks.remove(at: index)
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
+    }
 }
 
 extension RoutineFormViewController : UITableViewDataSource {
@@ -120,7 +131,20 @@ extension RoutineFormViewController : UITableViewDataSource {
         return cell
     }
     
-    
+}
+
+extension RoutineFormViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+            self.removeTask(self.tasks[indexPath.row])
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .systemRed
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
 }
 
 extension RoutineFormViewController: TaskFormDelegate {

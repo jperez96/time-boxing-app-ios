@@ -33,6 +33,15 @@ class RoutineTabViewController: UIViewController {
         })
     }
     
+    private func updateRoutine(_  routine: Routine) {
+        let useCase = UpdateRoutineUseCase()
+        _ = useCase.execute(routine).subscribe(onSuccess: { response in
+            self.getRoutines()
+        }, onFailure: { error in
+            print(error)
+        })
+    }
+    
     private func setUpTableView(_ routines : [Routine]){
         self.routines = routines
         routineTableView.reloadData()
@@ -101,7 +110,11 @@ extension RoutineTabViewController : UITableViewDelegate {
 }
 
 extension RoutineTabViewController : RoutineFormDelegate {
-    func registerRoutine(_ routine: Routine) {
+    func registerRoutine(_ routine: Routine, _ isToUpdate: Bool) {
+        if isToUpdate {
+            updateRoutine(routine)
+            return
+        }
         createRoutine(routine)
     }
 }

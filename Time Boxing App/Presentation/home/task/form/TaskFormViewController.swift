@@ -47,7 +47,8 @@ class TaskFormViewController: UIViewController {
     
     private func setUpFormTaskRoutineView(){
         startDatePicker.datePickerMode = .time
-        guard let date = Task.getTaskDateByWeekDay(date: Date(), weekDay: weekDay) else {
+        let now = Date.now
+        guard let date = Task.getTaskDateByWeekDay(date: now, weekDay: weekDay) else {
             return
         }
         self.task.initDate = date
