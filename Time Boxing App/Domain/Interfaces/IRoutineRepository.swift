@@ -13,5 +13,4 @@ protocol IRoutineRepository {
     func removeRoutine(_ task : Routine) -> Single<BaseResponse<Bool>>
     func updateRoutine(_ task : Routine) -> Single<BaseResponse<Bool>>
     func getRoutines() -> Single<BaseResponse<[Routine]>>
-
 }

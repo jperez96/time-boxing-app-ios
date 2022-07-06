@@ -28,3 +28,12 @@ extension Date {
     }
     
 }
+
+extension Optional {
+    func isNull() -> Bool {
+        return self == nil
+    }
+    func isNotNull() -> Bool {
+        return !self.isNull()
+    }
+}

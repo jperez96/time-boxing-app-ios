@@ -59,6 +59,10 @@
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
 		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
+		F7ABCFA9287511F300D0182D /* ScheduleNotificationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA8287511F300D0182D /* ScheduleNotificationUseCase.swift */; };
+		F7ABCFAB287512D200D0182D /* INotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAA287512D200D0182D /* INotificationRepository.swift */; };
+		F7ABCFAD2875131800D0182D /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAC2875131800D0182D /* NotificationRepository.swift */; };
+		F7ABCFAF28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAE28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +122,10 @@
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
 		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		F7ABCFA8287511F300D0182D /* ScheduleNotificationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleNotificationUseCase.swift; sourceTree = "<group>"; };
+		F7ABCFAA287512D200D0182D /* INotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotificationRepository.swift; sourceTree = "<group>"; };
+		F7ABCFAC2875131800D0182D /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
+		F7ABCFAE28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSingleNotificacionUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +377,7 @@
 				1AE928532865777A0076057A /* AuthRepository.swift */,
 				1A72F1AD286814F400A5CB34 /* TaskRepository.swift */,
 				F741FF9F2873C0EA001D5F55 /* RoutineRepository.swift */,
+				F7ABCFAC2875131800D0182D /* NotificationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 		1AE92855286578590076057A /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				F7ABCFA7287511DB00D0182D /* Notification */,
 				F741FFA32873C2F9001D5F55 /* Routine */,
 				1A062165286A17A6000B58D6 /* Task */,
 				1AE928562865786B0076057A /* Auth */,
@@ -397,6 +407,7 @@
 				1AE9285B286579160076057A /* IAuthRepository.swift */,
 				1A72F1AF2868153D00A5CB34 /* ITaskRepository.swift */,
 				F741FFA12873C119001D5F55 /* IRoutineRepository.swift */,
+				F7ABCFAA287512D200D0182D /* INotificationRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -480,6 +491,15 @@
 				F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */,
 			);
 			path = Routine;
+			sourceTree = "<group>";
+		};
+		F7ABCFA7287511DB00D0182D /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFA8287511F300D0182D /* ScheduleNotificationUseCase.swift */,
+				F7ABCFAE28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,11 +644,14 @@
 				F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */,
+				F7ABCFAD2875131800D0182D /* NotificationRepository.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */,
+				F7ABCFAF28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
 				F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */,
+				F7ABCFA9287511F300D0182D /* ScheduleNotificationUseCase.swift in Sources */,
 				1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */,
 				1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */,
 				F741FFA02873C0EA001D5F55 /* RoutineRepository.swift in Sources */,
@@ -636,6 +659,7 @@
 				1AE92848286560BA0076057A /* Extensions.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
 				1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */,
+				F7ABCFAB287512D200D0182D /* INotificationRepository.swift in Sources */,
 				F741FFA72873C3FB001D5F55 /* UpdateRoutineUseCase.swift in Sources */,
 				1A72F1AE286814F400A5CB34 /* TaskRepository.swift in Sources */,
 				1A3EF7D8285F96AB00CAF671 /* SceneDelegate.swift in Sources */,
