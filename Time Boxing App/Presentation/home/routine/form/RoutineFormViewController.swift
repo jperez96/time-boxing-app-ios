@@ -64,7 +64,6 @@ class RoutineFormViewController: UIViewController {
         if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
             vc.delegate = self
             vc.setFormTaskRoutine(self.weekDay)
-            print(self.weekDay)
             vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true, completion: nil)
         }

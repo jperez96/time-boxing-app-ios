@@ -11,6 +11,7 @@ import RxSwift
 class TaskRepository : ITaskRepository {
     
     private lazy var coreData = CoreDataManager()
+    private lazy var userDefault = UserDefaultManager()
     
     func createTask(_ task: Task) -> Single<BaseResponse<Task>> {
         return Single.create { single in
@@ -19,7 +20,11 @@ class TaskRepository : ITaskRepository {
                 return Disposables.create {}
             }
             let created = coreData.insertEntity(entityData: task)
-            if (created) {
+            let config = self.userDefault.getConfiguration()?.notification ?? false
+            if config {
+               _ = NotificationRepository().createNotifications([task], false)
+            }
+            if created {
                 single(.success(.success(data: task)))
             } else {
                 single(.success(.error(msg: "No se registro en Core Data.")))
@@ -35,7 +40,9 @@ class TaskRepository : ITaskRepository {
                 return Disposables.create {}
             }
             let removed = coreData.removeEntity(entity: task)
-            if (removed) {
+            _ = NotificationRepository().removeNotification([task])
+            
+            if removed {
                 single(.success(.success(data: true)))
             } else {
                 single(.success(.error( msg: "No se elimino de Core Data.")))
@@ -82,6 +89,13 @@ class TaskRepository : ITaskRepository {
                 return Disposables.create {}
             }
             let updated = coreData.updateEntity(entityData: task)
+            
+            let config = self.userDefault.getConfiguration()?.notification ?? false
+            if config {
+               _ = NotificationRepository().removeNotification([task])
+               _ = NotificationRepository().createNotifications([task], false)
+            }
+            
             if (updated) {
                 single(.success(.success(data: updated)))
             } else {

@@ -25,6 +25,7 @@ class NotificationManager {
         var date = DateComponents()
         date.weekday = notificationDate.getWeekDay()
         date.hour = notificationDate.getHour()
+        date.minute = notificationDate.getMinute()
         let content = UNMutableNotificationContent()
         content.title = "\(task.name) - \(notificationDate.toDateString(.format3))"
         let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: repeatNotification)

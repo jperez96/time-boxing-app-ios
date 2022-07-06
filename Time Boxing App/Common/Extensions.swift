@@ -23,6 +23,10 @@ extension Date {
         return Calendar.current.component(.hour, from: self)
     }
     
+    func getMinute() -> Int {
+        return Calendar.current.component(.minute, from: self)
+    }
+    
     func toDateString(_ format : DateFormat) -> String{
         return self.string(format: format)
     }

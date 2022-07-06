@@ -77,14 +77,14 @@ class NotificationRepository : INotificationRepository {
         }
     }
     
-    private func createNotifications(_ tasks: [Task] , _ repeatNotification: Bool) -> Bool {
+    func createNotifications(_ tasks: [Task] , _ repeatNotification: Bool) -> Bool {
         tasks.forEach { task in
             notificationManager.registerNotificationTask(task, task.initDate, repeatNotification)
         }
         return true
     }
     
-    private func removeNotification(_ tasks: [Task]) -> Bool {
+    func removeNotification(_ tasks: [Task]) -> Bool {
         notificationManager.removeNotificationTask(tasks)
         return true
     }

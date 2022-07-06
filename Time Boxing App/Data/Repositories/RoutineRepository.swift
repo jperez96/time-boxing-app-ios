@@ -11,6 +11,7 @@ import RxSwift
 class RoutineRepository : IRoutineRepository {
     
     private lazy var coreData = CoreDataManager()
+    private lazy var userDefault = UserDefaultManager()
 
     func createRoutine(_ routine: Routine) -> Single<BaseResponse<Routine>> {
         return Single.create { single in
@@ -19,7 +20,13 @@ class RoutineRepository : IRoutineRepository {
                 return Disposables.create {}
             }
             let created = coreData.insertEntity(entityData: routine)
-            if (created) {
+            
+            let config = self.userDefault.getConfiguration()?.notification ?? false
+            if config {
+                _ = NotificationRepository().createNotifications(routine.tasks, true)
+            }
+            
+            if created {
                 single(.success(.success(data: routine)))
             } else {
                 single(.success(.error(msg: "No se registro en Core Data.")))
@@ -35,7 +42,8 @@ class RoutineRepository : IRoutineRepository {
                 return Disposables.create {}
             }
             let removed = coreData.removeEntity(entity: routine)
-            if (removed) {
+            _ = NotificationRepository().removeNotification(routine.tasks)
+            if removed  {
                 single(.success(.success(data: true)))
             } else {
                 single(.success(.error( msg: "No se elimino de Core Data.")))
@@ -51,7 +59,14 @@ class RoutineRepository : IRoutineRepository {
                 return Disposables.create {}
             }
             let updated = coreData.updateEntity(entityData: routine)
-            if (updated) {
+            
+            let config = self.userDefault.getConfiguration()?.notification ?? false
+            if config {
+                _ = NotificationRepository().removeNotification(routine.tasks)
+                _ = NotificationRepository().createNotifications(routine.tasks, true)
+            }
+            
+            if updated {
                 single(.success(.success(data: updated)))
             } else {
                 single(.success(.error( msg: "No se actualizo en Core Data.")))

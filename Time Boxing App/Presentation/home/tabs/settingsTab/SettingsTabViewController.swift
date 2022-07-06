@@ -55,6 +55,15 @@ class SettingsTabViewController: UIViewController {
         signOut(currentUser)
     }
     
+    private func scheduleNotifications(_ schedule: Bool){
+        let useCase = ScheduleNotificationUseCase()
+        _ = useCase.execute(schedule).subscribe(onSuccess: { response in
+            
+        }, onFailure: { error in
+            print(error)
+        })
+    }
+    
     private func removeGoogleSession(_ currentUser: User) {
         if(currentUser.loginType == LoginType.Google.rawValue) {
             guard let service = GoogleAuthService() else {
@@ -115,6 +124,7 @@ extension SettingsTabViewController : GoogleSignOutDelegate {
     func onSignOutResponse(_ response: BaseResponse<Bool>) {
         switch(response.responseCode) {
         case .Success:
+            scheduleNotifications(false)
             removeLocalSesion()
             break
         case .Error:
@@ -134,6 +144,7 @@ extension SettingsTabViewController : NotificationPermissionDelegate {
             if !result {
                 self.currentConfig.notification = false
             }
+            self.scheduleNotifications(self.currentConfig.notification)
             self.updateConfig(self.currentConfig)
         }
     }
