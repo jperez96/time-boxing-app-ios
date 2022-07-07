@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,24 +16,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dbr-jB-jhS">
-                                <rect key="frame" x="50" y="94" width="314" height="489"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-C1-RjK">
-                                <rect key="frame" x="50" y="683" width="314" height="87"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SS-Wk-MFq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-C1-RjK">
+                                <rect key="frame" x="50" y="633" width="314" height="137"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="085-g0-JBk">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesión con Google"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar sesión con:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-CX-025">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="085-g0-JBk" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="37" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Xwj-cj-W7S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Google"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Google">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="loginGoogleButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPI-mh-56R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4c-fv-q0q">
-                                        <rect key="frame" x="0.0" y="56" width="314" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Iniciar Sesión como Anónimo"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4c-fv-q0q" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="97" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mch-Ol-LBh"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Iniciar Sesión como Anónimo"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Anónimo">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="ooy-Lv-d0g" kind="showDetail" id="cil-TA-xgX"/>
                                         </connections>
@@ -52,17 +74,22 @@
                         <constraints>
                             <constraint firstItem="5Wj-C1-RjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="34W-zg-7fI"/>
                             <constraint firstItem="dWz-kd-n0g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="8eT-De-OlP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbr-jB-jhS" secondAttribute="trailing" constant="50" id="Hob-eM-TJE"/>
-                            <constraint firstItem="Dbr-jB-jhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Sgs-wC-swI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Wj-C1-RjK" secondAttribute="trailing" constant="50" id="Tb8-FM-AOi"/>
-                            <constraint firstItem="Dbr-jB-jhS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fMR-C4-ZKa"/>
+                            <constraint firstItem="0SS-Wk-MFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VxN-He-fvK"/>
                             <constraint firstItem="dWz-kd-n0g" firstAttribute="top" secondItem="5Wj-C1-RjK" secondAttribute="bottom" constant="50" id="frr-pp-tJc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dWz-kd-n0g" secondAttribute="bottom" constant="25" id="lCm-lr-KcQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0SS-Wk-MFq" secondAttribute="trailing" id="qOC-4i-vSI"/>
+                            <constraint firstItem="0SS-Wk-MFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rfK-xQ-4Dk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dWz-kd-n0g" secondAttribute="trailing" constant="25" id="sHf-ak-Pdu"/>
-                            <constraint firstItem="5Wj-C1-RjK" firstAttribute="top" secondItem="Dbr-jB-jhS" secondAttribute="bottom" constant="100" id="yLe-pT-3Rb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7vj-6h-VCL"/>
+                    <connections>
+                        <outlet property="anonLoginButton" destination="P4c-fv-q0q" id="Gzg-vy-3KL"/>
+                        <outlet property="googleLoginButton" destination="085-g0-JBk" id="Zjn-yE-2O3"/>
+                        <outlet property="labelView" destination="0SS-Wk-MFq" id="NH4-uS-cbd"/>
+                        <outlet property="stackView" destination="5Wj-C1-RjK" id="5TG-8z-nXm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -77,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKF-CZ-VUQ">
-                                <rect key="frame" x="25" y="25" width="364" height="64.5"/>
+                                <rect key="frame" x="25" y="69" width="364" height="64.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-lb-ihs">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -96,7 +123,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l">
-                                <rect key="frame" x="50" y="114.5" width="314" height="31"/>
+                                <rect key="frame" x="50" y="158.5" width="314" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
                                 <connections>

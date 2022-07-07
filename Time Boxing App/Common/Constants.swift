@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum CoreDataEntity : String {
     case TaskEntity = "TaskEntity"
@@ -34,7 +35,7 @@ enum AssetsName : String {
 
 enum DateFormat : String {
     case format1 = "EEEE, MMM d - HH:mm"
-    case format2 = "dd-MM-yyyy"
+    case format2 = "dd/MM/yyyy"
     case format3 = "HH:mm"
 }
 
@@ -43,3 +44,6 @@ enum LoginType : Int {
     case Google = 2
     case Other = 3
 }
+
+
+let loginCarousel : [CarouselData] = [.init(image: UIImage(named: "on_image1"), text: "Organiza tu tiempo"),.init(image: UIImage(named: "on_image2"), text: "Enfocate en lo que necesitas"), .init(image: UIImage(named: "on_image3"), text: "Pon recordatorios para lo que necesites")]
