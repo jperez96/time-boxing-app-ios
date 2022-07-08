@@ -14,6 +14,8 @@ protocol TaskCellTableViewCellDelegate {
 class TaskCellTableViewCell: UITableViewCell {
         
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
     private var task : Task?
     var delegate:TaskCellTableViewCellDelegate? = nil
     private let updateTaskUseCase = UpdateTaskUseCase()
@@ -21,10 +23,17 @@ class TaskCellTableViewCell: UITableViewCell {
     func setData(obj: Task){
         task = obj
         titleLabel.text = obj.name
+        let hourDif = "\(obj.initDate.string(format: .format3)) - \(obj.finishDate.string(format: .format3))"
+        subtitleLabel.text = hourDif
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setStyle()
+    }
+    
+    private func setStyle(){
+        self.containerView.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

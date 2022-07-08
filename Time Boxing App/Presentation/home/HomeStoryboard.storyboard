@@ -109,9 +109,8 @@
                                     <constraint firstAttribute="height" constant="120" id="bdQ-ef-p7a"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
-                                <rect key="frame" x="16" y="229" width="382" height="584"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
+                                <rect key="frame" x="16" y="239" width="382" height="574"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="orQ-zg-lF8"/>
@@ -121,7 +120,7 @@
                             <constraint firstItem="lv0-FT-EfM" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="16" id="3tR-lB-BPN"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="top" secondItem="orQ-zg-lF8" secondAttribute="top" constant="25" id="58o-nb-g1Q"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="dEZ-Oq-Fky" secondAttribute="trailing" id="DTM-H6-QMP"/>
-                            <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" id="HZK-Nd-fR0"/>
+                            <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" constant="10" id="HZK-Nd-fR0"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="lv0-FT-EfM" secondAttribute="bottom" id="IfQ-sA-PBN"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="25" id="eaE-5M-syG"/>
                             <constraint firstItem="dEZ-Oq-Fky" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" id="gLZ-ot-u6w"/>
