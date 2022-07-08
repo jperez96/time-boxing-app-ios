@@ -73,6 +73,8 @@
 		F7ABCFD52877E3E900D0182D /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */; };
 		F7ABCFD72877E69B00D0182D /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */; };
 		F7ABCFD92877FB2900D0182D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD82877FB2900D0182D /* HomeTabBarController.swift */; };
+		F7ABCFDE287893C700D0182D /* HorizontalCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFDD287893C700D0182D /* HorizontalCalendar.swift */; };
+		F7ABCFE0287893DE00D0182D /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFDF287893DE00D0182D /* CalendarExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,6 +150,8 @@
 		F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 		F7ABCFD82877FB2900D0182D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
+		F7ABCFDD287893C700D0182D /* HorizontalCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendar.swift; sourceTree = "<group>"; };
+		F7ABCFDF287893DE00D0182D /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +262,7 @@
 		1A8FF3BE2862E23A00A54872 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F7ABCFDC287893BD00D0182D /* Calendar */,
 				F7ABCFD32877E3D400D0182D /* TextField */,
 				F7ABCFC628768AE200D0182D /* StyledComponents */,
 				F7ABCFC12876837500D0182D /* Button */,
@@ -584,6 +589,23 @@
 			path = TextField;
 			sourceTree = "<group>";
 		};
+		F7ABCFDC287893BD00D0182D /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFE12878946D00D0182D /* HorizontalCalendar */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		F7ABCFE12878946D00D0182D /* HorizontalCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFDD287893C700D0182D /* HorizontalCalendar.swift */,
+				F7ABCFDF287893DE00D0182D /* CalendarExtensions.swift */,
+			);
+			path = HorizontalCalendar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -711,6 +733,7 @@
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
 				1A72F1B22868160300A5CB34 /* BaseResponse.swift in Sources */,
 				1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */,
+				F7ABCFDE287893C700D0182D /* HorizontalCalendar.swift in Sources */,
 				F7ABCFD028779A1E00D0182D /* CarouselItem.swift in Sources */,
 				1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */,
 				1AE928542865777A0076057A /* AuthRepository.swift in Sources */,
@@ -747,6 +770,7 @@
 				F741FFA02873C0EA001D5F55 /* RoutineRepository.swift in Sources */,
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
 				1AE92848286560BA0076057A /* Extensions.swift in Sources */,
+				F7ABCFE0287893DE00D0182D /* CalendarExtensions.swift in Sources */,
 				F7ABCFBE28766B9B00D0182D /* CarouselData.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
 				1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */,

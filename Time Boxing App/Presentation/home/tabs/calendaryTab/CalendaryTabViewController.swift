@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import HorizontalCalendar
 
 class CalendaryTabViewController: UIViewController {
     
