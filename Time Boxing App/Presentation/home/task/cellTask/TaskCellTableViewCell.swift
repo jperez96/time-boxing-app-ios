@@ -34,6 +34,7 @@ class TaskCellTableViewCell: UITableViewCell {
     
     private func setStyle(){
         self.containerView.layer.cornerRadius = 5
+        self.containerView.backgroundColor = .quaternary
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

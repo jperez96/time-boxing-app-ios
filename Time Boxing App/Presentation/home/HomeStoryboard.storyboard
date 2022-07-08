@@ -242,21 +242,25 @@
         <!--Task Form View Controller-->
         <scene sceneID="1ht-JG-YL8">
             <objects>
-                <viewController storyboardIdentifier="TaskFormVC" id="3so-kT-Tn4" customClass="TaskFormViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TaskFormVC" modalTransitionStyle="crossDissolve" id="3so-kT-Tn4" customClass="TaskFormViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="1uA-j3-00Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp">
-                                <rect key="frame" x="25" y="69" width="81.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                <rect key="frame" x="25" y="69" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="J6f-Rn-qn1"/>
+                                    <constraint firstAttribute="height" constant="40" id="wIe-IA-Zr8"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Cancelar"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
                                 <connections>
                                     <action selector="dismissButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="KNS-kw-rco"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-sO-c6T">
-                                <rect key="frame" x="25" y="144" width="364" height="161.5"/>
+                                <rect key="frame" x="25" y="144" width="364" height="225.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-8x-9Ch">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -264,8 +268,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-bj-tiE">
-                                        <rect key="frame" x="0.0" y="35.5" width="364" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-bj-tiE" customClass="DefaultTextField" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="35.5" width="364" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nYE-MZ-Ehv"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -273,12 +280,15 @@
                                         </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-9J-qnA">
-                                        <rect key="frame" x="0.0" y="84.5" width="364" height="31"/>
+                                        <rect key="frame" x="0.0" y="90.5" width="364" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="a8I-AA-3mu"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Fecha Inicio"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fecha Inicio"/>
                                                 <connections>
                                                     <action selector="startDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="6Nn-Rv-3nS"/>
                                                 </connections>
@@ -288,19 +298,19 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="RWM-Od-6YD"/>
                                                 </constraints>
-                                                <connections>
-                                                    <action selector="initValueChangeDatePicker:" destination="3so-kT-Tn4" eventType="valueChanged" id="rBJ-Gg-gCl"/>
-                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-mB-XZr">
-                                        <rect key="frame" x="0.0" y="130.5" width="364" height="31"/>
+                                        <rect key="frame" x="0.0" y="165.5" width="364" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="rd8-OW-RMe"/>
+                                                </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Fecha Fin"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Fecha Fin"/>
                                                 <connections>
                                                     <action selector="endDateButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="vI2-Sz-UeA"/>
                                                 </connections>
@@ -310,18 +320,19 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="110" id="ITR-d5-adZ"/>
                                                 </constraints>
-                                                <connections>
-                                                    <action selector="endValueChangedDatePicker:" destination="3so-kT-Tn4" eventType="valueChanged" id="B8J-CW-JA2"/>
-                                                </connections>
                                             </datePicker>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR">
-                                <rect key="frame" x="306.5" y="69" width="82.5" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                <rect key="frame" x="349" y="69" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="pH4-bB-AuS"/>
+                                    <constraint firstAttribute="height" constant="40" id="qrb-SL-4lv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Registrar"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                 <connections>
                                     <action selector="registerTaskButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="cn5-t5-lJK"/>
                                 </connections>
@@ -341,11 +352,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="RQu-g8-yHy"/>
                     <connections>
+                        <outlet property="dimissOutletButton" destination="aEb-d1-bOp" id="Mh3-fy-r6Q"/>
                         <outlet property="endDateButtonOutlet" destination="dRc-r3-oDP" id="9CN-Wh-7QJ"/>
                         <outlet property="endDatePicker" destination="Jh1-I8-jRQ" id="h1Q-zO-h2A"/>
                         <outlet property="initDateButtonOutle" destination="SFv-CB-G1t" id="ljT-LB-sdP"/>
                         <outlet property="registerButton" destination="TM6-mz-VgR" id="xl6-en-EbK"/>
                         <outlet property="startDatePicker" destination="FV7-7f-QGF" id="PJ9-FB-N2v"/>
+                        <outlet property="titleTextField" destination="TJq-bj-tiE" id="LAC-hb-i9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yc3-df-jSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -359,6 +372,7 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="tertiary">
             <color red="0.95686274509803915" green="0.63529411764705879" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
