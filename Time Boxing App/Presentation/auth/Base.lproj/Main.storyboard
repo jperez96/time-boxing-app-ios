@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKF-CZ-VUQ">
-                                <rect key="frame" x="25" y="69" width="364" height="64.5"/>
+                                <rect key="frame" x="25" y="69" width="364" height="70.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-lb-ihs">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -121,22 +121,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20w-XU-e6P">
-                                        <rect key="frame" x="0.0" y="30.5" width="364" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20w-XU-e6P" customClass="DefaultTextField" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="30.5" width="364" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="wVD-70-vl1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="onChangeUsernameTextField:" destination="ooy-Lv-d0g" eventType="editingChanged" id="5h0-QK-Aok"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l">
-                                <rect key="frame" x="50" y="158.5" width="314" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                <rect key="frame" x="50" y="164.5" width="314" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="X6z-Xl-5q8"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
                                 <connections>
-                                    <action selector="createUserButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="oe2-hL-U0v"/>
+                                    <action selector="onDidTouchRegisterButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="PqD-gA-8oi"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -154,7 +157,7 @@
                     <navigationItem key="navigationItem" id="kDC-2b-IIW"/>
                     <connections>
                         <outlet property="registerButton" destination="ahh-E4-38l" id="zGC-y4-Uxq"/>
-                        <outlet property="userTextField" destination="20w-XU-e6P" id="bas-xg-VRZ"/>
+                        <outlet property="userTextField" destination="20w-XU-e6P" id="odX-j2-FrH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygP-5p-kmF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

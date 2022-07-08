@@ -41,9 +41,19 @@ extension UIImage {
 }
 
 extension UIColor {
-    static var primary = UIColor(named: "color1") ?? .systemBlue
-    static var secundary = UIColor(named: "color2") ?? .systemBlue
-    static var tertiary = UIColor(named: "color3") ?? .systemBlue
-    static var quaternary = UIColor(named: "color4") ?? .systemBlue
-    static var fifth = UIColor(named: "color5") ?? .systemBlue
+    
+    static func colorPalette(_ name: String) -> UIColor {
+        return UIColor(named: name) ?? .black
+    }
+    
+    // Core Colors
+    static var primary =  UIColor.colorPalette("primary")
+    static var secundary = UIColor.colorPalette("secundary")
+    static var tertiary = UIColor.colorPalette("tertiary")
+    static var quaternary = UIColor.colorPalette("quaternary")
+    static var fifth = UIColor.colorPalette("fifth")
+    
+    // TextField Colors
+    static var bgTextField = UIColor.colorPalette("bg_grey_text_field")
+    
 }

@@ -70,6 +70,8 @@
 		F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7ABCFCD287796CE00D0182D /* CarouselItem.xib */; };
 		F7ABCFD028779A1E00D0182D /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFCF28779A1E00D0182D /* CarouselItem.swift */; };
 		F7ABCFD228779B3B00D0182D /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */; };
+		F7ABCFD52877E3E900D0182D /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */; };
+		F7ABCFD72877E69B00D0182D /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,8 @@
 		F7ABCFCD287796CE00D0182D /* CarouselItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItem.xib; sourceTree = "<group>"; };
 		F7ABCFCF28779A1E00D0182D /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
 		F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
+		F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
+		F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,7 @@
 		1A8FF3BE2862E23A00A54872 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F7ABCFD32877E3D400D0182D /* TextField */,
 				F7ABCFC628768AE200D0182D /* StyledComponents */,
 				F7ABCFC12876837500D0182D /* Button */,
 				F7ABCFB028765C0100D0182D /* Carousel */,
@@ -543,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				F7ABCFC728768AFE00D0182D /* ButtonStyle.swift */,
+				F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */,
 			);
 			path = StyledComponents;
 			sourceTree = "<group>";
@@ -565,6 +571,14 @@
 				F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */,
 			);
 			path = v2;
+			sourceTree = "<group>";
+		};
+		F7ABCFD32877E3D400D0182D /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -701,10 +715,12 @@
 				1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */,
 				F7ABCFA62875053900D0182D /* Configuration.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
+				F7ABCFD52877E3E900D0182D /* DefaultTextField.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
 				1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */,
 				F741FFA22873C119001D5F55 /* IRoutineRepository.swift in Sources */,
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
+				F7ABCFD72877E69B00D0182D /* TextFieldStyle.swift in Sources */,
 				F7ABCFC3287683A800D0182D /* DefaultButton.swift in Sources */,
 				1A72F1AC286814B600A5CB34 /* CreateTaskUseCase.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,

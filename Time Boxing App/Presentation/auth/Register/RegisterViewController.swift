@@ -9,23 +9,36 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var userTextField: UITextField!
-    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var userTextField: DefaultTextField!
+    @IBOutlet weak var registerButton: DefaultButton!
     
     private var loginUseCase = LoginUseCase()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setStyle()
+        setUpViews()
     }
     
-    @IBAction func onChangeUsernameTextField(_ sender: UITextField) {
-        guard let size = sender.text?.count else {
+    private func setStyle() {
+        self.view.backgroundColor = .primary
+        userTextField.setStyle()
+        registerButton.setStyle()
+    }
+    
+    private func setUpViews(){
+        userTextField.addTarget(self, action: #selector(self.onChangeTextName(_:)), for: .editingChanged)
+    }
+    
+    @objc func onChangeTextName(_ textField: UITextField) {
+        guard let size = textField.text?.count else {
             return
         }
         registerButton.isEnabled = size > 2
     }
+    
 
-    @IBAction func createUserButton(_ sender: UIButton) {
+    @IBAction func onDidTouchRegisterButton(_ sender: DefaultButton) {
         guard let name = userTextField.text else {
             return
         }
