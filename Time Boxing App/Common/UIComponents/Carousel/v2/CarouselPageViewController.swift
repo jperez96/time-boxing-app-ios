@@ -30,7 +30,7 @@ class CarouselPageViewController: UIPageViewController {
     
     private func decoratePageControl() {
         let pc = UIPageControl.appearance(whenContainedInInstancesOf: [CarouselPageViewController.self])
-        pc.currentPageIndicatorTintColor = .orange
+        pc.currentPageIndicatorTintColor = .white
         pc.pageIndicatorTintColor = .gray
     }
     
@@ -43,7 +43,7 @@ class CarouselPageViewController: UIPageViewController {
     
     private func createCarouselItemControler(_ titleText: String?, _ image: UIImage?) -> UIViewController {
         let c = UIViewController()
-        c.view = CarouselItem(title, image)
+        c.view = CarouselItem(titleText, image)
         return c
     }
 }
@@ -109,7 +109,6 @@ extension CarouselPageViewController: UIPageViewControllerDelegate {
               let currentVC = pageViewController.viewControllers?.first,
               let index = items.firstIndex(of: currentVC) else { return }
         self.carouselDelegate?.onPageChanged(index, currentVC, currentVC.view)
-        
     }
     
 }
