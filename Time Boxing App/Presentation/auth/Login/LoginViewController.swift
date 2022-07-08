@@ -9,16 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var labelView: UILabel!
     @IBOutlet weak var googleLoginButton: DefaultButton!
     @IBOutlet weak var anonLoginButton: DefaultButton!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var containerCarouselView: UIView!
+    private var carouselVc : CarouselPageViewController? = nil
     private var loginUseCase = LoginUseCase()
-    private var carouselView: CarouselView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpCarrouselView()
         setViewStyle()
     }
     
@@ -27,26 +26,22 @@ class LoginViewController: UIViewController {
         anonLoginButton.setStyle()
     }
     
-    private func setUpCarrouselView(){
-        carouselView = CarouselView(pages: 3, delegate: self)
-        setupUI()
-    }
-    
-    func setupUI() {
-        view.backgroundColor = .primary
-        guard let carouselView = carouselView else { return }
-        view.addSubview(carouselView)
-        carouselView.translatesAutoresizingMaskIntoConstraints = false
-        carouselView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        carouselView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        carouselView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        carouselView.bottomAnchor.constraint(equalTo: stackView.topAnchor).isActive = true
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let carouselVc = segue.destination as? CarouselPageViewController else {
+            return
+        }
+        self.carouselVc = carouselVc
+        self.carouselVc?.carouselDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        carouselView?.configureView(with: loginCarousel)
+        setUpCarrouselView()
     }
+    
+    private func setUpCarrouselView(){
+        self.view.backgroundColor = .primary
+    }
+    
 
     @IBAction func loginGoogleButton() {
         guard let service = GoogleAuthService() else {
@@ -84,23 +79,20 @@ extension LoginViewController : GoogleSignInDelegate {
     }
 }
 
-extension LoginViewController: CarouselViewDelegate {
-    func currentPageDidChange(to page: Int) {
-        UIView.animate(withDuration: 0.5) {
-            var color : UIColor
-            switch (page) {
-            case 0: color = .primary
-                break
-            case 1: color = .secundary
-                break
-            case 2: color = .tertiary
-                break
-            default:
-                color = .systemBlue
+extension LoginViewController : CarouselPageDelegate {    
+    
+    func onPageChanged(_ page: Int, _ vc: UIViewController, _ view: UIView) {
+        UIView.animate(withDuration: 0.5 ){
+            let uiColor: UIColor
+            switch page {
+            case 0: uiColor = .primary
+            case 1 : uiColor = .secundary
+            case 2 : uiColor = .tertiary
+            default: uiColor = .primary
                 break
             }
-            self.carouselView?.backgroundColor = color
-            self.view.backgroundColor = color
+            self.view.backgroundColor = uiColor
         }
     }
+    
 }

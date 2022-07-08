@@ -8,6 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Carousel Page View Controller-->
+        <scene sceneID="WEe-bh-kN8">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="ZdB-4U-Bc7" customClass="CarouselPageViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQd-sM-aXk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1010" y="819"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -16,12 +24,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0SS-Wk-MFq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-ea-Gx9">
+                                <rect key="frame" x="0.0" y="69" width="414" height="539"/>
+                                <connections>
+                                    <segue destination="ZdB-4U-Bc7" kind="embed" id="z9y-8U-AGC"/>
+                                </connections>
+                            </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-C1-RjK">
                                 <rect key="frame" x="50" y="633" width="314" height="137"/>
                                 <subviews>
@@ -74,20 +82,21 @@
                         <constraints>
                             <constraint firstItem="5Wj-C1-RjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="34W-zg-7fI"/>
                             <constraint firstItem="dWz-kd-n0g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="8eT-De-OlP"/>
+                            <constraint firstItem="5Wj-C1-RjK" firstAttribute="top" secondItem="4Pf-ea-Gx9" secondAttribute="bottom" constant="25" id="DQf-T7-ZI6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Pf-ea-Gx9" secondAttribute="trailing" id="Drb-m0-UYa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Wj-C1-RjK" secondAttribute="trailing" constant="50" id="Tb8-FM-AOi"/>
-                            <constraint firstItem="0SS-Wk-MFq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VxN-He-fvK"/>
                             <constraint firstItem="dWz-kd-n0g" firstAttribute="top" secondItem="5Wj-C1-RjK" secondAttribute="bottom" constant="50" id="frr-pp-tJc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dWz-kd-n0g" secondAttribute="bottom" constant="25" id="lCm-lr-KcQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0SS-Wk-MFq" secondAttribute="trailing" id="qOC-4i-vSI"/>
-                            <constraint firstItem="0SS-Wk-MFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rfK-xQ-4Dk"/>
+                            <constraint firstItem="4Pf-ea-Gx9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ldC-kZ-jD1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dWz-kd-n0g" secondAttribute="trailing" constant="25" id="sHf-ak-Pdu"/>
+                            <constraint firstItem="4Pf-ea-Gx9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="wsj-lP-eRw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7vj-6h-VCL"/>
                     <connections>
                         <outlet property="anonLoginButton" destination="P4c-fv-q0q" id="Gzg-vy-3KL"/>
+                        <outlet property="containerCarouselView" destination="4Pf-ea-Gx9" id="le5-Qf-SOK"/>
                         <outlet property="googleLoginButton" destination="085-g0-JBk" id="Zjn-yE-2O3"/>
-                        <outlet property="labelView" destination="0SS-Wk-MFq" id="NH4-uS-cbd"/>
                         <outlet property="stackView" destination="5Wj-C1-RjK" id="5TG-8z-nXm"/>
                     </connections>
                 </viewController>

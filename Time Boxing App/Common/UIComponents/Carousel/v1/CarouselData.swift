@@ -10,4 +10,9 @@ import UIKit
 struct CarouselData {
     let image: UIImage?
     let text: String
+    
+    init(_ image: UIImage, _ title: String) {
+        self.image = image
+        self.text = title
+    }
 }

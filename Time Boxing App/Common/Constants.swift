@@ -21,6 +21,7 @@ enum CellViewName : String {
 enum ViewControllerName: String {
     case TabView = "TabViewController"
     case LoginView = "LoginViewController"
+    case CarouselPageViewController = "CarouselPageViewController"
 }
 
 enum StoryboardName : String {
@@ -45,5 +46,6 @@ enum LoginType : Int {
     case Other = 3
 }
 
-
-let loginCarousel : [CarouselData] = [.init(image: UIImage(named: "on_image1"), text: "Organiza tu tiempo"),.init(image: UIImage(named: "on_image2"), text: "Enfocate en lo que necesitas"), .init(image: UIImage(named: "on_image3"), text: "Pon recordatorios para lo que necesites")]
+let loginCarousel : [CarouselData] = [.init(UIImage(named: "on_image1")!, "Organiza tu tiempo"),
+                                      .init(UIImage(named: "on_image2")!, "Enfocate en lo que necesitas"),
+                                      .init(UIImage(named: "on_image3")!, "Pon recordatorios para lo que necesites")]

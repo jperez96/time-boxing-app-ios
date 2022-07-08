@@ -63,12 +63,13 @@
 		F7ABCFAB287512D200D0182D /* INotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAA287512D200D0182D /* INotificationRepository.swift */; };
 		F7ABCFAD2875131800D0182D /* NotificationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAC2875131800D0182D /* NotificationRepository.swift */; };
 		F7ABCFAF28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFAE28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift */; };
-		F7ABCFB92876699800D0182D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFB72876699800D0182D /* CarouselView.swift */; };
-		F7ABCFBA2876699800D0182D /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFB82876699800D0182D /* CarouselCell.swift */; };
 		F7ABCFBE28766B9B00D0182D /* CarouselData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFBD28766B9B00D0182D /* CarouselData.swift */; };
 		F7ABCFC028766D3500D0182D /* UIContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFBF28766D3500D0182D /* UIContants.swift */; };
 		F7ABCFC3287683A800D0182D /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFC2287683A800D0182D /* DefaultButton.swift */; };
 		F7ABCFC828768AFE00D0182D /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFC728768AFE00D0182D /* ButtonStyle.swift */; };
+		F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7ABCFCD287796CE00D0182D /* CarouselItem.xib */; };
+		F7ABCFD028779A1E00D0182D /* CarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFCF28779A1E00D0182D /* CarouselItem.swift */; };
+		F7ABCFD228779B3B00D0182D /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,12 +133,15 @@
 		F7ABCFAA287512D200D0182D /* INotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INotificationRepository.swift; sourceTree = "<group>"; };
 		F7ABCFAC2875131800D0182D /* NotificationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRepository.swift; sourceTree = "<group>"; };
 		F7ABCFAE28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleSingleNotificacionUseCase.swift; sourceTree = "<group>"; };
-		F7ABCFB72876699800D0182D /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselView.swift; path = ../../../../../carousel/carousel/CarouselView.swift; sourceTree = "<group>"; };
-		F7ABCFB82876699800D0182D /* CarouselCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CarouselCell.swift; path = ../../../../../carousel/carousel/CarouselCell.swift; sourceTree = "<group>"; };
 		F7ABCFBD28766B9B00D0182D /* CarouselData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselData.swift; sourceTree = "<group>"; };
 		F7ABCFBF28766D3500D0182D /* UIContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContants.swift; sourceTree = "<group>"; };
 		F7ABCFC2287683A800D0182D /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		F7ABCFC728768AFE00D0182D /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		F7ABCFCA287792CF00D0182D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		F7ABCFCB287792CF00D0182D /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		F7ABCFCD287796CE00D0182D /* CarouselItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselItem.xib; sourceTree = "<group>"; };
+		F7ABCFCF28779A1E00D0182D /* CarouselItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItem.swift; sourceTree = "<group>"; };
+		F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -521,9 +525,8 @@
 		F7ABCFB028765C0100D0182D /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
-				F7ABCFB82876699800D0182D /* CarouselCell.swift */,
-				F7ABCFB72876699800D0182D /* CarouselView.swift */,
-				F7ABCFBD28766B9B00D0182D /* CarouselData.swift */,
+				F7ABCFCC2877930200D0182D /* v2 */,
+				F7ABCFC9287792CA00D0182D /* v1 */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -542,6 +545,26 @@
 				F7ABCFC728768AFE00D0182D /* ButtonStyle.swift */,
 			);
 			path = StyledComponents;
+			sourceTree = "<group>";
+		};
+		F7ABCFC9287792CA00D0182D /* v1 */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFCB287792CF00D0182D /* CarouselCell.swift */,
+				F7ABCFCA287792CF00D0182D /* CarouselView.swift */,
+				F7ABCFBD28766B9B00D0182D /* CarouselData.swift */,
+			);
+			path = v1;
+			sourceTree = "<group>";
+		};
+		F7ABCFCC2877930200D0182D /* v2 */ = {
+			isa = PBXGroup;
+			children = (
+				F7ABCFCD287796CE00D0182D /* CarouselItem.xib */,
+				F7ABCFCF28779A1E00D0182D /* CarouselItem.swift */,
+				F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */,
+			);
+			path = v2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -608,6 +631,7 @@
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
+				F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
 				F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */,
@@ -670,6 +694,7 @@
 				1A3EF7D6285F96AB00CAF671 /* AppDelegate.swift in Sources */,
 				1A72F1B22868160300A5CB34 /* BaseResponse.swift in Sources */,
 				1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */,
+				F7ABCFD028779A1E00D0182D /* CarouselItem.swift in Sources */,
 				1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */,
 				1AE928542865777A0076057A /* AuthRepository.swift in Sources */,
 				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
@@ -688,7 +713,6 @@
 				F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */,
 				1AE928652865836C0076057A /* User.swift in Sources */,
 				F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */,
-				F7ABCFB92876699800D0182D /* CarouselView.swift in Sources */,
 				F7ABCFAD2875131800D0182D /* NotificationRepository.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */,
@@ -699,7 +723,6 @@
 				F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */,
 				F7ABCFA9287511F300D0182D /* ScheduleNotificationUseCase.swift in Sources */,
 				1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */,
-				F7ABCFBA2876699800D0182D /* CarouselCell.swift in Sources */,
 				1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */,
 				F741FFA02873C0EA001D5F55 /* RoutineRepository.swift in Sources */,
 				1A8FF3C12862E28100A54872 /* CheckBoxView.swift in Sources */,
@@ -714,6 +737,7 @@
 				F741FF912870A5C5001D5F55 /* RoutineCellTableViewCell.swift in Sources */,
 				1A8FF3B62862D22D00A54872 /* TaskCellTableViewCell.swift in Sources */,
 				1ADFB8E428616476005A5E74 /* RegisterViewController.swift in Sources */,
+				F7ABCFD228779B3B00D0182D /* CarouselPageViewController.swift in Sources */,
 				1AE928582865787B0076057A /* LoginUseCase.swift in Sources */,
 				F741FFA52873C30E001D5F55 /* CreateRoutineUseCase.swift in Sources */,
 				1AE9285C286579160076057A /* IAuthRepository.swift in Sources */,
