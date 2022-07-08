@@ -19,8 +19,8 @@ public class HorizontalCalendar: UIView {
     
     static var dateFormat = "EEEE, MMM d"
     
-    static var selectedColor = UIColor(red: 231/255, green: 111/255, blue: 81/255, alpha: 1)
-    static var todayColor = UIColor(red: 255/255, green: 62/255, blue: 85/255, alpha: 1)
+    static var selectedColor : UIColor = .fifth
+    static var todayColor : UIColor = .fifth
     static var textDark = UIColor(red: 74/255, green: 74/255, blue: 74/255, alpha: 1)
     static var textLight = UIColor(red: 155/255, green: 155/255, blue: 155/255, alpha: 1)
     static var dateColor = UIColor(red: 34/255, green: 34/255, blue: 34/255, alpha: 1)
@@ -43,15 +43,13 @@ public class HorizontalCalendar: UIView {
     }()
     
     private lazy var todayButton: UIButton = { [unowned self] in
-        let button = UIButton(type: .system)
+        let button = UIButton(type: .custom)
         button.setTitle("Hoy", for: .normal)
-        button.setTitleColor(HorizontalCalendar.textDark, for: .normal)
+        button.setTitleColor(UIColor.white , for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: fontMedium)
-        button.contentEdgeInsets = UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 7)
         button.layer.cornerRadius = 5
-        button.tintColor = .red
-        button.layer.borderWidth = 1
-        button.layer.borderColor = border.cgColor
+        button.tintColor = .white
+        button.backgroundColor = .fifth
         button.isHidden = true
         return button
     }()
@@ -166,7 +164,8 @@ extension HorizontalCalendar {
         todayButton.translatesAutoresizingMaskIntoConstraints = false
         addSubview(todayButton)
         NSLayoutConstraint.activate([
-            todayButton.heightAnchor.constraint(equalToConstant: 25),
+            todayButton.heightAnchor.constraint(equalToConstant: 30),
+            todayButton.widthAnchor.constraint(equalToConstant: 40),
             todayButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32),
             todayButton.centerYAnchor.constraint(equalTo: dateLabel.centerYAnchor)
         ])

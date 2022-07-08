@@ -84,9 +84,10 @@ class CoreDataManager {
         }
     }
     
-    func findEntitiesByPredicateCasted<T: CoreDataEntityRequiere>(entity: T.Type, predicate : NSPredicate) -> [T?] {
+    func findEntitiesByPredicateCasted<T: CoreDataEntityRequiere>(entity: T.Type, predicate : NSPredicate, _ sortDesp : [NSSortDescriptor]? = nil ) -> [T?] {
         let request = NSFetchRequest<NSManagedObject>(entityName: entity.getEntityName())
         request.predicate = predicate
+        request.sortDescriptors = sortDesp
         request.returnsObjectsAsFaults = true
         do {
             let data = try context.fetch(request)

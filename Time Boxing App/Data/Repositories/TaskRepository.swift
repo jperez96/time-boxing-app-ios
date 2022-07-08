@@ -60,7 +60,9 @@ class TaskRepository : ITaskRepository {
             
             let predicate =  NSPredicate(format: "initDate >= %@ && initDate <= %@", Calendar.current.startOfDay(for: date) as CVarArg, Calendar.current.startOfDay(for: date + 86400) as CVarArg)
             
-            let result = coreData.findEntitiesByPredicateCasted(entity: Task.self, predicate: predicate)
+            let sort = NSSortDescriptor(key: "initDate", ascending: true)
+            
+            let result = coreData.findEntitiesByPredicateCasted(entity: Task.self, predicate: predicate, [sort])
             
             let nillCount = result.filter { task in
                 task == nil
