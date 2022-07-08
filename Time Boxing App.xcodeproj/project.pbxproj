@@ -72,6 +72,7 @@
 		F7ABCFD228779B3B00D0182D /* CarouselPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */; };
 		F7ABCFD52877E3E900D0182D /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */; };
 		F7ABCFD72877E69B00D0182D /* TextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */; };
+		F7ABCFD92877FB2900D0182D /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFD82877FB2900D0182D /* HomeTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		F7ABCFD128779B3B00D0182D /* CarouselPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselPageViewController.swift; sourceTree = "<group>"; };
 		F7ABCFD42877E3E900D0182D /* DefaultTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextField.swift; sourceTree = "<group>"; };
 		F7ABCFD62877E69B00D0182D /* TextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldStyle.swift; sourceTree = "<group>"; };
+		F7ABCFD82877FB2900D0182D /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,6 +470,7 @@
 				1ADFB90B28616ED6005A5E74 /* settingsTab */,
 				1ADFB90A28616EC9005A5E74 /* routineTab */,
 				1ADFB90928616EC2005A5E74 /* calendaryTab */,
+				F7ABCFD82877FB2900D0182D /* HomeTabBarController.swift */,
 			);
 			path = tabs;
 			sourceTree = "<group>";
@@ -732,6 +735,7 @@
 				F7ABCFAD2875131800D0182D /* NotificationRepository.swift in Sources */,
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */,
+				F7ABCFD92877FB2900D0182D /* HomeTabBarController.swift in Sources */,
 				F7ABCFC028766D3500D0182D /* UIContants.swift in Sources */,
 				F7ABCFAF28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,

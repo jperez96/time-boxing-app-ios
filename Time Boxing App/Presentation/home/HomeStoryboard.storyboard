@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,7 +60,7 @@
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="bottom" secondItem="KTe-H1-5Tq" secondAttribute="bottom" id="nBc-15-Awl"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rutinas" id="Gdy-eG-DMH"/>
+                    <tabBarItem key="tabBarItem" title="Rutinas" image="repeat" catalog="system" id="Gdy-eG-DMH"/>
                     <connections>
                         <outlet property="routineTableView" destination="KTe-H1-5Tq" id="0Od-bT-WrC"/>
                     </connections>
@@ -85,7 +86,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-6I-gce">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-6I-gce" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                         <rect key="frame" x="324" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="UEP-5z-Tuo"/>
@@ -128,8 +129,11 @@
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" constant="16" id="sBL-EA-b56"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendario" id="l1P-jS-Rly"/>
+                    <tabBarItem key="tabBarItem" title="Calendario" id="l1P-jS-Rly">
+                        <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <connections>
+                        <outlet property="addTaskButton" destination="x6i-6I-gce" id="vk4-6p-Rgv"/>
                         <outlet property="calendaryView" destination="dEZ-Oq-Fky" id="Yba-kf-cOK"/>
                         <outlet property="headerStackView" destination="czX-px-KJg" id="KL8-4A-fBq"/>
                         <outlet property="taskTableView" destination="lv0-FT-EfM" id="bo7-qM-4mV"/>
@@ -139,14 +143,16 @@
             </objects>
             <point key="canvasLocation" x="-943" y="-988"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Home Tab Bar Controller-->
         <scene sceneID="vZj-ao-gma">
             <objects>
-                <tabBarController storyboardIdentifier="TabViewController" modalPresentationStyle="fullScreen" id="nzc-oA-rgy" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabViewController" modalPresentationStyle="fullScreen" id="nzc-oA-rgy" customClass="HomeTabBarController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iO5-u2-Eo8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="tertiary"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="kD3-ag-ugZ" kind="relationship" relationship="viewControllers" id="8fI-r8-eQ6"/>
@@ -223,7 +229,7 @@
                             <constraint firstItem="W6K-VZ-zNS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="vsS-Yq-Ems"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Configuracion" id="uL0-My-uUh"/>
+                    <tabBarItem key="tabBarItem" title="Configuracion" image="slider.horizontal.3" catalog="system" id="uL0-My-uUh"/>
                     <connections>
                         <outlet property="notificationPermissionOutletSwitch" destination="Sjy-7a-syX" id="hLM-Hn-oRR"/>
                         <outlet property="userImageView" destination="W6K-VZ-zNS" id="9Qr-Le-Pwu"/>
@@ -349,8 +355,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
+        <namedColor name="tertiary">
+            <color red="0.95686274509803915" green="0.63529411764705879" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,6 +14,7 @@ extension DefaultButton {
         self.setUpView()
         self.backgroundColor = .fifth
         self.titleLabel?.tintColor = .white
+        self.tintColor = .white
     }
     
     func setLoginGoogleStyle() {
