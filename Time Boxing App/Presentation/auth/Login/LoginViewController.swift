@@ -24,6 +24,9 @@ class LoginViewController: UIViewController {
     private func setViewStyle() {
         googleLoginButton.setLoginGoogleStyle()
         anonLoginButton.setStyle()
+        UIView.animate(withDuration: 0.5 ){
+            self.view.backgroundColor = .primary
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
