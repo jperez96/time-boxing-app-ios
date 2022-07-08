@@ -137,7 +137,7 @@
                                     <constraint firstAttribute="height" constant="40" id="X6z-Xl-5q8"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Iniciar Sesion "/>
+                                <buttonConfiguration key="configuration" style="plain" title="Iniciar Sesion "/>
                                 <connections>
                                     <action selector="onDidTouchRegisterButton:" destination="ooy-Lv-d0g" eventType="touchUpInside" id="PqD-gA-8oi"/>
                                 </connections>

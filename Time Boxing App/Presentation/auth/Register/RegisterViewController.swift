@@ -35,6 +35,7 @@ class RegisterViewController: UIViewController {
             return
         }
         registerButton.isEnabled = size > 2
+        registerButton.setStyle()
     }
     
 
