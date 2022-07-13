@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,26 +21,26 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-ea-Gx9">
-                                <rect key="frame" x="0.0" y="25" width="600" height="321"/>
+                                <rect key="frame" x="0.0" y="69" width="414" height="539"/>
                                 <connections>
                                     <segue destination="ZdB-4U-Bc7" kind="embed" id="z9y-8U-AGC"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5Wj-C1-RjK">
-                                <rect key="frame" x="50" y="371" width="500" height="137"/>
+                                <rect key="frame" x="50" y="633" width="314" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iniciar sesión con:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-CX-025">
-                                        <rect key="frame" x="0.0" y="0.0" width="500" height="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="085-g0-JBk" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="37" width="500" height="40"/>
+                                        <rect key="frame" x="0.0" y="37" width="314" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Xwj-cj-W7S"/>
                                         </constraints>
@@ -54,7 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4c-fv-q0q" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="97" width="500" height="40"/>
+                                        <rect key="frame" x="0.0" y="97" width="314" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Mch-Ol-LBh"/>
                                         </constraints>
@@ -70,7 +71,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creado por X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dWz-kd-n0g">
-                                <rect key="frame" x="25" y="558" width="550" height="17"/>
+                                <rect key="frame" x="25" y="820" width="364" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -108,20 +109,20 @@
             <objects>
                 <viewController id="ooy-Lv-d0g" customClass="RegisterViewController" customModule="Time_Boxing_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rb6-ZX-uWi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HKF-CZ-VUQ">
-                                <rect key="frame" x="25" y="25" width="550" height="70.5"/>
+                                <rect key="frame" x="25" y="69" width="364" height="70.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6Q-lb-ihs">
-                                        <rect key="frame" x="0.0" y="0.0" width="550" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="20w-XU-e6P" customClass="BaseTextField" customModule="Time_Boxing_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="30.5" width="550" height="40"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="364" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="wVD-70-vl1"/>
                                         </constraints>
@@ -131,7 +132,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahh-E4-38l" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
-                                <rect key="frame" x="50" y="120.5" width="500" height="40"/>
+                                <rect key="frame" x="50" y="164.5" width="314" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="X6z-Xl-5q8"/>
                                 </constraints>

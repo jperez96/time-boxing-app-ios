@@ -11,6 +11,9 @@ class SettingsTabViewController: UIViewController {
     
     private var notificationManager = NotificationManager()
     
+    @IBOutlet weak var signOutButton: BaseButton!
+    @IBOutlet var configurationStacks: [UIStackView]!
+    
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var notificationPermissionOutletSwitch: UISwitch!
@@ -21,8 +24,17 @@ class SettingsTabViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setStyleView()
         setUpConfiguration()
         setUpProfile()
+    }
+    
+    private func setStyleView(){
+        configurationStacks.forEach { stack in
+            stack.layer.cornerRadius = 8
+        }
+        notificationPermissionOutletSwitch.onTintColor = .primary
+        signOutButton.setStyle()
     }
     
     private func setUpConfiguration(){

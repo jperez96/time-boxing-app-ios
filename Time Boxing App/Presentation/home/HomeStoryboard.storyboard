@@ -172,68 +172,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W6K-VZ-zNS">
-                                <rect key="frame" x="50" y="95.5" width="50" height="47.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="ic8-2y-Q5c"/>
-                                    <constraint firstAttribute="height" constant="50" id="whB-Bd-6RL"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn2-Dy-Bc6">
-                                <rect key="frame" x="115" y="109" width="249" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TFP-cQ-fca">
-                                <rect key="frame" x="25" y="244" width="364" height="82"/>
+                                <rect key="frame" x="25" y="249" width="364" height="111"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u3-Tm-snS">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="51"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificaciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12M-gU-iyb">
-                                                <rect key="frame" x="0.0" y="0.0" width="315" height="31"/>
+                                                <rect key="frame" x="16" y="10" width="283" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-7a-syX">
-                                                <rect key="frame" x="315" y="0.0" width="51" height="31"/>
+                                                <rect key="frame" x="299" y="10" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="requestNotificationPermission:" destination="Y6W-OH-hqX" eventType="valueChanged" id="LPM-1b-gIU"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.098628932119205301" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="16" bottom="10" trailing="16"/>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-Mg-ixs">
-                                        <rect key="frame" x="0.0" y="51" width="364" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Cerrar Sesion"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obP-Mg-ixs" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="71" width="364" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="A72-Dz-Vyw"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Cerrar Sesion"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cerrar Sesion"/>
                                         <connections>
                                             <action selector="onDidTouchSignOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RKi-j6-eoH"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="W6K-VZ-zNS">
+                                <rect key="frame" x="0.0" y="95.5" width="414" height="72.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="mpn-IK-ahU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn2-Dy-Bc6">
+                                <rect key="frame" x="50" y="175" width="314" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TFP-cQ-fca" secondAttribute="trailing" constant="25" id="8CT-Sp-OnT"/>
-                            <constraint firstItem="tn2-Dy-Bc6" firstAttribute="leading" secondItem="W6K-VZ-zNS" secondAttribute="trailing" constant="15" id="EfV-xV-ING"/>
-                            <constraint firstItem="TFP-cQ-fca" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="SRb-Uc-27i"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tn2-Dy-Bc6" secondAttribute="trailing" constant="50" id="VtQ-WM-g1T"/>
-                            <constraint firstItem="TFP-cQ-fca" firstAttribute="top" secondItem="W6K-VZ-zNS" secondAttribute="bottom" constant="100" id="cHM-QW-JLW"/>
-                            <constraint firstItem="W6K-VZ-zNS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="h0W-qF-Zgu"/>
-                            <constraint firstItem="tn2-Dy-Bc6" firstAttribute="centerY" secondItem="W6K-VZ-zNS" secondAttribute="centerY" id="nTL-mV-4Rq"/>
-                            <constraint firstItem="W6K-VZ-zNS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="vsS-Yq-Ems"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="W6K-VZ-zNS" secondAttribute="trailing" id="4eZ-pS-uoC"/>
+                            <constraint firstItem="W6K-VZ-zNS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="86H-6S-CDx"/>
+                            <constraint firstItem="W6K-VZ-zNS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="B2O-ke-Mkx"/>
+                            <constraint firstItem="tn2-Dy-Bc6" firstAttribute="top" secondItem="W6K-VZ-zNS" secondAttribute="bottom" constant="6" id="ELn-Bw-76B"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TFP-cQ-fca" secondAttribute="trailing" constant="25" id="Qpi-Wh-UIz"/>
+                            <constraint firstItem="tn2-Dy-Bc6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="XbH-30-ZbC"/>
+                            <constraint firstItem="TFP-cQ-fca" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="cvR-xF-DsU"/>
+                            <constraint firstItem="TFP-cQ-fca" firstAttribute="top" secondItem="tn2-Dy-Bc6" secondAttribute="bottom" constant="50" id="dfQ-6D-4hk"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tn2-Dy-Bc6" secondAttribute="trailing" constant="50" id="mi9-LB-04I"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Configuracion" image="slider.horizontal.3" catalog="system" id="uL0-My-uUh"/>
                     <connections>
                         <outlet property="notificationPermissionOutletSwitch" destination="Sjy-7a-syX" id="hLM-Hn-oRR"/>
+                        <outlet property="signOutButton" destination="obP-Mg-ixs" id="aGM-nv-q7H"/>
                         <outlet property="userImageView" destination="W6K-VZ-zNS" id="9Qr-Le-Pwu"/>
                         <outlet property="userNameLabel" destination="tn2-Dy-Bc6" id="oPu-x9-XZI"/>
+                        <outletCollection property="configurationStacks" destination="7u3-Tm-snS" collectionClass="NSMutableArray" id="mAe-k2-kSM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

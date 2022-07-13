@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendaryTabViewController: UIViewController {
+class CalendaryTabViewController: BaseViewController {
     
     @IBOutlet weak var taskTableView: UITableView!
     @IBOutlet weak var headerStackView: UIStackView!
