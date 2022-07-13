@@ -16,15 +16,40 @@ class RoutineFormViewController: UIViewController {
     @IBOutlet weak var daysStackView: UIStackView!
     @IBOutlet weak var addRoutineOutlet: UIButton!
     @IBOutlet weak var routineTableView: UITableView!
+    @IBOutlet weak var createRoutineButton: BaseButton!
+    @IBOutlet weak var closeFormButton: BaseButton!
+    @IBOutlet weak var nameTextField: BaseTextField!
+    @IBOutlet weak var mondayButton: BaseButton!
+    
+    @IBOutlet var weekDaysOutlet: [BaseButton]!
+    
     private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [] )
     private var tasks: [Task] = []
     private var weekDay = 2
     private var isToUpdate = false
+    
     var delegate: RoutineFormDelegate? = nil
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        setUpStyle()
+    }
+    
+    private func setCurrentButton(_ button : BaseButton){
+        weekDaysOutlet.forEach { btn in
+            btn.backgroundColor = btn == button ? .fifth : .primary
+        }
+    }
+    
+    private func setUpStyle(){
+        createRoutineButton.setStyle()
+        closeFormButton.setStyle()
+        nameTextField.setStyle()
+        weekDaysOutlet.forEach { btn in
+            btn.setStyle()
+        }
+        setCurrentButton(mondayButton)
     }
     
     private func setUpTableView(){
@@ -71,32 +96,39 @@ class RoutineFormViewController: UIViewController {
     }
     
     //Days
-    @IBAction func mondayButton(_ sender: UIButton) {
+    @IBAction func mondayButton(_ sender: BaseButton) {
         weekDay = 2
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func tuesdayButton(_ sender: UIButton) {
+    @IBAction func tuesdayButton(_ sender: BaseButton) {
         weekDay = 3
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func wednesdayButton(_ sender: UIButton) {
+    @IBAction func wednesdayButton(_ sender: BaseButton) {
         weekDay = 4
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func thursdayButton(_ sender: UIButton) {
+    @IBAction func thursdayButton(_ sender: BaseButton) {
         weekDay = 5
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func fridayButton(_ sender: UIButton) {
+    @IBAction func fridayButton(_ sender: BaseButton) {
         weekDay = 6
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func saturdayButton(_ sender: UIButton) {
+    @IBAction func saturdayButton(_ sender: BaseButton) {
         weekDay = 7
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
-    @IBAction func sundayButton(_ sender: UIButton) {
+    @IBAction func sundayButton(_ sender: BaseButton) {
         weekDay = 1
+        setCurrentButton(sender)
         setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
     }
     

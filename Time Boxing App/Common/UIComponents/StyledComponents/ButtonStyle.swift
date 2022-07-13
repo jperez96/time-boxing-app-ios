@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension DefaultButton {
+extension BaseButton {
     
     func setStyle() {
         self.setUpView()

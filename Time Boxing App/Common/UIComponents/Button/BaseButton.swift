@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-class DefaultButton: UIButton {
-    
-    
+class BaseButton: UIButton {
         
     override init(frame: CGRect) {
         super.init(frame: frame)

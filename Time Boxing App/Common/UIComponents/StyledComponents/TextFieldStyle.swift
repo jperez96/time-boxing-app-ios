@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DefaultTextField {
+extension BaseTextField {
     
     func setStyle() {
         self.setUpView()

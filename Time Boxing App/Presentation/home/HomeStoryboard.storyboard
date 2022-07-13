@@ -27,7 +27,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-jh-Gf4" userLabel="El">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-jh-Gf4" userLabel="El" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                         <rect key="frame" x="324" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="JO9-5x-5Lp"/>
@@ -44,7 +44,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-H1-5Tq">
-                                <rect key="frame" x="0.0" y="134" width="414" height="679"/>
+                                <rect key="frame" x="16" y="134" width="382" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -55,13 +55,14 @@
                             <constraint firstItem="H6a-Xz-KhO" firstAttribute="top" secondItem="2j8-Qe-vsN" secondAttribute="top" constant="25" id="Qh0-n4-18a"/>
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="H6a-Xz-KhO" secondAttribute="trailing" constant="25" id="Vj7-n5-wvn"/>
                             <constraint firstItem="KTe-H1-5Tq" firstAttribute="top" secondItem="H6a-Xz-KhO" secondAttribute="bottom" constant="25" id="f3F-OJ-SAG"/>
-                            <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="KTe-H1-5Tq" secondAttribute="trailing" id="fSv-jd-oyF"/>
-                            <constraint firstItem="KTe-H1-5Tq" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" id="g2F-7a-EUN"/>
+                            <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="KTe-H1-5Tq" secondAttribute="trailing" constant="16" id="fSv-jd-oyF"/>
+                            <constraint firstItem="KTe-H1-5Tq" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" constant="16" id="g2F-7a-EUN"/>
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="bottom" secondItem="KTe-H1-5Tq" secondAttribute="bottom" id="nBc-15-Awl"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rutinas" image="repeat" catalog="system" id="Gdy-eG-DMH"/>
                     <connections>
+                        <outlet property="addRoutineButton" destination="Lgg-jh-Gf4" id="7EB-LX-9s5"/>
                         <outlet property="routineTableView" destination="KTe-H1-5Tq" id="0Od-bT-WrC"/>
                     </connections>
                 </viewController>
@@ -86,7 +87,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-6I-gce" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6i-6I-gce" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                         <rect key="frame" x="324" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="UEP-5z-Tuo"/>
@@ -247,7 +248,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                 <rect key="frame" x="25" y="69" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="J6f-Rn-qn1"/>
@@ -268,7 +269,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-bj-tiE" customClass="DefaultTextField" customModule="Time_Boxing_App" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de la tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-bj-tiE" customClass="BaseTextField" customModule="Time_Boxing_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35.5" width="364" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="nYE-MZ-Ehv"/>
@@ -282,7 +283,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="coJ-9J-qnA">
                                         <rect key="frame" x="0.0" y="90.5" width="364" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SFv-CB-G1t" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="a8I-AA-3mu"/>
@@ -304,7 +305,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-mB-XZr">
                                         <rect key="frame" x="0.0" y="165.5" width="364" height="60"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-r3-oDP" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="364" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="rd8-OW-RMe"/>
@@ -325,7 +326,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR" customClass="DefaultButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                                 <rect key="frame" x="349" y="69" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="pH4-bB-AuS"/>
@@ -374,7 +375,7 @@
         <image name="slider.horizontal.3" catalog="system" width="128" height="100"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="tertiary">
-            <color red="0.95686274509803915" green="0.63529411764705879" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.9570000171661377" green="0.63499999046325684" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

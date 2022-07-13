@@ -9,8 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var googleLoginButton: DefaultButton!
-    @IBOutlet weak var anonLoginButton: DefaultButton!
+    @IBOutlet weak var googleLoginButton: BaseButton!
+    @IBOutlet weak var anonLoginButton: BaseButton!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var containerCarouselView: UIView!
     private var carouselVc : CarouselPageViewController? = nil

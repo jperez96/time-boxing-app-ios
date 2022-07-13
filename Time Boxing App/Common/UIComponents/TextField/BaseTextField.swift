@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class DefaultTextField : UITextField {
+class BaseTextField : UITextField {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

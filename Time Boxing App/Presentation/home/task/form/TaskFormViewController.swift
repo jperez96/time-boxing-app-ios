@@ -17,11 +17,11 @@ class TaskFormViewController: UIViewController {
     
     @IBOutlet weak var startDatePicker: UIDatePicker!
     @IBOutlet weak var endDatePicker: UIDatePicker!
-    @IBOutlet weak var titleTextField: DefaultTextField!
-    @IBOutlet weak var initDateButtonOutle: DefaultButton!
-    @IBOutlet weak var endDateButtonOutlet: DefaultButton!
-    @IBOutlet weak var registerButton: DefaultButton!
-    @IBOutlet weak var dimissOutletButton: DefaultButton!
+    @IBOutlet weak var titleTextField: BaseTextField!
+    @IBOutlet weak var initDateButtonOutle: BaseButton!
+    @IBOutlet weak var endDateButtonOutlet: BaseButton!
+    @IBOutlet weak var registerButton: BaseButton!
+    @IBOutlet weak var dimissOutletButton: BaseButton!
     private var weekDay = 0
     
     var task = Task(name: "", initDate: Date(), finishDate: Date())

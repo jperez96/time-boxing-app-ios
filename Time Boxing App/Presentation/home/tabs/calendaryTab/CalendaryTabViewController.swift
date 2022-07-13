@@ -12,7 +12,7 @@ class CalendaryTabViewController: UIViewController {
     @IBOutlet weak var taskTableView: UITableView!
     @IBOutlet weak var headerStackView: UIStackView!
     @IBOutlet weak var calendaryView: UIView!
-    @IBOutlet weak var addTaskButton: DefaultButton!
+    @IBOutlet weak var addTaskButton: BaseButton!
     
     private var getTaskFromDate = GetTaskFromDateUseCase()
     private var removeTaskUseCase = RemoveTaskUseCase()

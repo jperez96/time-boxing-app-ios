@@ -10,11 +10,17 @@ import UIKit
 class RoutineTabViewController: UIViewController {
     
     @IBOutlet weak var routineTableView: UITableView!
+    @IBOutlet weak var addRoutineButton: BaseButton!
     private var routines: [Routine] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTable()
+        setUpStyle()
+    }
+    
+    private func setUpStyle(){
+        addRoutineButton.setStyle()
     }
     
     @IBAction func addRoutineAction(_ sender: Any) {

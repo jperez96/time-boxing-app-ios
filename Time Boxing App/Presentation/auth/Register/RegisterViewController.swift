@@ -9,8 +9,8 @@ import UIKit
 
 class RegisterViewController: UIViewController {
 
-    @IBOutlet weak var userTextField: DefaultTextField!
-    @IBOutlet weak var registerButton: DefaultButton!
+    @IBOutlet weak var userTextField: BaseTextField!
+    @IBOutlet weak var registerButton: BaseButton!
     
     private var loginUseCase = LoginUseCase()
     
@@ -39,7 +39,7 @@ class RegisterViewController: UIViewController {
     }
     
 
-    @IBAction func onDidTouchRegisterButton(_ sender: DefaultButton) {
+    @IBAction func onDidTouchRegisterButton(_ sender: BaseButton) {
         guard let name = userTextField.text else {
             return
         }
