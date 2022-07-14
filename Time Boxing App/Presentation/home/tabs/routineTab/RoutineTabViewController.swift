@@ -24,8 +24,15 @@ class RoutineTabViewController: UIViewController {
     }
     
     @IBAction func addRoutineAction(_ sender: Any) {
+        openRoutineFrom()
+    }
+    
+    private func openRoutineFrom(_ routine: Routine? = nil) {
         let vc = RoutineFormViewController()
         vc.delegate = self
+        if routine.isNotNull() {
+            vc.setupForm(routine: routine)
+        }
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true)
     }
@@ -107,9 +114,19 @@ extension RoutineTabViewController : UITableViewDelegate {
             self.removeRoutine(routineToRemove)
             completionHandler(true)
         }
+        
+        let updateAction = UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler) in
+            let routineToUpdte = self.routines[indexPath.row]
+            self.openRoutineFrom(routineToUpdte)
+            completionHandler(true)
+        }
+        
+        updateAction.image = UIImage(systemName: "pencil")
+        updateAction.backgroundColor = .systemOrange
+        
         deleteAction.image = UIImage(systemName: "trash")
         deleteAction.backgroundColor = .systemRed
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, updateAction])
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }

@@ -25,7 +25,7 @@ class HomeTabBarController : UITabBarController {
               
        private func setupCustomTabBarFrame() {
            let height = self.view.safeAreaInsets.bottom + 60
-           
+    
            var tabFrame = self.tabBar.frame
            tabFrame.size.height = height
            tabFrame.origin.y = self.view.frame.size.height - height

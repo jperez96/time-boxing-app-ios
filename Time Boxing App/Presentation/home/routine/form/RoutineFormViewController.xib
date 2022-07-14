@@ -18,6 +18,7 @@
                 <outlet property="mondayButton" destination="uiz-Xc-yUz" id="Nk5-hy-CQH"/>
                 <outlet property="nameTextField" destination="wsE-xv-mcI" id="AuQ-LQ-Jbi"/>
                 <outlet property="routineTableView" destination="Kgt-Yb-qWm" id="Ah5-c1-i94"/>
+                <outlet property="titleRoutineTextField" destination="wsE-xv-mcI" id="zuv-6j-8Qm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="weekDaysOutlet" destination="tUf-qW-fsv" collectionClass="NSMutableArray" id="6eo-o3-7Ag"/>
                 <outletCollection property="weekDaysOutlet" destination="uiz-Xc-yUz" collectionClass="NSMutableArray" id="ebw-as-MiF"/>
@@ -140,7 +141,7 @@
                         <constraint firstAttribute="height" constant="30" id="xYO-cb-oIu"/>
                     </constraints>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-Yb-qWm">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-Yb-qWm">
                     <rect key="frame" x="16" y="248" width="382" height="598"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

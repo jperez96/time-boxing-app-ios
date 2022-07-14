@@ -51,6 +51,7 @@ public class HorizontalCalendar: UIView {
         button.tintColor = .white
         button.backgroundColor = .fifth
         button.isHidden = true
+        button.setShadow()
         return button
     }()
     
@@ -74,7 +75,7 @@ public class HorizontalCalendar: UIView {
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
-        
+
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.isDirectionalLockEnabled = true
         collectionView.showsHorizontalScrollIndicator = false

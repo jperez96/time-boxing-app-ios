@@ -21,6 +21,7 @@ class RoutineFormViewController: UIViewController {
     @IBOutlet weak var closeFormButton: BaseButton!
     @IBOutlet weak var nameTextField: BaseTextField!
     @IBOutlet weak var mondayButton: BaseButton!
+    @IBOutlet weak var titleRoutineTextField: BaseTextField!
     
     @IBOutlet var weekDaysOutlet: [BaseButton]!
     
@@ -53,6 +54,9 @@ class RoutineFormViewController: UIViewController {
             btn.setStyle()
         }
         setCurrentButton(mondayButton)
+        if isToUpdate {
+            setTitleRotine(routine.name)
+        }
     }
     
     private func setUpTableView(){
@@ -99,8 +103,13 @@ class RoutineFormViewController: UIViewController {
         guard let name = sender.text else {
             return
         }
-        self.addRoutineOutlet.isHidden = !validateName(name)
-        self.routine.name = name
+        setTitleRotine(name)
+    }
+    
+    private func setTitleRotine(_ title: String){
+        self.addRoutineOutlet.isHidden = !validateName(title)
+        self.titleRoutineTextField.text = title
+        self.routine.name = title
     }
 
     @IBAction func onTouchAddRoutineButton(_ sender: UIButton) {

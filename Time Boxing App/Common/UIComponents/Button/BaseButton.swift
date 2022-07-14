@@ -23,6 +23,7 @@ class BaseButton: UIButton {
         self.backgroundColor = .fifth
         let defaultWidth = ButtonConstans.defaultWidth.rawValue
         self.frame.size = .init(width: self.frame.size.width, height: CGFloat(defaultWidth))
+        self.setShadow()
     }
     
     func setIcon(_ icon : UIImage ) {

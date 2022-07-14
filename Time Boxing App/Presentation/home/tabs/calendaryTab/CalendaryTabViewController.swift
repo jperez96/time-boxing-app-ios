@@ -55,7 +55,7 @@ class CalendaryTabViewController: UIViewController {
         view.addSubview(calendar)
         calendar.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            calendar.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 0),
+            calendar.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 5),
             calendar.leftAnchor.constraint(equalTo: view.leftAnchor),
             calendar.rightAnchor.constraint(equalTo: view.rightAnchor),
             calendar.bottomAnchor.constraint(equalTo: taskTableView.topAnchor)

@@ -21,9 +21,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6a-Xz-KhO">
                                 <rect key="frame" x="25" y="69" width="364" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-ai-5tm">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rutinas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXd-ai-5tm">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -43,7 +43,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-H1-5Tq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KTe-H1-5Tq">
                                 <rect key="frame" x="16" y="134" width="382" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -81,9 +81,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czX-px-KJg">
                                 <rect key="frame" x="25" y="69" width="364" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Rt-fgD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tareas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQJ-Rt-fgD">
                                         <rect key="frame" x="0.0" y="0.0" width="324" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -104,14 +104,14 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEZ-Oq-Fky">
-                                <rect key="frame" x="0.0" y="109" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="bdQ-ef-p7a"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
-                                <rect key="frame" x="16" y="239" width="382" height="574"/>
+                                <rect key="frame" x="16" y="244" width="382" height="569"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="orQ-zg-lF8"/>
@@ -124,7 +124,7 @@
                             <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" constant="10" id="HZK-Nd-fR0"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="lv0-FT-EfM" secondAttribute="bottom" id="IfQ-sA-PBN"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="25" id="eaE-5M-syG"/>
-                            <constraint firstItem="dEZ-Oq-Fky" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" id="gLZ-ot-u6w"/>
+                            <constraint firstItem="dEZ-Oq-Fky" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" constant="5" id="gLZ-ot-u6w"/>
                             <constraint firstItem="dEZ-Oq-Fky" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="rhH-9G-BCz"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" constant="16" id="sBL-EA-b56"/>
                         </constraints>
@@ -256,20 +256,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
-                                <rect key="frame" x="25" y="69" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="J6f-Rn-qn1"/>
-                                    <constraint firstAttribute="height" constant="40" id="wIe-IA-Zr8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
-                                <connections>
-                                    <action selector="dismissButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="KNS-kw-rco"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="8pY-sO-c6T">
-                                <rect key="frame" x="25" y="144" width="364" height="225.5"/>
+                                <rect key="frame" x="25" y="134" width="364" height="225.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-8x-9Ch">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
@@ -334,29 +322,51 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
-                                <rect key="frame" x="349" y="69" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="pH4-bB-AuS"/>
-                                    <constraint firstAttribute="height" constant="40" id="qrb-SL-4lv"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                <connections>
-                                    <action selector="registerTaskButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="cn5-t5-lJK"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fjx-f7-Yz1">
+                                <rect key="frame" x="25" y="69" width="364" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-d1-bOp" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="7ay-Aa-XcA"/>
+                                            <constraint firstAttribute="height" constant="40" id="nVc-mm-pkR"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="dismissButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="KNS-kw-rco"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear Tarea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-2r-Nvs" userLabel="Nueva Tarea">
+                                        <rect key="frame" x="40" y="0.0" width="284" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TM6-mz-VgR" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                                        <rect key="frame" x="324" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="0rm-3u-qa1"/>
+                                            <constraint firstAttribute="height" constant="40" id="qZ7-ZZ-NjF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="registerTaskButton:" destination="3so-kT-Tn4" eventType="touchUpInside" id="cn5-t5-lJK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8LW-o2-8iA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8LW-o2-8iA" firstAttribute="trailing" secondItem="TM6-mz-VgR" secondAttribute="trailing" constant="25" id="533-C2-WLL"/>
-                            <constraint firstItem="aEb-d1-bOp" firstAttribute="leading" secondItem="8LW-o2-8iA" secondAttribute="leading" constant="25" id="A2l-fJ-YIs"/>
-                            <constraint firstItem="8pY-sO-c6T" firstAttribute="top" secondItem="8LW-o2-8iA" secondAttribute="top" constant="100" id="KGe-RL-Gij"/>
-                            <constraint firstItem="aEb-d1-bOp" firstAttribute="top" secondItem="8LW-o2-8iA" secondAttribute="top" constant="25" id="OC4-Xi-9fb"/>
+                            <constraint firstItem="Fjx-f7-Yz1" firstAttribute="top" secondItem="8LW-o2-8iA" secondAttribute="top" constant="25" id="NzG-kX-V0d"/>
+                            <constraint firstItem="8LW-o2-8iA" firstAttribute="trailing" secondItem="Fjx-f7-Yz1" secondAttribute="trailing" constant="25" id="Qd9-O0-MLB"/>
                             <constraint firstItem="8LW-o2-8iA" firstAttribute="trailing" secondItem="8pY-sO-c6T" secondAttribute="trailing" constant="25" id="ZR0-iu-NlP"/>
-                            <constraint firstItem="TM6-mz-VgR" firstAttribute="top" secondItem="8LW-o2-8iA" secondAttribute="top" constant="25" id="dgq-bQ-YDU"/>
+                            <constraint firstItem="Fjx-f7-Yz1" firstAttribute="leading" secondItem="8LW-o2-8iA" secondAttribute="leading" constant="25" id="dsc-6E-64a"/>
                             <constraint firstItem="8pY-sO-c6T" firstAttribute="leading" secondItem="8LW-o2-8iA" secondAttribute="leading" constant="25" id="oDj-E0-klP"/>
+                            <constraint firstItem="8pY-sO-c6T" firstAttribute="top" secondItem="Fjx-f7-Yz1" secondAttribute="bottom" constant="25" id="zEz-aY-plK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RQu-g8-yHy"/>

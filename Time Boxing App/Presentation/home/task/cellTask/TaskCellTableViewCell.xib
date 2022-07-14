@@ -11,39 +11,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TaskCellView" rowHeight="158" id="KGk-i7-Jjw" customClass="TaskCellTableViewCell" customModule="Time_Boxing_App" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="158"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45s-sJ-hLI">
-                        <rect key="frame" x="10" y="10" width="300" height="138"/>
+                        <rect key="frame" x="10" y="10" width="300" height="80"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6zK-OH-7jX">
-                                <rect key="frame" x="10" y="10" width="280" height="118"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-k3-7oQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="92.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg8-k3-7oQ">
+                                        <rect key="frame" x="8" y="8" width="284" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-oW-jZK">
-                                        <rect key="frame" x="0.0" y="97.5" width="280" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-oW-jZK">
+                                        <rect key="frame" x="8" y="33.5" width="284" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" name="primary"/>
                         <constraints>
-                            <constraint firstItem="6zK-OH-7jX" firstAttribute="top" secondItem="45s-sJ-hLI" secondAttribute="top" constant="10" id="B2C-iN-bRf"/>
-                            <constraint firstAttribute="trailing" secondItem="6zK-OH-7jX" secondAttribute="trailing" constant="10" id="T1c-Ow-sc2"/>
-                            <constraint firstAttribute="bottom" secondItem="6zK-OH-7jX" secondAttribute="bottom" constant="10" id="axA-fF-eXR"/>
-                            <constraint firstItem="6zK-OH-7jX" firstAttribute="leading" secondItem="45s-sJ-hLI" secondAttribute="leading" constant="10" id="d63-tq-m6a"/>
+                            <constraint firstItem="6zK-OH-7jX" firstAttribute="top" secondItem="45s-sJ-hLI" secondAttribute="top" id="B2C-iN-bRf"/>
+                            <constraint firstAttribute="trailing" secondItem="6zK-OH-7jX" secondAttribute="trailing" id="T1c-Ow-sc2"/>
+                            <constraint firstAttribute="bottom" secondItem="6zK-OH-7jX" secondAttribute="bottom" id="axA-fF-eXR"/>
+                            <constraint firstItem="6zK-OH-7jX" firstAttribute="leading" secondItem="45s-sJ-hLI" secondAttribute="leading" id="d63-tq-m6a"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -65,7 +66,7 @@
     </objects>
     <resources>
         <namedColor name="primary">
-            <color red="0.9137254901960784" green="0.76862745098039209" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91399997472763062" green="0.76899999380111694" blue="0.41600000858306885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

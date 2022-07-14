@@ -56,6 +56,8 @@
 		F741FFA72873C3FB001D5F55 /* UpdateRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA62873C3FB001D5F55 /* UpdateRoutineUseCase.swift */; };
 		F741FFAA2873C46E001D5F55 /* GetRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */; };
 		F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */; };
+		F754717C287FBB800061BDCA /* CalendaryLabelItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F754717B287FBB800061BDCA /* CalendaryLabelItem.xib */; };
+		F754717E287FBB920061BDCA /* CalendaryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754717D287FBB910061BDCA /* CalendaryLabelView.swift */; };
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
 		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
@@ -131,6 +133,8 @@
 		F741FFA62873C3FB001D5F55 /* UpdateRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRoutineUseCase.swift; sourceTree = "<group>"; };
 		F741FFA92873C46E001D5F55 /* GetRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoutineUseCase.swift; sourceTree = "<group>"; };
 		F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRoutineUseCase.swift; sourceTree = "<group>"; };
+		F754717B287FBB800061BDCA /* CalendaryLabelItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendaryLabelItem.xib; sourceTree = "<group>"; };
+		F754717D287FBB910061BDCA /* CalendaryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryLabelView.swift; sourceTree = "<group>"; };
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
 		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -526,6 +530,15 @@
 			path = Routine;
 			sourceTree = "<group>";
 		};
+		F754717A287FB8170061BDCA /* CalendaryUIViews */ = {
+			isa = PBXGroup;
+			children = (
+				F754717B287FBB800061BDCA /* CalendaryLabelItem.xib */,
+				F754717D287FBB910061BDCA /* CalendaryLabelView.swift */,
+			);
+			path = CalendaryUIViews;
+			sourceTree = "<group>";
+		};
 		F7ABCFA7287511DB00D0182D /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +605,7 @@
 		F7ABCFDC287893BD00D0182D /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				F754717A287FB8170061BDCA /* CalendaryUIViews */,
 				F7ABCFE12878946D00D0182D /* HorizontalCalendar */,
 			);
 			path = Calendar;
@@ -669,6 +683,7 @@
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
+				F754717C287FBB800061BDCA /* CalendaryLabelItem.xib in Resources */,
 				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
 				F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
@@ -740,6 +755,7 @@
 				1AE9284D2865730A0076057A /* UIExtension.swift in Sources */,
 				1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */,
 				F7ABCFA62875053900D0182D /* Configuration.swift in Sources */,
+				F754717E287FBB920061BDCA /* CalendaryLabelView.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				F7ABCFD52877E3E900D0182D /* BaseTextField.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,

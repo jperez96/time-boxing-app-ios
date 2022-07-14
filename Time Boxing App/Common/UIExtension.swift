@@ -19,6 +19,14 @@ extension UIButton {
     }
 }
 
+extension UIView {
+    func setShadow(){
+        self.layer.shadowOffset = CGSize(width: 3, height: 3)
+        self.layer.shadowRadius = 5
+        self.layer.shadowOpacity = 0.25
+    }
+}
+
 extension UITableView {
     func registerTaskCell(){
         self.register(UINib(nibName: "TaskCellTableViewCell", bundle: nil), forCellReuseIdentifier: CellViewName.task.rawValue)
