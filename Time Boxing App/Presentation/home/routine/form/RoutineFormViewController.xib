@@ -11,8 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoutineFormViewController" customModule="Time_Boxing_App" customModuleProvider="target">
             <connections>
                 <outlet property="addRoutineOutlet" destination="odJ-dz-iIl" id="cxL-Kn-Kfa"/>
+                <outlet property="addTaskButtonOutlet" destination="oF0-A0-lYU" id="kxj-Px-GVr"/>
                 <outlet property="closeFormButton" destination="Uiu-yQ-B6R" id="K1q-Lg-n6a"/>
-                <outlet property="createRoutineButton" destination="oF0-A0-lYU" id="1gH-ek-C6M"/>
+                <outlet property="createRoutineButton" destination="odJ-dz-iIl" id="pn2-2d-NBh"/>
                 <outlet property="daysStackView" destination="obJ-68-vxN" id="DSC-2t-kae"/>
                 <outlet property="mondayButton" destination="uiz-Xc-yUz" id="Nk5-hy-CQH"/>
                 <outlet property="nameTextField" destination="wsE-xv-mcI" id="AuQ-LQ-Jbi"/>
@@ -140,13 +141,16 @@
                     </constraints>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Kgt-Yb-qWm">
-                    <rect key="frame" x="0.0" y="223" width="414" height="289"/>
+                    <rect key="frame" x="16" y="248" width="382" height="598"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-dz-iIl">
-                    <rect key="frame" x="75" y="781" width="264" height="31"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-dz-iIl" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                    <rect key="frame" x="75" y="772" width="264" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="fbc-HB-eBa"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="gray" title="Agregar Rutina"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Agregar Rutina"/>
                     <connections>
                         <action selector="onTouchAddRoutineButton:" destination="-1" eventType="touchUpInside" id="Goi-Tc-Tqw"/>
                     </connections>
@@ -155,11 +159,11 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kgt-Yb-qWm" secondAttribute="bottom" constant="350" id="CBQ-hS-7Hi"/>
-                <constraint firstItem="Kgt-Yb-qWm" firstAttribute="top" secondItem="obJ-68-vxN" secondAttribute="bottom" id="HFv-7p-azg"/>
-                <constraint firstItem="Kgt-Yb-qWm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MTQ-q1-HV8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kgt-Yb-qWm" secondAttribute="bottom" constant="16" id="CBQ-hS-7Hi"/>
+                <constraint firstItem="Kgt-Yb-qWm" firstAttribute="top" secondItem="obJ-68-vxN" secondAttribute="bottom" constant="25" id="HFv-7p-azg"/>
+                <constraint firstItem="Kgt-Yb-qWm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MTQ-q1-HV8"/>
                 <constraint firstItem="obJ-68-vxN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Ntd-12-Aae"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kgt-Yb-qWm" secondAttribute="trailing" id="RlG-tr-qaW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Kgt-Yb-qWm" secondAttribute="trailing" constant="16" id="RlG-tr-qaW"/>
                 <constraint firstItem="wsE-xv-mcI" firstAttribute="top" secondItem="XRH-fn-OGq" secondAttribute="bottom" constant="25" id="To6-Lr-9Ld"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XRH-fn-OGq" secondAttribute="trailing" constant="25" id="VII-jR-oaz"/>
                 <constraint firstItem="XRH-fn-OGq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="VyY-Ow-A7b"/>

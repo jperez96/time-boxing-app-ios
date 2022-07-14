@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CalendaryTabViewController: BaseViewController {
+class CalendaryTabViewController: UIViewController {
     
     @IBOutlet weak var taskTableView: UITableView!
     @IBOutlet weak var headerStackView: UIStackView!
@@ -37,9 +37,16 @@ class CalendaryTabViewController: BaseViewController {
     }
     
     @IBAction func openFormTaskButton(_ sender: UIButton) {
+        openTaskForm()
+    }
+    
+    private func openTaskForm(_ task: Task? = nil){
         if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
             vc.delegate = self
             vc.modalPresentationStyle = .overCurrentContext
+            if task.isNotNull() {
+                vc.setFormToUpdate(task: task!)
+            }
             self.present(vc, animated: true, completion: nil)
         }
     }
@@ -109,6 +116,15 @@ class CalendaryTabViewController: BaseViewController {
         }
     }
     
+    private func updateTask(_ task: Task){
+        let useCase = UpdateTaskUseCase()
+        _ = useCase.execute(task).subscribe { response in
+            self.getTaskFromDate(self.calendar.selectedDate)
+        } onFailure: { error in
+            print(error)
+        }
+    }
+    
     private func removeTask(_ task : Task) {
         let _ = removeTaskUseCase.execute(task).subscribe { response in
             guard let result = response.responseData else {
@@ -143,21 +159,31 @@ extension CalendaryTabViewController : UITableViewDataSource {
 
 extension CalendaryTabViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+        let deleteAction = UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler) in
             let taskToRemove = self.tasks[indexPath.row]
             self.removeTask(taskToRemove)
             completionHandler(true)
         }
+        let updateAction = UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler) in
+            self.openTaskForm(self.tasks[indexPath.row])
+            completionHandler(true)
+        }
         deleteAction.image = UIImage(systemName: "trash")
         deleteAction.backgroundColor = .systemRed
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        updateAction.image = UIImage(systemName: "pencil")
+        updateAction.backgroundColor = .systemOrange
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction,updateAction])
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }
 }
 
 extension CalendaryTabViewController : TaskFormDelegate {
-    func didRegister(task: Task) {
-        registerTask(task)
+    func didRegister(task: Task, toUpdate : Bool) {
+        if !toUpdate {
+            registerTask(task)
+        } else {
+            updateTask(task)
+        }
     }
 }

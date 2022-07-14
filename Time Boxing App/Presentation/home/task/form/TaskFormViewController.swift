@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 protocol TaskFormDelegate {
-    func didRegister(task: Task)
+    func didRegister(task: Task, toUpdate : Bool)
 }
 
 
@@ -23,6 +23,7 @@ class TaskFormViewController: UIViewController {
     @IBOutlet weak var registerButton: BaseButton!
     @IBOutlet weak var dimissOutletButton: BaseButton!
     private var weekDay = 0
+    private var isToUpdate = false
     
     var task = Task(name: "", initDate: Date(), finishDate: Date())
     var delegate : TaskFormDelegate?
@@ -31,9 +32,17 @@ class TaskFormViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setStyle()
-        if(weekDay != 0){
-            setUpFormTaskRoutineView()
-        }
+    }
+    
+    private func setTaskFormToEdit(_ task : Task){
+        self.setTitleTask(task.name)
+        self.saveInitDate(task.initDate)
+        self.saveEndDate(task.finishDate)
+    }
+    
+    func setFormToUpdate(task : Task){
+        self.task = task
+        self.isToUpdate = true
     }
     
     private func setStyle(){
@@ -54,6 +63,13 @@ class TaskFormViewController: UIViewController {
         endDateButtonOutlet.setDateString(defaultDate, "Fecha Fin", .format3)
         startDatePicker.addTarget(self, action: #selector(self.startDatePickerChanged(_:)), for: .valueChanged)
         endDatePicker.addTarget(self, action: #selector(self.endDatePickerChanged(_:)), for: .valueChanged)
+        
+        if(weekDay != 0){
+            setUpFormTaskRoutineView()
+        }
+        if isToUpdate {
+            self.setTaskFormToEdit(self.task)
+        }
     }
     
     @objc func startDatePickerChanged(_ sender: UIDatePicker) {
@@ -89,7 +105,7 @@ class TaskFormViewController: UIViewController {
     }
     
     @IBAction func registerTaskButton(_ sender: UIButton) {
-        self.delegate?.didRegister(task: self.task)
+        self.delegate?.didRegister(task: self.task, toUpdate: self.isToUpdate)
         dismiss(animated: true)
     }
     
@@ -105,7 +121,12 @@ class TaskFormViewController: UIViewController {
         guard let title = sender.text else {
             return
         }
+        setTitleTask(title)
+    }
+    
+    private func setTitleTask(_ title: String){
         registerButton.isEnabled = !title.isEmpty
+        titleTextField.text = title
         task.name = title
     }
     

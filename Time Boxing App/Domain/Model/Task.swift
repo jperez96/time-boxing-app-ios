@@ -42,7 +42,10 @@ struct Task : Codable {
     
     static func getTaskDateByWeekDay(date: Date, weekDay : Int) -> Date? {
         let nexttDay = DateComponents(weekday: weekDay)
-        return Calendar.current.nextDate(after: date, matching: nexttDay, matchingPolicy: .strict)
+        guard let dateWeek = Calendar.current.nextDate(after: date, matching: nexttDay, matchingPolicy: .strict) else {
+            return nil
+        }
+        return  Calendar.current.date(bySettingHour: date.getHour(), minute: date.getMinute(), second: 0, of: dateWeek)
     }
     
 }

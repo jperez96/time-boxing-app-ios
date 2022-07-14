@@ -14,7 +14,8 @@ protocol RoutineFormDelegate {
 class RoutineFormViewController: UIViewController {
 
     @IBOutlet weak var daysStackView: UIStackView!
-    @IBOutlet weak var addRoutineOutlet: UIButton!
+    @IBOutlet weak var addRoutineOutlet: BaseButton!
+    @IBOutlet weak var addTaskButtonOutlet: BaseButton!
     @IBOutlet weak var routineTableView: UITableView!
     @IBOutlet weak var createRoutineButton: BaseButton!
     @IBOutlet weak var closeFormButton: BaseButton!
@@ -45,7 +46,9 @@ class RoutineFormViewController: UIViewController {
     private func setUpStyle(){
         createRoutineButton.setStyle()
         closeFormButton.setStyle()
+        addTaskButtonOutlet.setStyle()
         nameTextField.setStyle()
+        addRoutineOutlet.setStyle()
         weekDaysOutlet.forEach { btn in
             btn.setStyle()
         }
@@ -61,8 +64,27 @@ class RoutineFormViewController: UIViewController {
     }
     
     private func setTaskOnView(_ tasks: [Task]){
-        self.tasks = tasks
+        self.tasks = sortByDate(tasks)
         routineTableView.reloadData()
+    }
+    
+    private func setTaskToEdit(_ task: Task){
+        var list : [Task] = []
+        self.routine.tasks.forEach { obj in
+            if(task.id == obj.id) {
+                list.append(task)
+            } else {
+                list.append(obj)
+            }
+        }
+        self.routine.tasks = list
+        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
+    }
+    
+    private func sortByDate(_ tasks : [Task]) -> [Task] {
+        return tasks.sorted { a, b in
+            a.initDate < b.finishDate
+        }
     }
 
     func setupForm(routine: Routine?){
@@ -87,10 +109,17 @@ class RoutineFormViewController: UIViewController {
     }
     
     @IBAction func addTaskButton(_ sender: UIButton) {
+        openTaskForm()
+    }
+    
+    private func openTaskForm(_ task: Task? = nil){
         if let vc = UIStoryboard(name: StoryboardName.Home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "TaskFormVC") as? TaskFormViewController {
             vc.delegate = self
-            vc.setFormTaskRoutine(self.weekDay)
             vc.modalPresentationStyle = .overCurrentContext
+            vc.setFormTaskRoutine(self.weekDay)
+            if task.isNotNull() {
+                vc.setFormToUpdate(task: task!)
+            }
             self.present(vc, animated: true, completion: nil)
         }
     }
@@ -171,17 +200,27 @@ extension RoutineFormViewController: UITableViewDelegate {
             self.removeTask(self.tasks[indexPath.row])
             completionHandler(true)
         }
+        let updateAction = UIContextualAction(style: .normal, title: nil) { (_, _, completionHandler) in
+            self.openTaskForm(self.tasks[indexPath.row])
+            completionHandler(true)
+        }
         deleteAction.image = UIImage(systemName: "trash")
         deleteAction.backgroundColor = .systemRed
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        updateAction.image = UIImage(systemName: "pencil")
+        updateAction.backgroundColor = .systemOrange
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction, updateAction])
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }
 }
 
 extension RoutineFormViewController: TaskFormDelegate {
-    func didRegister(task: Task) {
-        self.routine.tasks.append(task)
-        setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
+    func didRegister(task: Task, toUpdate : Bool) {
+        if toUpdate {
+            setTaskToEdit(task)
+        } else {
+            self.routine.tasks.append(task)
+            setTaskOnView(Routine.getTaskByWeekDay(tasks: self.routine.tasks, weekDay: weekDay))
+        }
     }
 }
