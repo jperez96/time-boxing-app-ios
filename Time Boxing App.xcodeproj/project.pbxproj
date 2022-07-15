@@ -17,6 +17,8 @@
 		1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DB285F96AB00CAF671 /* Main.storyboard */; };
 		1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */; };
 		1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */; };
+		1A59B40B28821183000559C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A59B40A28821183000559C3 /* GoogleService-Info.plist */; };
+		1A59B40E288214DB000559C3 /* login-view-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A59B40D288214DB000559C3 /* login-view-animation.json */; };
 		1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */; };
 		1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A12867EFA500A5CB34 /* DataModel.xcdatamodeld */; };
 		1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A42867F3AF00A5CB34 /* CoreDataManager.swift */; };
@@ -44,7 +46,6 @@
 		1AE9285C286579160076057A /* IAuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9285B286579160076057A /* IAuthRepository.swift */; };
 		1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE9285E28657ECB0076057A /* UserDefaultUtil.swift */; };
 		1AE928652865836C0076057A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE928642865836C0076057A /* User.swift */; };
-		F741FF8028709C22001D5F55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */; };
 		F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF8A2870A2ED001D5F55 /* RoutineFormViewController.swift */; };
 		F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */; };
 		F741FF912870A5C5001D5F55 /* RoutineCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */; };
@@ -65,7 +66,6 @@
 		F791A0262881291200F402BE /* IAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0252881291200F402BE /* IAppRepository.swift */; };
 		F791A02A2881B97900F402BE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0282881B97900F402BE /* LoadingViewController.swift */; };
 		F791A02B2881B97900F402BE /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F791A0292881B97900F402BE /* LoadingViewController.xib */; };
-		F791A02E2881CAE800F402BE /* login-view-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F791A02D2881CAE800F402BE /* login-view-animation.json */; };
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
 		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
@@ -100,6 +100,8 @@
 		1A3EF7DE285F96AC00CAF671 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3EF7E1285F96AC00CAF671 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A3EF7E3285F96AC00CAF671 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A59B40A28821183000559C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1A59B40D288214DB000559C3 /* login-view-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "login-view-animation.json"; sourceTree = "<group>"; };
 		1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		1A72F1A22867EFA500A5CB34 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		1A72F1A42867F3AF00A5CB34 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -129,7 +131,6 @@
 		1AE928642865836C0076057A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		25F738DFAFBE379E141FADA6 /* Pods_Time_Boxing_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Time_Boxing_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53267AECC0F5C957BDB08B8E /* Pods-Time Boxing App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Time Boxing App.debug.xcconfig"; path = "Target Support Files/Pods-Time Boxing App/Pods-Time Boxing App.debug.xcconfig"; sourceTree = "<group>"; };
-		F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F741FF8A2870A2ED001D5F55 /* RoutineFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineFormViewController.swift; sourceTree = "<group>"; };
 		F741FF8B2870A2ED001D5F55 /* RoutineFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineFormViewController.xib; sourceTree = "<group>"; };
 		F741FF8F2870A5C5001D5F55 /* RoutineCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,7 +151,6 @@
 		F791A0252881291200F402BE /* IAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAppRepository.swift; sourceTree = "<group>"; };
 		F791A0282881B97900F402BE /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F791A0292881B97900F402BE /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
-		F791A02D2881CAE800F402BE /* login-view-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "login-view-animation.json"; path = "../../../../../Downloads/login-view-animation.json"; sourceTree = "<group>"; };
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
 		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		1A3EF7D4285F96AB00CAF671 /* Time Boxing App */ = {
 			isa = PBXGroup;
 			children = (
-				F741FF7F28709C22001D5F55 /* GoogleService-Info.plist */,
+				1A59B40A28821183000559C3 /* GoogleService-Info.plist */,
 				1AE9284E286576870076057A /* Data */,
 				1A8FF3C42863852200A54872 /* Domain */,
 				1A8FF3BA2862D82B00A54872 /* Common */,
@@ -236,6 +236,14 @@
 				1ADFB8B328610FAE005A5E74 /* Presentation */,
 			);
 			path = "Time Boxing App";
+			sourceTree = "<group>";
+		};
+		1A59B40C288214A7000559C3 /* LottieFile */ = {
+			isa = PBXGroup;
+			children = (
+				1A59B40D288214DB000559C3 /* login-view-animation.json */,
+			);
+			path = LottieFile;
 			sourceTree = "<group>";
 		};
 		1A72F1772866B19D00A5CB34 /* Utilities */ = {
@@ -344,7 +352,7 @@
 		1ADFB8BA28611225005A5E74 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				F791A02C2881CAC700F402BE /* LottieFile */,
+				1A59B40C288214A7000559C3 /* LottieFile */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */,
 				1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */,
@@ -579,14 +587,6 @@
 			path = LoadingView;
 			sourceTree = "<group>";
 		};
-		F791A02C2881CAC700F402BE /* LottieFile */ = {
-			isa = PBXGroup;
-			children = (
-				F791A02D2881CAE800F402BE /* login-view-animation.json */,
-			);
-			path = LottieFile;
-			sourceTree = "<group>";
-		};
 		F7ABCFA7287511DB00D0182D /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -730,16 +730,16 @@
 			files = (
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
-				F791A02E2881CAE800F402BE /* login-view-animation.json in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				F754717C287FBB800061BDCA /* CalendaryLabelItem.xib in Resources */,
+				1A59B40B28821183000559C3 /* GoogleService-Info.plist in Resources */,
 				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
 				F791A02B2881B97900F402BE /* LoadingViewController.xib in Resources */,
+				1A59B40E288214DB000559C3 /* login-view-animation.json in Resources */,
 				F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
 				F741FF922870A5C5001D5F55 /* RoutineCellTableViewCell.xib in Resources */,
-				F741FF8028709C22001D5F55 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

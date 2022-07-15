@@ -139,6 +139,7 @@ class TaskFormViewController: UIViewController {
         task.initDate = date
         task.finishDate = date
         endDatePicker.minimumDate = date
+        endDateButtonOutlet.setDateString(date, "Fecha Fin", .format3)
         initDateButtonOutle.setDateString(date, "Fecha Inicio", weekDay == 0 ? .format1 : .format3)
     }
     

@@ -110,10 +110,21 @@ class RoutineFormViewController: UIViewController {
     }
     
     private func setTitleRotine(_ title: String){
-        self.addRoutineOutlet.isHidden = !validateName(title)
+        if self.validateName(title) {
+            setAnimationTransition()
+        } else {
+            self.addRoutineOutlet.isHidden = true
+        }
         self.titleRoutineTextField.text = title
         self.routine.name = title
     }
+    
+    private func setAnimationTransition(){
+        UIView.transition(with: self.addRoutineOutlet, duration: 0.5, options: .transitionCrossDissolve) {
+            self.addRoutineOutlet.isHidden = false
+        }
+    }
+    
 
     @IBAction func onTouchAddRoutineButton(_ sender: UIButton) {
         delegate?.registerRoutine(self.routine, isToUpdate)
