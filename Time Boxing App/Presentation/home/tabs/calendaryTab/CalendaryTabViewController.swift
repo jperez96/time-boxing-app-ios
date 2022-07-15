@@ -17,6 +17,7 @@ class CalendaryTabViewController: UIViewController {
     private var getTaskFromDate = GetTaskFromDateUseCase()
     private var removeTaskUseCase = RemoveTaskUseCase()
     private var tasks : [Task] = []
+    private var tasksRoutine : [Task] = []
     private var calendar = HorizontalCalendar()
     
     override func viewDidLoad() {
@@ -104,13 +105,21 @@ class CalendaryTabViewController: UIViewController {
             taskToAdd.append(contentsOf: tasksFromRoutines)
         }
         self.tasks.append(contentsOf: taskToAdd)
+        self.tasksRoutine = taskToAdd
         self.taskTableView.reloadData()
+    }
+    
+    private func isTaskRoutine(_ task : Task) -> Bool {
+        return self.tasksRoutine.filter { taskRoutine in
+            taskRoutine.id == task.id
+        }.isEmpty
     }
     
     private func registerTask(_ task: Task){
         let useCase = CreateTaskUseCase()
         _ = useCase.execute(task).subscribe { response in
             self.getTaskFromDate(self.calendar.selectedDate)
+            self.syncData()
         } onFailure: { error in
             print(error)
         }
@@ -120,6 +129,7 @@ class CalendaryTabViewController: UIViewController {
         let useCase = UpdateTaskUseCase()
         _ = useCase.execute(task).subscribe { response in
             self.getTaskFromDate(self.calendar.selectedDate)
+            self.syncData()
         } onFailure: { error in
             print(error)
         }
@@ -138,6 +148,13 @@ class CalendaryTabViewController: UIViewController {
         } onFailure: { error in
           print(error)
         }
+    }
+    
+    private func syncData() {
+        let repository = AppRepository()
+        repository.delegate = self
+        repository.syncDataToCloud()
+        return
     }
     
 }
@@ -172,7 +189,11 @@ extension CalendaryTabViewController : UITableViewDelegate {
         deleteAction.backgroundColor = .systemRed
         updateAction.image = UIImage(systemName: "pencil")
         updateAction.backgroundColor = .systemOrange
-        let configuration = UISwipeActionsConfiguration(actions: [deleteAction,updateAction])
+        var actions : [UIContextualAction] = []
+        if isTaskRoutine(self.tasks[indexPath.row]) {
+            actions = [deleteAction,updateAction]
+        }
+        let configuration = UISwipeActionsConfiguration(actions: actions)
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }
@@ -185,5 +206,11 @@ extension CalendaryTabViewController : TaskFormDelegate {
         } else {
             updateTask(task)
         }
+    }
+}
+
+extension CalendaryTabViewController : AppRepositoryDelegate {
+    func result(_ result: BaseResponse<Bool>) {
+        print(result.responseMessage)
     }
 }

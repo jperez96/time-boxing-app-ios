@@ -10,5 +10,5 @@ import RxSwift
 
 protocol IAppRepository {
     func syncDataToApp()
-    func syncDataToCloud(_ data: FirebaseUserEntity)
+    func syncDataToCloud()
 }

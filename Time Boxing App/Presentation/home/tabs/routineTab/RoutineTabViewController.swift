@@ -41,6 +41,7 @@ class RoutineTabViewController: UIViewController {
         let useCase = CreateRoutineUseCase()
         _ = useCase.execute(routine).subscribe(onSuccess: { response in
             self.getRoutines()
+            self.syncData()
         }, onFailure: { error in
             print(error)
         })
@@ -50,6 +51,7 @@ class RoutineTabViewController: UIViewController {
         let useCase = UpdateRoutineUseCase()
         _ = useCase.execute(routine).subscribe(onSuccess: { response in
             self.getRoutines()
+            self.syncData()
         }, onFailure: { error in
             print(error)
         })
@@ -88,6 +90,7 @@ class RoutineTabViewController: UIViewController {
                 return
             }
             self.getRoutines()
+            self.syncData()
         }, onFailure: { error in
             print(error)
         })
@@ -130,6 +133,13 @@ extension RoutineTabViewController : UITableViewDelegate {
         configuration.performsFirstActionWithFullSwipe = false
         return configuration
     }
+    
+    private func syncData() {
+        let repository = AppRepository()
+        repository.delegate = self
+        repository.syncDataToCloud()
+        return
+    }
 }
 
 extension RoutineTabViewController : RoutineFormDelegate {
@@ -140,4 +150,11 @@ extension RoutineTabViewController : RoutineFormDelegate {
         }
         createRoutine(routine)
     }
+}
+
+extension RoutineTabViewController: AppRepositoryDelegate {
+    func result(_ result: BaseResponse<Bool>) {
+        print(result.responseMessage)
+    }
+    
 }

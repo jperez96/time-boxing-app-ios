@@ -57,6 +57,12 @@ class LoginViewController: UIViewController {
     private func loginWithUser(_ user : User) {
         _ = loginUseCase.execute(user).subscribe { result in
             if result {
+                if user.loginType == LoginType.Google.rawValue {
+                    let repository = AppRepository()
+                    repository.delegate = self
+                    repository.syncDataToApp()
+                    return
+                }
                 self.toHomeView()
             }
         } onFailure: { error in
@@ -71,6 +77,12 @@ class LoginViewController: UIViewController {
     }
 }
 
+extension LoginViewController : AppRepositoryDelegate {
+    func result(_ result: BaseResponse<Bool>) {
+        print(result.responseMessage)
+        self.toHomeView()
+    }
+}
 
 extension LoginViewController : GoogleSignInDelegate {
     func onSignInGoogleResponse(_ response: BaseResponse<User>) {

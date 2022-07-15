@@ -56,6 +56,39 @@ class NotificationRepository : INotificationRepository {
         }
     }
     
+    func scheduleNotificationNotSingle(_ schedule : Bool) {
+        guard let coreData = self.coreData else {
+            return
+        }
+        
+        var tasks : [Task] = []
+        var taskRoutines : [Task] = []
+        let predicate =  NSPredicate(format: "initDate >= %@", Calendar.current.startOfDay(for: Date()) as CVarArg)
+        
+        coreData.findEntitiesByPredicateCasted(entity: Task.self, predicate: predicate).forEach { task in
+            if task.isNotNull() {
+                tasks.append(task!)
+            }
+        }
+        
+        coreData.findEntitiesCasted(entity: Routine.self).forEach { routine in
+            if routine.isNotNull() {
+                routine!.tasks.forEach { task in
+                    taskRoutines.append(task)
+                }
+            }
+        }
+                
+        if schedule {
+            _ = self.createNotifications(tasks, false)
+            _ = self.createNotifications(taskRoutines, true)
+        } else {
+            tasks.append(contentsOf: taskRoutines)
+            _ = self.removeNotification(tasks)
+        }
+        
+    }
+    
     func scheduleSingleNotification(_ tasks : [Task] , _ schedule: Bool, _ repeatNotification: Bool) -> Single<BaseResponse<Bool>> {
         return Single.create { single in
             

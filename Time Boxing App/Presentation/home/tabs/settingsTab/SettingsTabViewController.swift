@@ -70,10 +70,17 @@ class SettingsTabViewController: UIViewController {
     private func scheduleNotifications(_ schedule: Bool){
         let useCase = ScheduleNotificationUseCase()
         _ = useCase.execute(schedule).subscribe(onSuccess: { response in
-            
+            self.syncData()
         }, onFailure: { error in
             print(error)
         })
+    }
+    
+    private func syncData() {
+        let repository = AppRepository()
+        repository.delegate = self
+        repository.syncDataToCloud()
+        return
     }
     
     private func removeGoogleSession(_ currentUser: User) {
@@ -159,5 +166,11 @@ extension SettingsTabViewController : NotificationPermissionDelegate {
             self.scheduleNotifications(self.currentConfig.notification)
             self.updateConfig(self.currentConfig)
         }
+    }
+}
+
+extension SettingsTabViewController : AppRepositoryDelegate {
+    func result(_ result: BaseResponse<Bool>) {
+        print(result.responseMessage)
     }
 }
