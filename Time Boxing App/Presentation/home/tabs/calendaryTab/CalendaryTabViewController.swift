@@ -171,7 +171,7 @@ extension CalendaryTabViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellViewName.task.rawValue, for: indexPath) as! TaskCellTableViewCell
-        cell.setData(obj: tasks[indexPath.row])
+        cell.setData(obj: tasks[indexPath.row], !self.isTaskRoutine(self.tasks[indexPath.row]))
         return cell
     }
     

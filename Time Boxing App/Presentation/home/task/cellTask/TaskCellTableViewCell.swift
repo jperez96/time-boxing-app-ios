@@ -16,15 +16,17 @@ class TaskCellTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var iconTask: UIImageView!
     private var task : Task?
     var delegate:TaskCellTableViewCellDelegate? = nil
     private let updateTaskUseCase = UpdateTaskUseCase()
     
-    func setData(obj: Task){
+    func setData(obj: Task, _ taskRoutine : Bool = false){
         task = obj
         titleLabel.text = obj.name
         let hourDif = "\(obj.initDate.string(format: .format3)) - \(obj.finishDate.string(format: .format3))"
         subtitleLabel.text = hourDif
+        iconTask.isHidden = !taskRoutine
     }
     
     override func awakeFromNib() {
