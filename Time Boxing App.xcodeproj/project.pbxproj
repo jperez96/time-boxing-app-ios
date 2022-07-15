@@ -63,6 +63,9 @@
 		F791A02028810EA800F402BE /* FirebaseUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A01F28810EA800F402BE /* FirebaseUserEntity.swift */; };
 		F791A0242881290400F402BE /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0232881290400F402BE /* AppRepository.swift */; };
 		F791A0262881291200F402BE /* IAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0252881291200F402BE /* IAppRepository.swift */; };
+		F791A02A2881B97900F402BE /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0282881B97900F402BE /* LoadingViewController.swift */; };
+		F791A02B2881B97900F402BE /* LoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F791A0292881B97900F402BE /* LoadingViewController.xib */; };
+		F791A02E2881CAE800F402BE /* login-view-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F791A02D2881CAE800F402BE /* login-view-animation.json */; };
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
 		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
@@ -145,6 +148,9 @@
 		F791A01F28810EA800F402BE /* FirebaseUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserEntity.swift; sourceTree = "<group>"; };
 		F791A0232881290400F402BE /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
 		F791A0252881291200F402BE /* IAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAppRepository.swift; sourceTree = "<group>"; };
+		F791A0282881B97900F402BE /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F791A0292881B97900F402BE /* LoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingViewController.xib; sourceTree = "<group>"; };
+		F791A02D2881CAE800F402BE /* login-view-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "login-view-animation.json"; path = "../../../../../Downloads/login-view-animation.json"; sourceTree = "<group>"; };
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
 		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 		1A8FF3BE2862E23A00A54872 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				F791A0272881B96900F402BE /* LoadingView */,
 				F7ABCFDC287893BD00D0182D /* Calendar */,
 				F7ABCFD32877E3D400D0182D /* TextField */,
 				F7ABCFC628768AE200D0182D /* StyledComponents */,
@@ -337,6 +344,7 @@
 		1ADFB8BA28611225005A5E74 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				F791A02C2881CAC700F402BE /* LottieFile */,
 				1A3EF7E0285F96AC00CAF671 /* LaunchScreen.storyboard */,
 				1A3EF7D5285F96AB00CAF671 /* AppDelegate.swift */,
 				1A3EF7D7285F96AB00CAF671 /* SceneDelegate.swift */,
@@ -562,6 +570,23 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
+		F791A0272881B96900F402BE /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				F791A0282881B97900F402BE /* LoadingViewController.swift */,
+				F791A0292881B97900F402BE /* LoadingViewController.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		F791A02C2881CAC700F402BE /* LottieFile */ = {
+			isa = PBXGroup;
+			children = (
+				F791A02D2881CAE800F402BE /* login-view-animation.json */,
+			);
+			path = LottieFile;
+			sourceTree = "<group>";
+		};
 		F7ABCFA7287511DB00D0182D /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,9 +730,11 @@
 			files = (
 				1A3EF7E2285F96AC00CAF671 /* LaunchScreen.storyboard in Resources */,
 				1A8FF3B72862D22D00A54872 /* TaskCellTableViewCell.xib in Resources */,
+				F791A02E2881CAE800F402BE /* login-view-animation.json in Resources */,
 				1A3EF7DF285F96AC00CAF671 /* Assets.xcassets in Resources */,
 				F754717C287FBB800061BDCA /* CalendaryLabelItem.xib in Resources */,
 				F741FF8D2870A2ED001D5F55 /* RoutineFormViewController.xib in Resources */,
+				F791A02B2881B97900F402BE /* LoadingViewController.xib in Resources */,
 				F7ABCFCE287796CE00D0182D /* CarouselItem.xib in Resources */,
 				1ADFB9132861701B005A5E74 /* HomeStoryboard.storyboard in Resources */,
 				1A3EF7DD285F96AB00CAF671 /* Main.storyboard in Resources */,
@@ -802,6 +829,7 @@
 				1AE9285F28657ECB0076057A /* UserDefaultUtil.swift in Sources */,
 				F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */,
 				F7ABCFD92877FB2900D0182D /* HomeTabBarController.swift in Sources */,
+				F791A02A2881B97900F402BE /* LoadingViewController.swift in Sources */,
 				F7ABCFC028766D3500D0182D /* UIContants.swift in Sources */,
 				F7ABCFAF28752C3E00D0182D /* ScheduleSingleNotificacionUseCase.swift in Sources */,
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,

@@ -12,6 +12,7 @@ import FirebaseAuth
 
 protocol GoogleSignInDelegate {
     func onSignInGoogleResponse(_ response: BaseResponse<User>)
+    func onStartSignIn()
 }
 
 protocol GoogleSignOutDelegate {
@@ -47,6 +48,7 @@ class GoogleAuthService {
                 self.signInDelegate?.onSignInGoogleResponse(.error(msg: "No se obtuvo el authentication."))
                 return
             }
+            self.signInDelegate?.onStartSignIn()
             let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                            accessToken: authentication.accessToken)
             self.firebaseSignIn(credential)

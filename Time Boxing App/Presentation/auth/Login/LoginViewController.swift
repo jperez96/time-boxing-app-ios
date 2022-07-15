@@ -15,6 +15,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var containerCarouselView: UIView!
     private var carouselVc : CarouselPageViewController? = nil
     private var loginUseCase = LoginUseCase()
+    private var loginLoadingView = LoadingViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,10 +72,19 @@ class LoginViewController: UIViewController {
     }
     
     private func toHomeView(){
-        let storyboard = UIStoryboard(name: StoryboardName.Home.rawValue , bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: ViewControllerName.TabView.rawValue)
-        self.present(vc, animated: true)
+        loginLoadingView.dismiss(animated: true) {
+            let storyboard = UIStoryboard(name: StoryboardName.Home.rawValue , bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: ViewControllerName.TabView.rawValue)
+            self.present(vc, animated: true)
+        }
     }
+    
+    private func showLoadingView(){
+        loginLoadingView.modalPresentationStyle = .overFullScreen
+        loginLoadingView.modalTransitionStyle = .crossDissolve
+        present(loginLoadingView, animated: true)
+    }
+    
 }
 
 extension LoginViewController : AppRepositoryDelegate {
@@ -85,6 +95,10 @@ extension LoginViewController : AppRepositoryDelegate {
 }
 
 extension LoginViewController : GoogleSignInDelegate {
+    func onStartSignIn() {
+        showLoadingView()
+    }
+    
     func onSignInGoogleResponse(_ response: BaseResponse<User>) {
         if response.responseCode == .Success {
             loginWithUser(response.responseData!)

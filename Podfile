@@ -16,7 +16,6 @@ target 'Time Boxing App' do
   pod 'FirebaseFirestoreSwift', :git => 'https://github.com/firebase/firebase-ios-sdk.git'
 
   #UI
- 
-  # Pods for Time Boxing App
+  pod 'lottie-ios'
 
 end

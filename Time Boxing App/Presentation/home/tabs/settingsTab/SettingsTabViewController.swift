@@ -56,7 +56,6 @@ class SettingsTabViewController: UIViewController {
     
     private func setupViews() {
         userImageView.layer.masksToBounds = true
-        userImageView.layer.cornerRadius = userImageView.bounds.width / 2
     }
     
     @IBAction func onDidTouchSignOutButton(_ sender: UIButton) {

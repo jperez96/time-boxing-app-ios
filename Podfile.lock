@@ -725,6 +725,7 @@ PODS:
   - Libuv-gRPC/Implementation (0.0.10):
     - Libuv-gRPC/Interface (= 0.0.10)
   - Libuv-gRPC/Interface (0.0.10)
+  - lottie-ios (3.4.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -738,6 +739,7 @@ DEPENDENCIES:
   - FirebaseFirestore
   - FirebaseFirestoreSwift (from `https://github.com/firebase/firebase-ios-sdk.git`)
   - GoogleSignIn
+  - lottie-ios
   - RxSwift
 
 SPEC REPOS:
@@ -759,6 +761,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - Libuv-gRPC
+    - lottie-ios
     - nanopb
     - PromisesObjC
     - RxSwift
@@ -791,10 +794,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5595ec75acf5be50814f81e9189490412bad82ba
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   Libuv-gRPC: 55e51798e14ef436ad9bc45d12d43b77b49df378
+  lottie-ios: 69495122151a378fdc7d1bb4c5930347e37baf1f
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 9a9761c950ce9eee94d441de8d0f8d24684cd18d
+PODFILE CHECKSUM: d881bc3c14c9b7f19c8616bab014b9559847990f
 
 COCOAPODS: 1.11.3
