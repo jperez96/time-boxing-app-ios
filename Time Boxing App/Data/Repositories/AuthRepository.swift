@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 class AuthRepository : IAuthRepository {
-    
+
     private lazy var defaultUtilData = UserDefaultManager()
     
     func login(_ user: User) -> Single<Bool> {

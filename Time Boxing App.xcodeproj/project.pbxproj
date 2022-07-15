@@ -20,7 +20,7 @@
 		1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */; };
 		1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A12867EFA500A5CB34 /* DataModel.xcdatamodeld */; };
 		1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A42867F3AF00A5CB34 /* CoreDataManager.swift */; };
-		1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */; };
+		1A72F1A7286800DF00A5CB34 /* CoreDataEntityRequiere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1A6286800DF00A5CB34 /* CoreDataEntityRequiere.swift */; };
 		1A72F1AC286814B600A5CB34 /* CreateTaskUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1AB286814B600A5CB34 /* CreateTaskUseCase.swift */; };
 		1A72F1AE286814F400A5CB34 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1AD286814F400A5CB34 /* TaskRepository.swift */; };
 		1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A72F1AF2868153D00A5CB34 /* ITaskRepository.swift */; };
@@ -58,6 +58,11 @@
 		F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */; };
 		F754717C287FBB800061BDCA /* CalendaryLabelItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F754717B287FBB800061BDCA /* CalendaryLabelItem.xib */; };
 		F754717E287FBB920061BDCA /* CalendaryLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754717D287FBB910061BDCA /* CalendaryLabelView.swift */; };
+		F7547180287FC89A0061BDCA /* GoogleFirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754717F287FC89A0061BDCA /* GoogleFirestoreManager.swift */; };
+		F7547182287FC9210061BDCA /* FirestoreEntityRequiere.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7547181287FC9210061BDCA /* FirestoreEntityRequiere.swift */; };
+		F791A02028810EA800F402BE /* FirebaseUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A01F28810EA800F402BE /* FirebaseUserEntity.swift */; };
+		F791A0242881290400F402BE /* AppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0232881290400F402BE /* AppRepository.swift */; };
+		F791A0262881291200F402BE /* IAppRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F791A0252881291200F402BE /* IAppRepository.swift */; };
 		F7ABCFA22874ECB700D0182D /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA12874ECB700D0182D /* NotificationManager.swift */; };
 		F7ABCFA42874FE3A00D0182D /* PermissionRequestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */; };
 		F7ABCFA62875053900D0182D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABCFA52875053900D0182D /* Configuration.swift */; };
@@ -95,7 +100,7 @@
 		1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		1A72F1A22867EFA500A5CB34 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		1A72F1A42867F3AF00A5CB34 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityUtil.swift; sourceTree = "<group>"; };
+		1A72F1A6286800DF00A5CB34 /* CoreDataEntityRequiere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataEntityRequiere.swift; sourceTree = "<group>"; };
 		1A72F1AB286814B600A5CB34 /* CreateTaskUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskUseCase.swift; sourceTree = "<group>"; };
 		1A72F1AD286814F400A5CB34 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		1A72F1AF2868153D00A5CB34 /* ITaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITaskRepository.swift; sourceTree = "<group>"; };
@@ -135,6 +140,11 @@
 		F741FFAB2873C4D1001D5F55 /* RemoveRoutineUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRoutineUseCase.swift; sourceTree = "<group>"; };
 		F754717B287FBB800061BDCA /* CalendaryLabelItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendaryLabelItem.xib; sourceTree = "<group>"; };
 		F754717D287FBB910061BDCA /* CalendaryLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendaryLabelView.swift; sourceTree = "<group>"; };
+		F754717F287FC89A0061BDCA /* GoogleFirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleFirestoreManager.swift; sourceTree = "<group>"; };
+		F7547181287FC9210061BDCA /* FirestoreEntityRequiere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreEntityRequiere.swift; sourceTree = "<group>"; };
+		F791A01F28810EA800F402BE /* FirebaseUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserEntity.swift; sourceTree = "<group>"; };
+		F791A0232881290400F402BE /* AppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRepository.swift; sourceTree = "<group>"; };
+		F791A0252881291200F402BE /* IAppRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAppRepository.swift; sourceTree = "<group>"; };
 		F7ABCFA12874ECB700D0182D /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionRequestUtil.swift; sourceTree = "<group>"; };
 		F7ABCFA52875053900D0182D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -186,6 +196,7 @@
 			children = (
 				1A24BDCC286BA3A5003D846C /* GoogleAuthService.swift */,
 				F7ABCFA12874ECB700D0182D /* NotificationManager.swift */,
+				F754717F287FC89A0061BDCA /* GoogleFirestoreManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				1A72F1782866B1BA00A5CB34 /* CodableUtil.swift */,
-				1A72F1A6286800DF00A5CB34 /* CoreDataEntityUtil.swift */,
+				1A72F1A6286800DF00A5CB34 /* CoreDataEntityRequiere.swift */,
 				F7ABCFA32874FE3A00D0182D /* PermissionRequestUtil.swift */,
+				F7547181287FC9210061BDCA /* FirestoreEntityRequiere.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,7 +263,6 @@
 		1A8FF3BA2862D82B00A54872 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				1A24BDCB286BA317003D846C /* Services */,
 				1A72F1772866B19D00A5CB34 /* Utilities */,
 				1A8FF3BE2862E23A00A54872 /* UIComponents */,
 				1A8FF3BB2862D83600A54872 /* Constants.swift */,
@@ -297,6 +308,7 @@
 		1A8FF3C5286386FC00A54872 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F791A01D28810E8D00F402BE /* Firebase */,
 				1A8FF3C62863871200A54872 /* Task.swift */,
 				1AE928642865836C0076057A /* User.swift */,
 				F741FF9A28738E79001D5F55 /* Routine.swift */,
@@ -400,6 +412,7 @@
 		1AE9284E286576870076057A /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A24BDCB286BA317003D846C /* Services */,
 				1A72F17D2867ED5200A5CB34 /* CoreData */,
 				1AE9285D28657EBA0076057A /* UserDefaults */,
 				1AE92850286576ED0076057A /* Repositories */,
@@ -414,6 +427,7 @@
 				1A72F1AD286814F400A5CB34 /* TaskRepository.swift */,
 				F741FF9F2873C0EA001D5F55 /* RoutineRepository.swift */,
 				F7ABCFAC2875131800D0182D /* NotificationRepository.swift */,
+				F791A0232881290400F402BE /* AppRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -444,6 +458,7 @@
 				1A72F1AF2868153D00A5CB34 /* ITaskRepository.swift */,
 				F741FFA12873C119001D5F55 /* IRoutineRepository.swift */,
 				F7ABCFAA287512D200D0182D /* INotificationRepository.swift */,
+				F791A0252881291200F402BE /* IAppRepository.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -537,6 +552,14 @@
 				F754717D287FBB910061BDCA /* CalendaryLabelView.swift */,
 			);
 			path = CalendaryUIViews;
+			sourceTree = "<group>";
+		};
+		F791A01D28810E8D00F402BE /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				F791A01F28810EA800F402BE /* FirebaseUserEntity.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		F7ABCFA7287511DB00D0182D /* Notification */ = {
@@ -749,6 +772,7 @@
 				1A72F1B22868160300A5CB34 /* BaseResponse.swift in Sources */,
 				1A062167286A182D000B58D6 /* UpdateTaskUseCase.swift in Sources */,
 				F7ABCFDE287893C700D0182D /* HorizontalCalendar.swift in Sources */,
+				F791A0242881290400F402BE /* AppRepository.swift in Sources */,
 				F7ABCFD028779A1E00D0182D /* CarouselItem.swift in Sources */,
 				1A72F1A32867EFA500A5CB34 /* DataModel.xcdatamodeld in Sources */,
 				1AE928542865777A0076057A /* AuthRepository.swift in Sources */,
@@ -756,14 +780,17 @@
 				1A062169286A3895000B58D6 /* RemoveTaskUseCase.swift in Sources */,
 				F7ABCFA62875053900D0182D /* Configuration.swift in Sources */,
 				F754717E287FBB920061BDCA /* CalendaryLabelView.swift in Sources */,
+				F791A0262881291200F402BE /* IAppRepository.swift in Sources */,
 				1ADFB91128616F08005A5E74 /* SettingsTabViewController.swift in Sources */,
 				F7ABCFD52877E3E900D0182D /* BaseTextField.swift in Sources */,
 				1A72F1792866B1BA00A5CB34 /* CodableUtil.swift in Sources */,
 				1A72F1A52867F3AF00A5CB34 /* CoreDataManager.swift in Sources */,
 				F741FFA22873C119001D5F55 /* IRoutineRepository.swift in Sources */,
 				1A8FF3C72863871200A54872 /* Task.swift in Sources */,
+				F7547182287FC9210061BDCA /* FirestoreEntityRequiere.swift in Sources */,
 				F7ABCFD72877E69B00D0182D /* TextFieldStyle.swift in Sources */,
 				F7ABCFC3287683A800D0182D /* BaseButton.swift in Sources */,
+				F7547180287FC89A0061BDCA /* GoogleFirestoreManager.swift in Sources */,
 				1A72F1AC286814B600A5CB34 /* CreateTaskUseCase.swift in Sources */,
 				1ADFB90F28616EFE005A5E74 /* RoutineTabViewController.swift in Sources */,
 				F741FFAC2873C4D1001D5F55 /* RemoveRoutineUseCase.swift in Sources */,
@@ -780,6 +807,7 @@
 				1A72F1B02868153D00A5CB34 /* ITaskRepository.swift in Sources */,
 				1A8FF3BC2862D83600A54872 /* Constants.swift in Sources */,
 				F741FF8C2870A2ED001D5F55 /* RoutineFormViewController.swift in Sources */,
+				F791A02028810EA800F402BE /* FirebaseUserEntity.swift in Sources */,
 				F7ABCFA9287511F300D0182D /* ScheduleNotificationUseCase.swift in Sources */,
 				1A24BDCD286BA3A5003D846C /* GoogleAuthService.swift in Sources */,
 				1A062162286972F6000B58D6 /* GetTaskFromDateUseCase.swift in Sources */,
@@ -789,7 +817,7 @@
 				F7ABCFE0287893DE00D0182D /* CalendarExtensions.swift in Sources */,
 				F7ABCFBE28766B9B00D0182D /* CarouselData.swift in Sources */,
 				1ADFB91F2862AAB2005A5E74 /* TaskFormViewController.swift in Sources */,
-				1A72F1A7286800DF00A5CB34 /* CoreDataEntityUtil.swift in Sources */,
+				1A72F1A7286800DF00A5CB34 /* CoreDataEntityRequiere.swift in Sources */,
 				F7ABCFAB287512D200D0182D /* INotificationRepository.swift in Sources */,
 				F741FFA72873C3FB001D5F55 /* UpdateRoutineUseCase.swift in Sources */,
 				1A72F1AE286814F400A5CB34 /* TaskRepository.swift in Sources */,

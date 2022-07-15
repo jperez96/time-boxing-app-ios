@@ -12,7 +12,9 @@ target 'Time Boxing App' do
   #Firebase
   pod 'FirebaseAuth'
   pod 'GoogleSignIn'
-  
+  pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift', :git => 'https://github.com/firebase/firebase-ios-sdk.git'
+
   #UI
  
   # Pods for Time Boxing App

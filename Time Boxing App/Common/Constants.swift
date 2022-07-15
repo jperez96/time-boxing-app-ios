@@ -13,6 +13,10 @@ enum CoreDataEntity : String {
     case RoutineEntity = "RoutineEntity"
 }
 
+enum FirebaseEntity: String {
+    case User = "User"
+}
+
 enum CellViewName : String {
     case task = "TaskCellView"
     case routine = "RoutineCellView"
