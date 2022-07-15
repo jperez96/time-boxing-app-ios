@@ -23,6 +23,7 @@ class RoutineFormViewController: UIViewController {
     @IBOutlet weak var mondayButton: BaseButton!
     @IBOutlet weak var titleRoutineTextField: BaseTextField!
     
+    @IBOutlet weak var containerEmptyTask: UIStackView!
     @IBOutlet var weekDaysOutlet: [BaseButton]!
     
     private var routine : Routine = Routine(id: UUID.init(), name: "", tasks: [] )
@@ -69,6 +70,8 @@ class RoutineFormViewController: UIViewController {
     
     private func setTaskOnView(_ tasks: [Task]){
         self.tasks = sortByDate(tasks)
+        self.containerEmptyTask.isHidden = !self.tasks.isEmpty
+        self.routineTableView.isHidden = self.tasks.isEmpty
         routineTableView.reloadData()
     }
     

@@ -13,6 +13,7 @@ class CalendaryTabViewController: UIViewController {
     @IBOutlet weak var headerStackView: UIStackView!
     @IBOutlet weak var calendaryView: UIView!
     @IBOutlet weak var addTaskButton: BaseButton!
+    @IBOutlet weak var emptyTaskView: UIView!
     
     private var getTaskFromDate = GetTaskFromDateUseCase()
     private var removeTaskUseCase = RemoveTaskUseCase()
@@ -80,6 +81,8 @@ class CalendaryTabViewController: UIViewController {
             self.tasks = result
             self.taskTableView.reloadData()
             self.getTaskRoutines(date)
+            self.emptyTaskView.isHidden = !self.tasks.isEmpty
+            self.taskTableView.isHidden = self.tasks.isEmpty
         } onFailure: { error in
             print(error)
         }

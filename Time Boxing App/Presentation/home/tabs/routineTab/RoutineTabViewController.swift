@@ -11,6 +11,7 @@ class RoutineTabViewController: UIViewController {
     
     @IBOutlet weak var routineTableView: UITableView!
     @IBOutlet weak var addRoutineButton: BaseButton!
+    @IBOutlet weak var emptyRoutineView: UIStackView!
     private var routines: [Routine] = []
     
     override func viewDidLoad() {
@@ -78,6 +79,8 @@ class RoutineTabViewController: UIViewController {
                 return
             }
             self.setUpTableView(routines)
+            self.emptyRoutineView.isHidden = !routines.isEmpty
+            self.routineTableView.isHidden = routines.isEmpty
         }, onFailure: { error in
             print(error)
         })

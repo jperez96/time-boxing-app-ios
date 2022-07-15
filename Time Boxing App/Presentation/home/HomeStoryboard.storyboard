@@ -47,22 +47,44 @@
                                 <rect key="frame" x="16" y="134" width="382" height="679"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ngk-s1-hWE">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_routine_icon" id="Cgn-cC-RvL">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="145.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ha registrado ninguna rutina." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPp-x5-8CO">
+                                        <rect key="frame" x="0.0" y="161.5" width="200" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0Wm-lc-6PG"/>
+                                    <constraint firstAttribute="height" constant="200" id="pSV-V7-ivr"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2j8-Qe-vsN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="H6a-Xz-KhO" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" constant="25" id="CX0-Hf-tpY"/>
                             <constraint firstItem="H6a-Xz-KhO" firstAttribute="top" secondItem="2j8-Qe-vsN" secondAttribute="top" constant="25" id="Qh0-n4-18a"/>
+                            <constraint firstItem="ngk-s1-hWE" firstAttribute="centerX" secondItem="l3n-hZ-TRe" secondAttribute="centerX" id="SAf-W7-tme"/>
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="H6a-Xz-KhO" secondAttribute="trailing" constant="25" id="Vj7-n5-wvn"/>
                             <constraint firstItem="KTe-H1-5Tq" firstAttribute="top" secondItem="H6a-Xz-KhO" secondAttribute="bottom" constant="25" id="f3F-OJ-SAG"/>
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="trailing" secondItem="KTe-H1-5Tq" secondAttribute="trailing" constant="16" id="fSv-jd-oyF"/>
                             <constraint firstItem="KTe-H1-5Tq" firstAttribute="leading" secondItem="2j8-Qe-vsN" secondAttribute="leading" constant="16" id="g2F-7a-EUN"/>
                             <constraint firstItem="2j8-Qe-vsN" firstAttribute="bottom" secondItem="KTe-H1-5Tq" secondAttribute="bottom" id="nBc-15-Awl"/>
+                            <constraint firstItem="ngk-s1-hWE" firstAttribute="centerY" secondItem="l3n-hZ-TRe" secondAttribute="centerY" id="srn-t3-wex"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Rutinas" image="repeat" catalog="system" id="Gdy-eG-DMH"/>
                     <connections>
                         <outlet property="addRoutineButton" destination="Lgg-jh-Gf4" id="7EB-LX-9s5"/>
+                        <outlet property="emptyRoutineView" destination="ngk-s1-hWE" id="Sf5-O8-40i"/>
                         <outlet property="routineTableView" destination="KTe-H1-5Tq" id="0Od-bT-WrC"/>
                     </connections>
                 </viewController>
@@ -110,6 +132,33 @@
                                     <constraint firstAttribute="height" constant="120" id="bdQ-ef-p7a"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-0s-q9R">
+                                <rect key="frame" x="0.0" y="234" width="414" height="579"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K93-JN-Taf">
+                                        <rect key="frame" x="107" y="164.5" width="200" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="empty_task_icon" translatesAutoresizingMaskIntoConstraints="NO" id="sq2-31-SRd">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="145.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay ninguna tarea registrada para este día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H51-hl-teL" userLabel="No hay ninguna tarea para este dia">
+                                                <rect key="frame" x="0.0" y="161.5" width="200" height="38.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Qb5-JW-Jfu"/>
+                                            <constraint firstAttribute="height" constant="200" id="o69-Ri-cRp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="K93-JN-Taf" firstAttribute="centerY" secondItem="cb1-0s-q9R" secondAttribute="centerY" constant="-25" id="EUI-ot-Kfc"/>
+                                    <constraint firstItem="K93-JN-Taf" firstAttribute="centerX" secondItem="cb1-0s-q9R" secondAttribute="centerX" id="tpa-24-cFv"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lv0-FT-EfM">
                                 <rect key="frame" x="16" y="244" width="382" height="569"/>
                             </tableView>
@@ -120,13 +169,17 @@
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="czX-px-KJg" secondAttribute="trailing" constant="25" id="2Kl-9c-4gY"/>
                             <constraint firstItem="lv0-FT-EfM" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="16" id="3tR-lB-BPN"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="top" secondItem="orQ-zg-lF8" secondAttribute="top" constant="25" id="58o-nb-g1Q"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="cb1-0s-q9R" secondAttribute="bottom" id="CWD-h4-W7b"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="dEZ-Oq-Fky" secondAttribute="trailing" id="DTM-H6-QMP"/>
                             <constraint firstItem="lv0-FT-EfM" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" constant="10" id="HZK-Nd-fR0"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="bottom" secondItem="lv0-FT-EfM" secondAttribute="bottom" id="IfQ-sA-PBN"/>
+                            <constraint firstItem="cb1-0s-q9R" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="YZW-Ww-veo"/>
                             <constraint firstItem="czX-px-KJg" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" constant="25" id="eaE-5M-syG"/>
                             <constraint firstItem="dEZ-Oq-Fky" firstAttribute="top" secondItem="czX-px-KJg" secondAttribute="bottom" constant="5" id="gLZ-ot-u6w"/>
+                            <constraint firstItem="cb1-0s-q9R" firstAttribute="top" secondItem="dEZ-Oq-Fky" secondAttribute="bottom" id="lYL-0h-gU0"/>
                             <constraint firstItem="dEZ-Oq-Fky" firstAttribute="leading" secondItem="orQ-zg-lF8" secondAttribute="leading" id="rhH-9G-BCz"/>
                             <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="lv0-FT-EfM" secondAttribute="trailing" constant="16" id="sBL-EA-b56"/>
+                            <constraint firstItem="orQ-zg-lF8" firstAttribute="trailing" secondItem="cb1-0s-q9R" secondAttribute="trailing" id="ydm-lR-91M"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendario" id="l1P-jS-Rly">
@@ -135,6 +188,7 @@
                     <connections>
                         <outlet property="addTaskButton" destination="x6i-6I-gce" id="vk4-6p-Rgv"/>
                         <outlet property="calendaryView" destination="dEZ-Oq-Fky" id="Yba-kf-cOK"/>
+                        <outlet property="emptyTaskView" destination="cb1-0s-q9R" id="Z5i-MJ-JWv"/>
                         <outlet property="headerStackView" destination="czX-px-KJg" id="KL8-4A-fBq"/>
                         <outlet property="taskTableView" destination="lv0-FT-EfM" id="bo7-qM-4mV"/>
                     </connections>
@@ -387,6 +441,8 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="empty_routine_icon" width="579.2322998046875" height="563.505859375"/>
+        <image name="empty_task_icon" width="485.833740234375" height="483.5"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="repeat" catalog="system" width="128" height="98"/>
         <image name="settings_form" width="722.45196533203125" height="364.19647216796875"/>

@@ -13,6 +13,7 @@
                 <outlet property="addRoutineOutlet" destination="odJ-dz-iIl" id="cxL-Kn-Kfa"/>
                 <outlet property="addTaskButtonOutlet" destination="oF0-A0-lYU" id="kxj-Px-GVr"/>
                 <outlet property="closeFormButton" destination="Uiu-yQ-B6R" id="K1q-Lg-n6a"/>
+                <outlet property="containerEmptyTask" destination="BTX-hb-aRT" id="bsz-eh-421"/>
                 <outlet property="createRoutineButton" destination="odJ-dz-iIl" id="pn2-2d-NBh"/>
                 <outlet property="daysStackView" destination="obJ-68-vxN" id="DSC-2t-kae"/>
                 <outlet property="mondayButton" destination="uiz-Xc-yUz" id="Nk5-hy-CQH"/>
@@ -80,56 +81,63 @@
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-68-vxN">
                     <rect key="frame" x="25" y="193" width="364" height="30"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiz-Xc-yUz" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uiz-Xc-yUz" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="L"/>
                             <connections>
                                 <action selector="mondayButton:" destination="-1" eventType="touchUpInside" id="seX-WX-pni"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-xb-gav" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="WeC-xb-gav" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="53" y="0.0" width="45.5" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="M"/>
                             <connections>
                                 <action selector="tuesdayButton:" destination="-1" eventType="touchUpInside" id="Bfn-Lj-qvE"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUf-qW-fsv" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="tUf-qW-fsv" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="106.5" y="0.0" width="45" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="M"/>
                             <connections>
                                 <action selector="wednesdayButton:" destination="-1" eventType="touchUpInside" id="EaN-Bf-Sa9"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S4G-d6-LMd" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S4G-d6-LMd" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="159.5" y="0.0" width="45" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="J"/>
                             <connections>
                                 <action selector="thursdayButton:" destination="-1" eventType="touchUpInside" id="f0H-90-Aqx"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eR-5k-NdS" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5eR-5k-NdS" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="212.5" y="0.0" width="45" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="V"/>
                             <connections>
                                 <action selector="fridayButton:" destination="-1" eventType="touchUpInside" id="9Q1-f6-66d"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFJ-qo-6jD" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="EFJ-qo-6jD" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="265.5" y="0.0" width="45.5" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="S"/>
                             <connections>
                                 <action selector="saturdayButton:" destination="-1" eventType="touchUpInside" id="00c-ra-jwC"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkm-aw-M8c" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vkm-aw-M8c" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                             <rect key="frame" x="319" y="0.0" width="45" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="D"/>
                             <connections>
@@ -145,6 +153,25 @@
                     <rect key="frame" x="16" y="248" width="382" height="598"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BTX-hb-aRT">
+                    <rect key="frame" x="107" y="373" width="200" height="200"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_task_icon" translatesAutoresizingMaskIntoConstraints="NO" id="l2S-VN-No7">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="145.5"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay ninguna tarea registrada para este día" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bqL-tz-SyZ" userLabel="No hay ninguna tarea registrada para este día">
+                            <rect key="frame" x="0.0" y="161.5" width="200" height="38.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="qfa-TI-Z2R"/>
+                        <constraint firstAttribute="width" constant="200" id="x3O-MK-KKu"/>
+                    </constraints>
+                </stackView>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odJ-dz-iIl" customClass="BaseButton" customModule="Time_Boxing_App" customModuleProvider="target">
                     <rect key="frame" x="75" y="772" width="264" height="40"/>
                     <constraints>
@@ -160,7 +187,6 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kgt-Yb-qWm" secondAttribute="bottom" constant="16" id="CBQ-hS-7Hi"/>
                 <constraint firstItem="Kgt-Yb-qWm" firstAttribute="top" secondItem="obJ-68-vxN" secondAttribute="bottom" constant="25" id="HFv-7p-azg"/>
                 <constraint firstItem="Kgt-Yb-qWm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="MTQ-q1-HV8"/>
                 <constraint firstItem="obJ-68-vxN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Ntd-12-Aae"/>
@@ -170,17 +196,21 @@
                 <constraint firstItem="XRH-fn-OGq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="25" id="VyY-Ow-A7b"/>
                 <constraint firstItem="obJ-68-vxN" firstAttribute="top" secondItem="wsE-xv-mcI" secondAttribute="bottom" constant="25" id="aIt-xZ-5Ed"/>
                 <constraint firstItem="XRH-fn-OGq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="dWj-5E-OiV"/>
+                <constraint firstItem="BTX-hb-aRT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="25" id="ewf-SK-aGw"/>
                 <constraint firstItem="wsE-xv-mcI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="iaY-yt-ORS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="odJ-dz-iIl" secondAttribute="bottom" constant="50" id="k94-pO-hET"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="odJ-dz-iIl" secondAttribute="trailing" constant="75" id="kcg-jv-IrQ"/>
                 <constraint firstItem="odJ-dz-iIl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="75" id="klY-6x-2dQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Kgt-Yb-qWm" secondAttribute="bottom" constant="16" id="mB3-VW-zYY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="obJ-68-vxN" secondAttribute="trailing" constant="25" id="p3G-25-jSC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wsE-xv-mcI" secondAttribute="trailing" constant="25" id="tGn-J2-v85"/>
+                <constraint firstItem="BTX-hb-aRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uAh-0u-vOr"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
+        <image name="empty_task_icon" width="485.833740234375" height="483.5"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
