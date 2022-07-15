@@ -33,7 +33,6 @@ class AppRepository : IAppRepository {
             switch result.responseCode {
             case .Success:
                 self.saveToApp(data: result.responseData!)
-                self.delegate?.result(.success(data: true))
                 break
             case .Error:
                 self.delegate?.result(.error(msg: result.responseMessage))
@@ -60,6 +59,7 @@ class AppRepository : IAppRepository {
         
         let notificationRepository = NotificationRepository()
         notificationRepository.scheduleNotificationNotSingle(data.configuration.notification)
+        self.delegate?.result(.success(data: true))
     }
     
     func syncDataToCloud() {
